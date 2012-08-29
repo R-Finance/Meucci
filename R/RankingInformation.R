@@ -1,14 +1,13 @@
 # TODO: translate PlotResults function
 # TODO: update plot of efficient frontier to show maximum return case
-# TODO: fix StackedBarChart function
 # TODO: add max weights constraint to EfficientFrontier()
 # TODO: add computeCVaR to EfficientFrontier()
 
 # TODO: confirm QuadProg does not have a bug (i.e. it can optimize expected returns without use dvec by adding an equality constraint)
 
-#' @param      a matrix of weights where rows are efficient portfolios summing to one, and columns are assets
-#' @param      a string indicating the title of the chart
-#' TODO FIXME check against function in Performanceanalytics, we probably want to use that one  unless there's a reaso to use this
+#' Generate a Stacked Bar Chart based on the frontier weights matrix
+#'
+#' @param weightsMatrix     a matrix of weights where rows are efficient portfolios summing to one, and columns are assets
 StackedBarChart = function( weightsMatrix )
 {
   data = as.data.frame( weightsMatrix )
@@ -18,9 +17,14 @@ StackedBarChart = function( weightsMatrix )
   return( p )
 }
 
+#' view the rankings
+#'
+#' @param  X        a vector containing returns for all the asset classes
+#' @param  p        a vector containing the prior probability values
 #' @param  Lower    a vector of indexes indicating which column is lower than the corresponding column number in Upper
 #' @param  Upper    a vector of indexes indicating which column is lower than the corresponding column number in Upper
-# @example ViewRanking( X , p , Lower = c(3,4) , Upper = c(4,5) ) # two inequality views: asset 3 < asset 4 returns, and asset 4 < asset 5 returns
+#' @export EntropyProg
+#  @example ViewRanking( X , p , Lower = c(3,4) , Upper = c(4,5) ) # two inequality views: asset 3 < asset 4 returns, and asset 4 < asset 5 returns
 ViewRanking = function( X , p , Lower , Upper )
 {
   library( matlab )
@@ -48,6 +52,7 @@ ViewRanking = function( X , p , Lower , Upper )
   return( p_ )
 }
 
+#' Generates an efficient frontier based on Meucci's Ranking Information version with the following inputs
 #' @param  X             a matrix with the joint-scenario probabilities by asset (rows are joint-scenarios, columns are assets)
 #' @param  p             a vector of probabilities associated with each scenario in matrix X
 #' @param  Options       a list of options....TBD
@@ -57,7 +62,8 @@ ViewRanking = function( X , p , Lower , Upper )
 #'             w          the NumPortf x N matrix of compositions (security weights) for each portfolio along the efficient frontier
 #'             e          the NumPortf x 1 matrix of expected returns for each portfolio along the efficient frontier
 #'             s          the NumPortf x 1 matrix of standard deviation of returns for each portfolio along the efficient frontier
-EfficientFrontier = function( X , p , Options)
+#' @export
+RIEfficientFrontier = function( X , p , Options)
 {    
   library( matlab )
     

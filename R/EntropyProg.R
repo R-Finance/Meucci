@@ -27,9 +27,11 @@
 #' @param  A        matrix consisting of inequality constraints (paired with argument 'b'). Denoted as 'F' in the Meucci paper
 #' @param  b        vector consisting of inequality constraints (paired with matrix A). Denoted as 'f' in the Meucci paper
 #'
-#' @return p_       revised probabilities based on entropy pooling
-#' @export
-#'
+#' ' \deqn{ \tilde{p}  \equiv  argmin_{Fx \leq f, Hx  \equiv  h}  \big\{ \sum_1^J  x_{j}  \big(ln \big( x_{j} \big) - ln \big( p_{j} \big) \big)  \big\} 
+#' \\ \ell  \big(x,  \lambda,  \nu \big)  \equiv  x'  \big(ln \big(x\big) - ln \big(p\big) \big) +   \lambda' \big(Fx - f\big)  +   \nu' \big(Hx - h\big)}
+#' @return a list with 
+#'      p_                       revised probabilities based on entropy pooling
+#'      optimizationPerformance  a list with status of optimization, value, number of iterations and sum of probabilities.
 #' @author Ram Ahluwalia \email{ram@@wingedfootcapital.com}
 #' @references 
 #' A. Meucci - "Fully Flexible Views: Theory and Practice". See page 22 for illustration of numerical implementation
@@ -38,6 +40,7 @@
 #' We use the information-theoretic estimator of Kitamur and Stutzer (1997). 
 #' Reversing 'p' and 'p_' leads to the empirical likelihood" estimator of Qin and Lawless (1994). 
 #' See Robertson et al, "Forecasting Using Relative Entropy" (2002) for more theory
+#'  @export
 EntropyProg = function( p , A , b , Aeq , beq )
 {
     library( nloptr )    
@@ -49,8 +52,8 @@ EntropyProg = function( p , A , b , Aeq , beq )
     # parameter checks        
     if ( K_ + K == 0 ) { stop( "at least one equality or inequality constraint must be specified")}    
     if ( ( ( .999999 < sum(p)) & (sum(p) < 1.00001) ) == FALSE ) { stop( "sum of probabilities from prior distribution must equal 1")}            
-    if ( nrow(Aeq)!=nrow(beq) ) { stop( "number of inequality constraints in matrix A must match number of elements in vector Aeq") }
-    if ( nrow(A)!=nrow(b) ) { stop( "number of equality constraints in matrix B must match number of elements in vector beq") }              
+    if ( nrow(Aeq)!=nrow(beq) ) { stop( "number of inequality constraints in matrix Aeq must match number of elements in vector beq") }
+    if ( nrow(A)!=nrow(b) ) { stop( "number of equality constraints in matrix A must match number of elements in vector b") }              
     
     # calculate derivatives of constraint matrices
     A_ = t( A )
@@ -173,4 +176,84 @@ EntropyProg = function( p , A , b , Aeq , beq )
     if ( sum( p_ ) > 1.001 ) { stop( "Sum or revised probabilities is greater than 1!" ) }
     
     return ( list ( p_ = p_ , optimizationPerformance = optimizationPerformance ) )
+}
+
+#' Calculate the full-confidence posterior distributions of Mu and Sigma
+#'
+#' \deqn{ \tilde{ \mu }  \equiv \mu +  \Sigma  Q'    {\big(Q \Sigma  Q' \big)}^{-1}   \big( \tilde{\mu}_{Q} - Q \mu \big),
+#' \\ \tilde{ \Sigma } \equiv \Sigma + \Sigma G' \big({\big(G \Sigma  G' \big)}^{-1} \tilde{ \Sigma }_G {\big(G \Sigma  G' \big)}^{-1} - {\big(G \Sigma  G' \big)}^{-1} \big) G \Sigma }
+#' @param M     a numeric vector with the Mu of the normal reference model
+#' @param Q     a numeric vector used to construct a view on expectation of the linear combination QX
+#' @param M_Q   a numeric vector with the view of the expectations of QX
+#' @param S     a covariance matrix for the normal reference model
+#' @param G     a numeric vector used to construct a view on covariance of the linear combination GX
+#' @param S_G   a numeric with the expectation associated with the covariance of the linear combination GX
+#'
+#' @return a list with 
+#' @return M_   a numeric vector with the full-confidence posterior distribution of Mu
+#' @return S_   a covariance matrix with the full-confidence posterior distribution of Sigma
+#'
+#' @references 
+#' \url{http://www.symmys.com}
+#' \url{http://ssrn.com/abstract=1213325}
+#' A. Meucci - "Fully Flexible Views: Theory and Practice". See formula (21) and (22) on page 7
+#' See Meucci script Prior2Posterior.m attached to Entropy Pooling Paper
+#' @author Ram Ahluwalia \email{ram@@wingedfootcapital.com}
+Prior2Posterior = function( M , Q , M_Q , S , G , S_G )
+{
+  # Compute posterior moments
+  
+  if ( Q != 0 ) { M_ = M + S %*% t(Q) %*% solve( Q %*% S %*% t(Q) ) %*% ( M_Q - Q %*% M) }
+  else { M_ = M }
+  
+  if ( G != 0 ) { S_ = S + (S %*% t(G)) %*% ( solve(G %*% S %*% t(G)) %*% S_G %*% solve(G %*% S %*% t(G)) - solve( G %*% S %*% t(G)) ) %*% (G %*% S) }
+  else { S_ = S }
+  
+  return( list( M_ = M_ , S_ = S_ ) )
+}
+
+#' Generates histogram
+#'
+#' @param X       a vector containing the data points
+#' @param p       a vector containing the probabilities for each of the data points in X
+#' @param nBins   expected number of Bins the data set is to be broken down into
+#' @param freq    a boolean variable to indicate whether the graphic is a representation of frequencies
+#'
+#' @return a list with 
+#'             f   the frequency for each midpoint
+#'             x   the midpoints of the nBins intervals
+#'
+#' @references 
+#' \url{http://www.symmys.com}
+#' See Meucci script pHist.m used for plotting
+#' @author Ram Ahluwalia \email{ram@@wingedfootcapital.com}
+
+pHist = function( X , p , nBins, freq = FALSE )    
+{      
+  if ( length( match.call() ) < 3 )
+  {
+    J = size( X , 1 )        
+    nBins = round( 10 * log(J) )
+  }
+  
+  dist = hist( x = X , breaks = nBins , freq = FALSE , main = "Portfolio return distribution" )
+  n = dist$counts
+  x = dist$breaks    
+  D = x[2] - x[1]
+  
+  N = length(x)
+  np = zeros(N , 1)
+  
+  for (s in 1:N)
+  {
+    # The boolean Index is true is X is within the interval centered at x(s) and within a half-break distance
+    Index = ( X >= x[s] - D/2 ) & ( X <= x[s] + D/2 )    
+    # np = new probabilities?
+    np[ s ] = sum( p[ Index ] )
+    f = np/D
+  }
+  
+  barplot( f , x , 1 )
+  
+  return( list( f = f , x = x ) )
 }
