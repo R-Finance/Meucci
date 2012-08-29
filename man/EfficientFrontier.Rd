@@ -1,4 +1,5 @@
 \name{EfficientFrontier}
+\title{EfficientFrontier}
 \alias{EfficientFrontier}
 \usage{
   EfficientFrontier(X, p, Options)
