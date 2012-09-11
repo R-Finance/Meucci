@@ -45,3 +45,16 @@ Suggests:
 License: GPL
 URL: http://r-forge.r-project.org/projects/returnanalytics/
 Copyright: (c) 2012
+Collate:
+    'CmaCopula.R'
+    'DetectOutliersviaMVE.R'
+    'EntropyProg.R'
+    'FullyFlexibleBayesNets.R'
+    'HermiteGrid.R'
+    'InvariantProjection.R'
+    'logToArithmeticCovariance.R'
+    'MeanDiversificationFrontier.R'
+    'MultivariateOUnCointegration.R'
+    'Prior2Posterior.R'
+    'RankingInformation.R'
+    'RobustBayesianAllocation.R'
