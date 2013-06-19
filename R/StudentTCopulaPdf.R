@@ -1,3 +1,5 @@
+library(pracma);
+
 #' Pdf of the copula of the Student t distribution at the generic point u in the unit hypercube,
 #' as described in  A. Meucci, "Risk and Asset Allocation", Springer, 2005.
 #'  
@@ -15,9 +17,6 @@
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 #' @export
-
-library(pracma);
-
 
 StudentTCopulaPdf = function( u, nu, Mu, Sigma )
 {
