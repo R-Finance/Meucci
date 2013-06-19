@@ -28,7 +28,8 @@ Depends:
     R (>= 2.14.0),
     zoo,
     xts (>= 0.8),
-    matlab
+    matlab,
+    pracma
 Suggests:
     quadprog,
     mvtnorm,
@@ -40,7 +41,6 @@ Suggests:
     fOptions,
     moments,
     nloptr,
-    pracma,
     ggplot2,
     expm,
     latticeExtra
@@ -62,3 +62,4 @@ Collate:
     'RobustBayesianAllocation.R'
     'LognormalMoments2Parameters.R'
     'LognormalParameters2Statistics.R'
+    'LognormalCopulaPdf.R'
