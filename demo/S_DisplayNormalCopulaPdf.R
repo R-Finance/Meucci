@@ -1,19 +1,18 @@
-#'This script displays the pdf of the copula of a lognormal distribution, as described 
+#'This script displays the pdf of the copula of a normal distribution, as described 
 #' in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 2.
 #'
 #' @references
 #' \url{http://}
-#' See Meucci's script for "S_DisplayLognormalCopulaPdf.m"
+#' See Meucci's script for "S_DisplayNormalCopulaPdf.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 #' @export
 
 #############################################################################################################
-### Input parameters
-Mu = rbind( 100.0, -30.0 );     
-r  = 0.8;            
-sigmas = rbind( 1000, 0.01 );    
-nu = 100;
+### input parameters
+Mu = rbind( 1,  -1 );     
+r  = 0.7;            
+sigmas = rbind( 1, 1 );    
 Sigma = diag( c( sigmas ) ) %*% rbind( c( 1, r ), c( r, 1 ) ) %*% diag( c( sigmas ) );
 
 #############################################################################################################
@@ -32,7 +31,7 @@ for ( j in 1 : nMesh )
     for ( k in 1 : nMesh)
     {
         u = c( GridSide1[ j ], GridSide2[ k ] );        
-        f_U[ j, k ] = LognormalCopulaPdf(u, Mu, Sigma);         
+        f_U[ j, k ] = NormalCopulaPdf(u, Mu, Sigma);         
     }
 }
 

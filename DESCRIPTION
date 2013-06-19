@@ -63,3 +63,4 @@ Collate:
     'LognormalMoments2Parameters.R'
     'LognormalParameters2Statistics.R'
     'LognormalCopulaPdf.R'
+    'NormalCopulaPdf.R'

@@ -38,7 +38,7 @@ nu_2 = 7;
 NormCorrMatrix = rbind( c( 1, NormCorr ), c( NormCorr, 1 ));
 NormCovMatrix  = diag( c( NormStDev ) ) %*% NormCorrMatrix %*% diag( c( NormStDev) );
 
-Z = rvnorm( nSim, NormExpVal, NormCovMatrix );
+Z = rmvnorm( nSim, NormExpVal, NormCovMatrix );
 
 Z_1 = Z[, 1];
 Z_2 = Z[, 2];

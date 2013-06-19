@@ -23,7 +23,7 @@ LognormalCopulaPdf = function( u, Mu, Sigma )
 	x = qlnorm( u, Mu, s );
 
 	Numerator = ( 2 * pi ) ^ ( -N / 2 ) * ( (det ( Sigma ) ) ^ ( -0.5 ) ) / 
-					prod(x) * exp( -.5 * t(log(x) - Mu) %*% mldivide( Sigma , ( log( x ) - Mu ), pinv=FALSE ) );
+					prod(x) * exp( -0.5 * t(log(x) - Mu) %*% mldivide( Sigma , ( log( x ) - Mu ), pinv=FALSE ) );
 
 	fs = dlnorm( x, Mu, s);
 

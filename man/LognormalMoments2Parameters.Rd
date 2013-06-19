@@ -1,7 +1,7 @@
 \name{LognormalMoments2Parameters}
 \alias{LognormalMoments2Parameters}
 \title{Compute the mean and standard deviation of a lognormal distribution from its parameters, as described in
-A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 1.}
+A. Meucci, "Risk and Asset Allocation", Springer, 2005.}
 \usage{
   LognormalMoments2Parameters(e, v)
 }
@@ -20,11 +20,10 @@ A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 1.}
 \description{
   Compute the mean and standard deviation of a lognormal
   distribution from its parameters, as described in A.
-  Meucci, "Risk and Asset Allocation", Springer, 2005,
-  Chapter 1.
+  Meucci, "Risk and Asset Allocation", Springer, 2005.
 }
 \note{
-  Inverts the formulas (1.98)-(1.99) in Risk and Asset
+  Inverts the formulas (1.98)-(1.99) in "Risk and Asset
   Allocation", Springer, 2005.
 }
 \author{
@@ -32,6 +31,6 @@ A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 1.}
 }
 \references{
   \url{http://} See Meucci's script for
-  "LognormalMoments2Parameters"
+  "LognormalMoments2Parameters.m"
 }
 
