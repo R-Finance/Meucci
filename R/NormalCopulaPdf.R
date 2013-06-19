@@ -5,7 +5,7 @@
 #'	@param   Mu    : [vector] (N x 1) mean
 #'	@param   Sigma : [matrix] (N x N) covariance
 #'  
-#'	@return   F_U   : [vector] (J x 1) PDF values
+#'	@return  F_U   : [vector] (J x 1) PDF values
 #'
 #' @references
 #' \url{http://}
@@ -14,6 +14,8 @@
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 #' @export
 
+library(pracma);
+
 NormalCopulaPdf = function( u, Mu, Sigma )
 {
 	N = length( u );
@@ -21,7 +23,7 @@ NormalCopulaPdf = function( u, Mu, Sigma )
 
 	x = qnorm( u, Mu, s );
 
-	Numerator = ( 2 * pi ) ^ ( -N / 2 ) * ( (det ( Sigma ) ) ^ ( -0.5 ) ) * exp( -0.5 * t(x - Mu) %*% mldivide( Sigma , ( x  - Mu ), pinv = FALSE ) );
+	Numerator = ( 2 * pi ) ^ ( -N / 2 ) * ( (det ( Sigma ) ) ^ ( -0.5 ) ) * exp( -0.5 * t(x - Mu) %*% mldivide( Sigma , ( x  - Mu )));
 
 	fs = dnorm( x, Mu, s);
 

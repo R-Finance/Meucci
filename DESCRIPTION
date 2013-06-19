@@ -64,3 +64,4 @@ Collate:
     'LognormalParameters2Statistics.R'
     'LognormalCopulaPdf.R'
     'NormalCopulaPdf.R'
+    'StudentTCopulaPdf.R'

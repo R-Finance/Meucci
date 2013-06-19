@@ -15,6 +15,8 @@
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 #' @export
 
+library(pracma);
+
 LognormalCopulaPdf = function( u, Mu, Sigma )
 {
 	N = length( u );
