@@ -3,7 +3,7 @@
 #'
 #' @references
 #' \url{http://}
-#' See Meucci's script for "S_DisplayNormalCopulaPdf.m"
+#' See Meucci's script for "S_DisplayNormalCopulaCdf.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 #' @export
