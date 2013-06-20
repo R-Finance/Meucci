@@ -26,8 +26,8 @@ for( n in 1 : N )
 
 NumBins = round( 10 * log( J ));
 
-
-hist( X[ , 1 ], NumBins, xlab = "X_1");
+par( mfrow = c( 3, 1) );
+hist( X[ , 1 ], NumBins, xlab = "X_1", main = "histogram of X_1" );
 plot( X[ , 1 ], X[ , 2 ], xlab = "X_1", ylab = "X_2" );
-hist( X[ , 2 ], NumBins, xlab = "X_2");
+hist( X[ , 2 ], NumBins, xlab = "X_2", main = "histogram of X_1" );
 
