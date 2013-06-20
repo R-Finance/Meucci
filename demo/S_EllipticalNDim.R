@@ -1,15 +1,19 @@
 library(mvtnorm);
-
-##################################################################################################################
-### This script decomposes the N-variate normal distribution into its radial and uniform components
-### then it uses the uniform component to generate an elliptical distribution with location parameter 
-### Mu and dispersion parameter Sigma
-### = Chapter 2 =
-#################################################################################################################
-clc; clear; close all;
+#'This script decomposes the N-variate normal distribution into its radial and uniform components
+#' then it uses the uniform component to generate an elliptical distribution with location parameter 
+#' Mu and dispersion parameter Sigma, as described in A. Meucci, "Risk and Asset Allocation",
+#' Springer, 2005,  Chapter 2.
+#'
+#' @references
+#' \url{http://}
+#' See Meucci's script for "S_EllipticalNDim.m"
+#'
+#' @author Xavier Valls \email{flamejat@@gmail.com}
+#' @export
 
 ##################################################################################################################
 ### Parameters
+
 N = 30;
 nSim = 10000;
 nu = 0.1;
