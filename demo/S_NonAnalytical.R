@@ -35,20 +35,24 @@ Z = X + Y;
 
 ##################################################################################################################
 ### Plot the sample Z
+dev.new();
 plot( Z,  xlab="simulations", ylab="Z", main = "sample vs observation time" );
 
 ##################################################################################################################
 ### Plot the histogram of Z
+dev.new();
 NumBins = round( 10 * log( nSim ) );
 hist( Z, NumBins, xlab="Z", main="sample histogram" );
 
 ##################################################################################################################
 ### Plot the empirical cdf of Z
+dev.new();
 f = ecdf( Z );
 plot( f, xlab="Z", main="empirical cdf" );
 
 ##################################################################################################################
 ### Plot the empirical quantile of Z
+dev.new();
 u= seq( 0.01, 0.99, 0.01 ); # range of quantiles (values between zero and one)
 q = quantile( Z, u );
 plot( u, q, type = "l", xlab="Grade", ylab="Quantile",  lty = 1,  main = "empirical quantile" );

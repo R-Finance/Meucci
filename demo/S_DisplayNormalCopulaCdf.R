@@ -1,3 +1,4 @@
+library(mvtnorm);
 #'This script displays the cdf of the copula of a normal distribution, as described 
 #' in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 2.
 #'
@@ -13,7 +14,7 @@
 Mu = c( 0, 0 );     
 r  = -0.999;            
 sigmas = c(1, 1 );    
-Sigma = diag( c( sigmas ) ) %*% rbind( c( 1, r ), c( r, 1 ) ) %*% diag( c( sigmas ) );
+Sigma = diag( sigmas ) %*% rbind( c( 1, r ), c( r, 1 ) ) %*% diag( sigmas );
 
 #############################################################################################################
 ### Grid

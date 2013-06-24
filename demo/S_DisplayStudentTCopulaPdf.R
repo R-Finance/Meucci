@@ -13,8 +13,8 @@
 
 Mu = rbind( 0, 0 );     
 r  = 0.5;            
-sigmas = rbind( 1, 2 );    
-Sigma = diag( c( sigmas ) ) %*% rbind( c( 1, r ), c( r, 1 ) ) %*% diag( c( sigmas ) );
+sigmas = c( 1, 2 );    
+Sigma = diag( sigmas ) %*% rbind( c( 1, r ), c( r, 1 ) ) %*% diag( sigmas );
 #nu = 1; Sigma(1,2) = 0; Sigma(2,1) = 0;
 nu = 200; 
 

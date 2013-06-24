@@ -44,12 +44,13 @@ Z_1 = Z[, 1];
 Z_2 = Z[, 2];
 
 # display marginals: as expected, they are normal
-
+dev.new();
 NumBins = round(10 * log(nSim));
 par( mfrow = c( 2, 1) );
 hist( Z_1, NumBins, xlab = "normal 1", ylab = "" );
 hist( Z_2, NumBins, xlab = "normal 2", ylab = "" );
 
+dev.new();
 plot( Z_1, Z_2, type = "p", xlab = "normal 1", ylab = "normal 2" );
 
 
@@ -57,7 +58,7 @@ plot( Z_1, Z_2, type = "p", xlab = "normal 1", ylab = "normal 2" );
 
 NumBins2D = round(sqrt(100 * log(nSim)));
 Z_3 = table( cut (Z_1, NumBins2D ), cut ( Z_2, NumBins2D));
-
+dev.new();
 cloud( Z_3, panel.3d.cloud = panel.3dbars, scales = list( arrows = FALSE, just = "right" ), 
 	xlab = "normal 1", ylab = "normal 2", zlab="", main = "pdf normal" );
 
@@ -70,15 +71,18 @@ U = c( U_1, U_2 ); # joint realizations from the required copula
 
 # plot copula
 NumBins = round(10 * log(nSim));
+dev.new();
 par( mfrow = c( 2, 1) );
 hist( U_1, NumBins, xlab = "grade 1", ylab = "", main = "" );
 hist( U_2, NumBins, xlab = "grade 2", ylab = "", main = "" );
 
 # joint sample
+dev.new();
 plot(U_1, U_2, xlab="grade 1", ylab="grade 2" );
 
 # 3d histogram
 NumBins2D = round(sqrt(100 * log(nSim)));
+dev.new();
 U_3 = table( cut (U_1, NumBins2D ), cut ( U_2, NumBins2D ));
 cloud( U_3, panel.3d.cloud = panel.3dbars, scales = list( arrows = FALSE, just = "right" ), 
 	xlab = "grade 1", ylab = "grade 2", zlab="", main = "pdf copula" );
@@ -100,7 +104,7 @@ X = C(X_1, X_2); # joint realizations from the required distribution
 
 NumBins = round(10 * log(nSim));
 
-
+dev.new();
 par( mfrow = c( 2, 1) );
 # Student t distribution
 hist( X_1, NumBins, xlab = "gamma", ylab = "", main = "" );
@@ -108,10 +112,12 @@ hist( X_1, NumBins, xlab = "gamma", ylab = "", main = "" );
 hist( X_2, NumBins, xlab = "lognormal", ylab = "", main = "" );
 
 # joint sample
+dev.new();
 plot(X_1, X_2, xlab="gamma", ylab="lognormal" );
 
 # 3d histogram
 NumBins2D = round(sqrt(100 * log(nSim)));
+dev.new();
 X_3 = table( cut (X_1, NumBins2D ), cut ( X_2, NumBins2D ));
 cloud( X_3, panel.3d.cloud = panel.3dbars, scales = list( arrows = FALSE, just = "right" ), 
 	xlab = "gamma", ylab = "lognormal", zlab="", main = "pdf joint distribution" );

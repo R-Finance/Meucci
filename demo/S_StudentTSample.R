@@ -45,6 +45,7 @@ X_c = mu + sigma * qt( U, nu );
 ### Plot histograms
 NumBins = round(10 * log(nSim));
 
+dev.new();
 par( mfrow = c( 3, 1) );
 
 hist( X_a, NumBins, main = "built-in generator" );
@@ -66,7 +67,7 @@ q_c = quantile( X_c, u );
 
 ##################################################################################################################
 ### Superimpose the the plots of the empirical quantiles
-
+dev.new();
 plot( u, q_a, type = "l", xlab="Grade", ylab="Quantile",  lty = 1, col = "red", main = "quantile of Student-t distribution" );
 lines( u, q_b, type = "l", lty = 1, col = "blue" );
 lines( u, q_c, type = "l", lty = 1, col = "green" );

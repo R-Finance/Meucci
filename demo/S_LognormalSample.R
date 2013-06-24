@@ -29,13 +29,16 @@ X = rlnorm( nSim, LP$mu, sigma );
 ### Plots
 
 # plot over time
+dev.new();
 plot( X, main = "lognormal sample vs observation time" );
 
 # plot histogram
+dev.new();
 NumBins = round( 10 * log( nSim ) );
 hist( X, NumBins, main = "histogram of lognormal sample" );
 
 # plot empirical cdf
+dev.new();
 f = ecdf( X );
 plot( f, col = "red", main = "cdf of lognormal distribution" );
 
@@ -47,6 +50,7 @@ legend( "bottomright", 1.9, c("empirical", "exact"), col = c("red", "blue"), lty
 
 ##################################################################################################################
 # plot empirical quantile
+dev.new();
 u= seq( 0.01, 0.99, 0.01 ); # range of quantiles (values between zero and one)
 q = quantile( X, u );
 plot( u, q, type = "l", xlab="Grade", ylab="Quantile",  lty = 1, col = "red",  main = "quantile of lognormal distribution" );

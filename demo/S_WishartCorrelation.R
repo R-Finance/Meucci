@@ -53,6 +53,6 @@ for( uu in 1 : nrhos )
 ### Analytical correlation
 corrs = sqrt( 2 ) * rhos / sqrt( 1 + rhos ^ 2);
 
-figure();
+dev.new();
 plot(rhos, corrs, xlab = expression( paste("input ", rho)), ylab = "Wishart correlation");
 lines( rhos, corrs2, col = "red" );

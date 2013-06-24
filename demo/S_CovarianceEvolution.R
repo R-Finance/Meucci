@@ -60,15 +60,18 @@ for ( s in 1:length( ts_0 ) )
 Pick = cbind( K + 2*J - 1, K + 2*J )
            
 # horizon simulations
+dev.new();
 plot( OUstepResult$X_t[ , Pick[ 1 ] ] , OUstepResult$X_t[ , Pick[ 2 ] ] )
            
 # horizon location
+dev.new();
 plot( OUstepResult$Mu_t[ Pick[ 1 ] ] , OUstepResult$Mu_t[ Pick[ 2 ] ] )
            
 # horizon dispersion ellipsoid 
 # TwoDimEllipsoid(MuHat_t1(Pick),SigmaHat_t1(Pick,Pick),2,0,0);
            
 # starting point
+dev.new();
 plot( x0[ Pick[ 1 ] ] , x0[ Pick[ 2 ] ] )
            
 # starting generating dispersion ellipsoid

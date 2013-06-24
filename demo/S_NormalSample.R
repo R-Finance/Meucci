@@ -21,11 +21,13 @@ X = rnorm( nSim, mu, sigma);
 
 ##################################################################################################################
 ### Plot the sample# plot over time
+dev.new();
 plot( X, main = "normal sample vs observation time" );
 
 
 ##################################################################################################################
 ### Plot the histogram
+dev.new();
 NumBins = round( 10 * log( nSim ) );
 hist( X, NumBins, main = "histogram of normal sample" );
 
@@ -33,6 +35,8 @@ hist( X, NumBins, main = "histogram of normal sample" );
 ### Compare empirical with exact cdfs
 
 # plot empirical cdf
+dev.new();
+
 f = ecdf( X );
 plot( f, col = "red", main = "cdf of normal distribution" );
 
@@ -43,7 +47,9 @@ legend( "bottomright", 1.9, c("empirical", "exact"), col = c("red", "blue"), lty
 
 ##################################################################################################################
 ### Compare empirical and exact quantiles
+
 # plot empirical quantile
+dev.new();
 u= seq( 0.01, 0.99, 0.01 ); # range of quantiles (values between zero and one)
 q = quantile( X, u );
 plot( u, q, type = "l", xlab="Grade", ylab="Quantile",  lty = 1, col = "red",  main = "quantile of normal distribution" );

@@ -48,11 +48,13 @@ m = 1;
 n = 3;
 xlabel = paste( "X_" , m );
 ylabel = paste( "X_", n );
+dev.new();
 plot( X[ , m ], X[ , n ], xlab = xlabel, ylab = ylabel);
 
 # visualize n-th marginal
 n = 4;
 xlabel = paste( "X_", m );
 NumBins = round(10 * log(nSim));
+dev.new();
 hist( X[ , n ], NumBins, xlab = xlabel, main= "histogram");
 

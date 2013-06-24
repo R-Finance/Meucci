@@ -12,8 +12,8 @@
 ### input parameters
 Mu = rbind( 1,  -1 );     
 r  = 0.7;            
-sigmas = rbind( 1, 1 );    
-Sigma = diag( c( sigmas ) ) %*% rbind( c( 1, r ), c( r, 1 ) ) %*% diag( c( sigmas ) );
+sigmas = c( 1, 1 );    
+Sigma = diag( sigmas ) %*% rbind( c( 1, r ), c( r, 1 ) ) %*% diag( sigmas );
 
 #############################################################################################################
 ### Grid
