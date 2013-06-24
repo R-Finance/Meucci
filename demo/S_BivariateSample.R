@@ -56,7 +56,7 @@ plot( Z_1, Z_2, type = "p", xlab = "normal 1", ylab = "normal 2" );
 # 3d histograms 
 
 NumBins2D = round(sqrt(100 * log(nSim)));
-Z_3 = table( cut (Z_1, NumBins2D ), cut ( Z_2, cloud ));
+Z_3 = table( cut (Z_1, NumBins2D ), cut ( Z_2, NumBins2D));
 
 cloud( Z_3, panel.3d.cloud = panel.3dbars, scales = list( arrows = FALSE, just = "right" ), 
 	xlab = "normal 1", ylab = "normal 2", zlab="", main = "pdf normal" );

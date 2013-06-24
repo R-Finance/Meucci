@@ -8,7 +8,7 @@
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 #' @export
 
-
+source("../R/LognormalMoments2Parameters.R");
 
 ##################################################################################################################
 ### Input parameters

@@ -48,11 +48,14 @@ for ( k in 1: K)
 # marginals
 NumBins = round(10 * log(NumObs));
 
+layout( matrix(c(1,2,2,1,2,2,0,3,3), 3, 3, byrow = TRUE), heights=c(1,2,1));
 
-layout( matrix(c(1,2,3), 3, 1, byrow = TRUE), heights=c(1,2,1));
 
 
-hist( X[ , Display[ 2 ] ], NumBins, xlab = db_FX$Fields[[ Display[ 2 ] + 1 ]], ylab = "", main = "");
+#hist( X[ , Display[ 2 ] ], NumBins, xlab = db_FX$Fields[[ Display[ 2 ] + 1 ]], ylab = "", main = "");
+barplot( table( cut( X[ , Display[ 2 ] ], NumBins )), horiz=TRUE, yaxt="n")
+axis( 2, at = seq(0, 100, 20), labels = seq( 0, 1, 0.2 ) );
+
 
 # scatter plot
 plot( Copula[ , Display[ 1 ] ], Copula[ , Display[ 2 ] ], main = "Copula", 

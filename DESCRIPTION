@@ -43,7 +43,9 @@ Suggests:
     nloptr,
     ggplot2,
     expm,
-    latticeExtra
+    latticeExtra,
+    scatterplot3d,
+    psych
 License: GPL
 URL: http://r-forge.r-project.org/projects/returnanalytics/
 Copyright: (c) 2012
