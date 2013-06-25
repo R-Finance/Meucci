@@ -67,3 +67,4 @@ Collate:
     'LognormalCopulaPdf.R'
     'NormalCopulaPdf.R'
     'StudentTCopulaPdf.R'
+    'ConvertChangeInYield2Price.R'
