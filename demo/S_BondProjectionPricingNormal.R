@@ -1,11 +1,15 @@
-#################################################################################################################
-### This script projects the distribution of the market invariants for the bond markets 
-### (i.e. the changes in yield to maturity) from the estimation interval to the investment horizon 
-### Then it computes the distribution of prices at the investment horizon 
-### == Chapter 3 ==
-##################################################################################################################
-clc; clear; close all;
-run ../../LIBRARY/InitializeLibrary.m; # load library of functions
+
+#'This script projects the distribution of the market invariants for the bond markets 
+#'(i.e. the changes in yield to maturity) from the estimation interval to the investment horizon 
+#'Then it computes the distribution of prices at the investment horizon  as described in A. Meucci,
+#'"Risk and Asset Allocation", Springer, 2005,  Chapter 3.
+#'
+#' @references
+#' \url{http://}
+#' See Meucci's script for "S_BondProjectionPricingNormal.m"
+#'
+#' @author Xavier Valls \email{flamejat@@gmail.com}
+#' @export
 
 ##################################################################################################################
 ### Inputs

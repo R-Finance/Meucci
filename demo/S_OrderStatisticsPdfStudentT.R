@@ -5,7 +5,7 @@ library(scatterplot3d);
 #'
 #' @references
 #' \url{http://}
-#' See Meucci's script for "S_OrderStatisticsPdfLognormal.m"
+#' See Meucci's script for "S_OrderStatisticsPdfStudentT.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 #' @export

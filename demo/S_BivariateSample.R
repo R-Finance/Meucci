@@ -1,15 +1,15 @@
+library(mvtnorm);
+library(latticeExtra);
+
 #' This script generates draws from a bivariate distribution with different marginals,
 #' as described in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 2.
 #'
 #' @references
 #' \url{http://}
-#' See Meucci's script for "S_AnalyzeLognormalCorrelation.m"
+#' See Meucci's script for "S_BivariateSample.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 #' @export
-
-library(mvtnorm);
-library(latticeExtra);
 
 ###################################################################################################################
 ### input parameters
