@@ -68,3 +68,4 @@ Collate:
     'NormalCopulaPdf.R'
     'StudentTCopulaPdf.R'
     'ConvertChangeInYield2Price.R'
+    'ProjectionStudentT.R'
