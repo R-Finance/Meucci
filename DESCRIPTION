@@ -70,3 +70,4 @@ Collate:
     'ConvertChangeInYield2Price.R'
     'ProjectionStudentT.R'
     'TwoDimEllipsoid.R'
+    'PerformIidAnalysis.R'
