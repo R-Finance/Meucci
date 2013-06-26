@@ -69,3 +69,4 @@ Collate:
     'StudentTCopulaPdf.R'
     'ConvertChangeInYield2Price.R'
     'ProjectionStudentT.R'
+    'TwoDimEllipsoid.R'
