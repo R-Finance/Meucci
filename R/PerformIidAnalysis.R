@@ -12,8 +12,7 @@
 #'
 #' @references
 #' \url{http://}
-#' See (6.77)-(6.79) in "Risk and Asset Allocation"-Springer (2005), by A. Meucci
-#' See Meucci's script for "ConvertCompoundedReturns2Price.m"
+#' See Meucci's script for "PerformIidAnalysis.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 #' @export

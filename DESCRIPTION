@@ -17,13 +17,13 @@ Description: Attilio Meucci is a thought leader in advanced risk and portfolio
     regularly posts code along with his working papers.  Unfortunately for
     those of us using R, he prefers to code in Matlab.  Some of that code
     requires Matlab's additional Optimization Toolkit. This package is the
-    result of a Google Summer of Code project in 2012 and 2013 that seeks 
-    to convert a subset of his Matlab code to R to make it more widely 
-    accessible to R users.  All of Meucci's original MATLAB source is available on
+    result of a Google Summer of Code project in 2012 and 2013 that seeks to
+    convert a subset of his Matlab code to R to make it more widely accessible
+    to R users.  All of Meucci's original MATLAB source is available on
     www.symmys.com.  That code should be considered the reference code that
-    this package seeks to port to R.  This package remains under
-    development (and likely will as long as Attilio keeps publishing code), and
-    any and all feedback is appreciated.
+    this package seeks to port to R.  This package remains under development
+    (and likely will as long as Attilio keeps publishing code), and any and all
+    feedback is appreciated.
 Depends:
     R (>= 2.14.0),
     zoo,
