@@ -1,7 +1,3 @@
-##################################################################################################################
-### This file performs the quest for invariance in the stock market
-### == Chapter 3 ==
-##################################################################################################################
 #' This file performs the quest for invariance in the stock market, as described in 
 #' A. Meucci "Risk and Asset Allocation", Springer, 2005, chapter 3.
 #'
