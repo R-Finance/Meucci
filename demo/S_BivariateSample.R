@@ -9,7 +9,6 @@ library(latticeExtra);
 #' See Meucci's script for "S_BivariateSample.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
-#' @export
 
 ###################################################################################################################
 ### input parameters

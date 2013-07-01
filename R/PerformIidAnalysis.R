@@ -30,7 +30,7 @@ PerformIidAnalysis = function( Dates = dim( Data, 1), Data, Str = "")
 	##########################################################################################################
 	### Test "identically distributed hypothesis": split observations into two sub-samples and plot histogram
 	Sample_1 = Data[ 1:round(length(Data) / 2) ];
-	Sample_2 = Data[ round(length(Data)/2) + 1: length(Data) ];
+	Sample_2 = Data[(round(length(Data)/2) + 1) : length(Data) ];
 	num_bins_1 = round(5 * log(length(Sample_1)));
 	num_bins_2 = round(5 * log(length(Sample_2)));
 	X_lim = c( min(Data) - .1 * (max(Data) - min(Data)), max(Data) + .1 * (max(Data) - min(Data)));

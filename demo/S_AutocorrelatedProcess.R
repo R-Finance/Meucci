@@ -7,7 +7,6 @@
 #' See Meucci's script for "S_AutocorrelatedProcess.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
-#' @export
 
 ##################################################################################################################
 ### Input parameters

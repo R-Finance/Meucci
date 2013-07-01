@@ -29,7 +29,8 @@ Depends:
     zoo,
     xts (>= 0.8),
     matlab,
-    pracma
+    pracma,
+    R.utils
 Suggests:
     quadprog,
     mvtnorm,
