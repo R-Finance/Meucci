@@ -72,3 +72,4 @@ Collate:
     'ProjectionStudentT.R'
     'TwoDimEllipsoid.R'
     'PerformIidAnalysis.R'
+    'SimulateJumpDiffusionMerton.R'
