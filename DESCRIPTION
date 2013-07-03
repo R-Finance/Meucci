@@ -73,3 +73,5 @@ Collate:
     'TwoDimEllipsoid.R'
     'PerformIidAnalysis.R'
     'SimulateJumpDiffusionMerton.R'
+    'BlackScholesCallPrice.R'
+    'InterExtrapolate.R'
