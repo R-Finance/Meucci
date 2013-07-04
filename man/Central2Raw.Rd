@@ -3,18 +3,28 @@
 \title{Transforms first n central moments into first n raw moments (first central moment defined as expectation)}
 \usage{
   Central2Raw(mu)
+
+  Central2Raw(mu)
 }
 \arguments{
   \item{mu}{a vector of central moments}
+
+  \item{mu}{: [vector] (length N corresponding to order N)
+  central moments}
 }
 \value{
   mu_ a vector of non-central moments
+
+  mu_ : [vector] (length N corresponding to order N)
+  corresponding raw moments
 }
 \description{
   step 2 of projection process: From the central moments of
   step 1, we compute the non-central moments. To do so we
   start with the first non-central moment and apply
   recursively an identity (formula 20)
+
+  Map central moments into raw moments
 }
 \details{
   \deqn{ \tilde{ \mu }^{ \big(1\big) }_{X} \equiv \mu
@@ -24,10 +34,14 @@
 }
 \author{
   Ram Ahluwalia \email{rahluwalia@gmail.com}
+
+  Xavier Valls \email{flamejat@gmail.com}
 }
 \references{
   A. Meucci - "Exercises in Advanced Risk and Portfolio
   Management". See page 10. Symmys site containing original
   MATLAB source code \url{http://www.symmys.com}
+
+  \url{http://} See Meucci's script for "Central2Raw.m"
 }
 

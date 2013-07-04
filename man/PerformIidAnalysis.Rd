@@ -24,7 +24,7 @@ A. Meucci "Risk and Asset Allocation", Springer, 2005}
   Xavier Valls \email{flamejat@gmail.com}
 }
 \references{
-  \url{http://} See Meucci's script for
+  \url{http://symmys.com/node/170} See Meucci's script for
   "PerformIidAnalysis.m"
 }
 

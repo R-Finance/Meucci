@@ -1,5 +1,6 @@
 export(BlackScholesCallPrice)
 export(Central2Raw)
+export(CentralAndStandardizedStatistics)
 export(CMAcombination)
 export(CMAseparation)
 export(ComputeMoments)

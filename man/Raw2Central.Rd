@@ -3,16 +3,27 @@
 \title{Transforms the first n raw moments into the first n central moments}
 \usage{
   Raw2Central(mu_)
+
+  Raw2Central(mu_)
 }
 \arguments{
   \item{mu_}{the raw (multi-period) non-central moment of
   Y-t}
+
+  \item{mu_}{: [vector] (length N corresponding to order N)
+  corresponding raw moments}
 }
 \value{
   mu (multi-period) central moment of Y-t
+
+  mu : [vector] (length N corresponding to order N) central
+  moments
 }
 \description{
   step 6 of projection process:
+
+  Map raw moments into central moments, as described in A.
+  Meucci "Risk and Asset Allocation", Springer, 2005
 }
 \details{
   compute multi-period central moments.
@@ -26,10 +37,15 @@
 }
 \author{
   Ram Ahluwalia \email{rahluwalia@gmail.com}
+
+  Xavier Valls \email{flamejat@gmail.com}
 }
 \references{
   A. Meucci - "Exercises in Advanced Risk and Portfolio
   Management". See page 9 Symmys site containing original
   MATLAB source code \url{http://www.symmys.com}
+
+  \url{http://symmys.com/node/170} See Meucci's script for
+  "Raw2Central.m"
 }
 
