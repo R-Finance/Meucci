@@ -80,3 +80,5 @@ Collate:
     'Cumul2Raw.R'
     'Raw2Central.R'
     'Raw2Cumul.R'
+    'FitExpectationMaximization.R'
+    'QuantileMixture.R'

@@ -5,7 +5,7 @@ library(mvtnorm)
 #'
 #' @references
 #' \url{http://symmys.com/node/170}
-#' See Meucci's script for "S_EigenValueDispersion.R"
+#' See Meucci's script for "S_EigenValueDispersion.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 
