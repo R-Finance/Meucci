@@ -82,3 +82,4 @@ Collate:
     'Raw2Cumul.R'
     'FitExpectationMaximization.R'
     'QuantileMixture.R'
+    'GenerateUniformDrawsOnUnitSphere.R'
