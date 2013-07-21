@@ -30,10 +30,11 @@ Depends:
     xts (>= 0.8),
     matlab,
     pracma,
-    R.utils
+    R.utils,
+    mvtnorm,
+    dlm
 Suggests:
     quadprog,
-    mvtnorm,
     limSolve,
     Matrix,
     MASS,
@@ -83,3 +84,5 @@ Collate:
     'FitExpectationMaximization.R'
     'QuantileMixture.R'
     'GenerateUniformDrawsOnUnitSphere.R'
+    'PlotMarginalsNormalInverseWishart.R'
+    'RandNormalInverseWishart.R'
