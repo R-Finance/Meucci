@@ -1,19 +1,21 @@
 \name{Cumul2Raw}
 \alias{Cumul2Raw}
-\title{Transforms cumulants of Y-t into raw moments}
+\title{Map cumulative moments into raw moments.}
 \usage{
   Cumul2Raw(ka)
 
   Cumul2Raw(ka)
 }
 \arguments{
-  \item{ka}{cumulants of Y}
+  \item{ka}{: [vector] (length N corresponding to order N)
+  cumulative moments}
 
   \item{ka}{: [vector] (length N corresponding to order N)
   cumulative moments}
 }
 \value{
-  mu_ the raw non-central moments of Y
+  mu_ : [vector] (length N corresponding to order N)
+  corresponding raw moments
 
   mu_ : [vector] (length N corresponding to order N)
   corresponding raw moments
@@ -36,11 +38,15 @@
   \kappa_{Y}^{ \big(k\big) } \tilde{ \mu } ^{n-k}_{Y} }
 }
 \author{
-  Ram Ahluwalia \email{rahluwalia@gmail.com}
+  Xavier Valls \email{flamejat@gmail.com} and Ram Ahluwalia
+  \email{rahluwalia@gmail.com}
 
   Xavier Valls \email{flamejat@gmail.com}
 }
 \references{
+  \url{http://symmys.com/node/170} See Meucci's script for
+  "Cumul2Raw.m".
+
   A. Meucci - "Annualization and General Projection of
   Skewness, Kurtosis and All Summary Statistics" - formula
   (24) Symmys site containing original MATLAB source code

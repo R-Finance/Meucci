@@ -34,7 +34,7 @@ Raw2Central = function( mu_ )
   return( mu = mu )
 }
 
-#' Transforms cumulants of Y-t into raw moments
+#' Map cumulative moments into raw moments.
 #'
 #' step 5 of the projection process: 
 #' 
@@ -46,28 +46,35 @@ Raw2Central = function( mu_ )
 #' \equiv \kappa^{ \big(n\big) }_{Y}  +  \sum_{k=1}^{n-1} (n-1)C_{k-1}
 #' \kappa_{Y}^{ \big(k\big) }   \tilde{ \mu } ^{n-k}_{Y}  }
 #' 
-#' @param  ka     cumulants of Y
-#' @return mu_    the raw non-central moments of Y
+#'  @param    ka  : [vector] (length N corresponding to order N) cumulative moments
+#'
+#'  @return   mu_ : [vector] (length N corresponding to order N) corresponding raw moments
 #' 
-#' @author Ram Ahluwalia \email{rahluwalia@@gmail.com}
+#' @author Xavier Valls \email{flamejat@@gmail.com} and Ram Ahluwalia \email{rahluwalia@@gmail.com}
 #' @references
+#' \url{http://symmys.com/node/170}
+#' See Meucci's script for "Cumul2Raw.m".
+#'
 #' A. Meucci - "Annualization and General Projection of Skewness, Kurtosis and All Summary Statistics" - formula (24)
 #' Symmys site containing original MATLAB source code \url{http://www.symmys.com/node/136}
 #' @export
+
 Cumul2Raw = function( ka )
 {
-  N = length( ka )
-  mu_ = ka    
-    
-  for ( n in 1:N )
+  N   = length( ka );
+  mu_ = ka;
+
+  for( n in 2 : N )
   {
-    mu_[n] = ka[n]
-    for ( k in 1:(n-1) ) 
-    {
-      if ( n != 1 ) { mu_[n] = mu_[n] + choose(n-1,k-1) * ka[k] * mu_[n-k] }
-    }
-  }    
-  return( mu_ = mu_ )
+      #ka[ n ] = mu_[ n ]; Doesn't make sense
+
+      for( k in 1 : (n-1) )
+      {
+          mu_[ n ] = mu_[ n ] + choose( n-1, k-1 ) * ka[ k ] * mu_[ n-k ]; 
+      }    
+  }
+
+  return( mu_ );
 }
 
 #' Transforms raw moments into cumulants
