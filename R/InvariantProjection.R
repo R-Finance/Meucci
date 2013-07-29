@@ -9,28 +9,36 @@
 #' \deqn{\tilde{ \mu } ^ {\big(n\big)} _{X}  \equiv E \big\{ X^{n} \big\},
 #' \\ \mu ^{ \big(n\big) }_{X}  \equiv  \sum_0^{n-1}  \big(-1\big)^{n-k}   \mu ^{n-k}_{X}  \tilde{ \mu }^{k}_{X} +  \tilde{ \mu }_{X}^{n}   }
 #' 
-#' @param  mu_   the raw (multi-period) non-central moment of Y-t
-#' @return mu    (multi-period) central moment of Y-t
+#'  @param    mu_ : [vector] (length N corresponding to order N) corresponding raw moments
+#'
+#'  @return   mu  : [vector] (length N corresponding to order N) central moments
+#'
 #' @author Ram Ahluwalia \email{rahluwalia@@gmail.com}
+#'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management". See page 9
 #' Symmys site containing original MATLAB source code \url{http://www.symmys.com}
+#' 
+#' \url{http://symmys.com/node/170}
+#' See Meucci's script for "Raw2Central.m"
 #' @export
 Raw2Central = function( mu_ )
 {
-  N = length( mu_ )
-  mu = mu_
-    
-  for ( n in 2:N )
+  N  = length( mu_ );
+  mu = mu_;
+
+  for( n in 1 : N )
   {
-    mu[n] = ((-1)^n) * (mu_[1])^(n) 
-    for ( k in 1:(n-1) )
-    {
-      if ( n != 1 ) { mu[n] =  mu[n] + choose( n , k ) * ( ( -1 ) ^ ( n - k ) ) * mu_[k] * ( mu_[ 1 ] ) ^ ( n - k ) }
-    }
-    mu[n] = mu[n] + mu_[n]
+    mu[ n ] = ( (-1) ^ n ) * ( mu_[ 1 ] )^( n );
+      
+      for( k in 1 : (n-1) )
+      {
+          if( n != 1 ){ mu[ n ] = mu[ n ] + choose( n, k ) * ((-1)^(n-k)) * mu_[ k ] * (mu_[ 1 ])^(n-k) } ; 
+      }    
+
+      mu[ n ] = mu[ n ] + mu_[ n ];
   }
-    
+
   return( mu = mu )
 }
 
@@ -50,7 +58,8 @@ Raw2Central = function( mu_ )
 #'
 #'  @return   mu_ : [vector] (length N corresponding to order N) corresponding raw moments
 #' 
-#' @author Xavier Valls \email{flamejat@@gmail.com} and Ram Ahluwalia \email{rahluwalia@@gmail.com}
+#' @author Ram Ahluwalia \email{rahluwalia@@gmail.com}
+#'
 #' @references
 #' \url{http://symmys.com/node/170}
 #' See Meucci's script for "Cumul2Raw.m".
@@ -64,13 +73,13 @@ Cumul2Raw = function( ka )
   N   = length( ka );
   mu_ = ka;
 
-  for( n in 2 : N )
+  for( n in 1 : N )
   {
-      #ka[ n ] = mu_[ n ]; Doesn't make sense
+      ka[ n ] = mu_[ n ];
 
       for( k in 1 : (n-1) )
       {
-          mu_[ n ] = mu_[ n ] + choose( n-1, k-1 ) * ka[ k ] * mu_[ n-k ]; 
+          if( n != 1 ){ mu_[ n ] = mu_[ n ] + choose( n-1, k-1 ) * ka[ k ] * mu_[ n-k ] }; 
       }    
   }
 
@@ -87,14 +96,20 @@ Cumul2Raw = function( ka )
 #' in formula (21). See Kendall and Stuart (1969)
 #'
 #' \deqn{ \kappa^{ \big(n\big) }_{X}   \equiv \tilde{ \mu } ^{ \big(n\big) }_{X} -  \sum_{k=1}^{n-1} (n-1)C_{k-1}  \kappa_{X}^{ \big(k\big) }   \tilde{ \mu } ^{n-k}_{X} }
-#' 
-#' @param mu_       non-central moments of the invariant X-t
-#' @return ka       cumulants of X-t
+#'
+#'  @param    mu_ : [vector] (length N corresponding to order N) corresponding raw moments
+#'
+#'  @return   ka  : [vector] (length N corresponding to order N) cumulative moments
+#'
 #' @author Ram Ahluwalia \email{rahluwalia@@gmail.com}
 #' @references
 #' A. Meucci - "Annualization and General Projection of Skewness, Kurtosis and All Summary Statistics" - formula (21)
 #' Symmys site containing original MATLAB source code \url{http://www.symmys.com/node/136}
+#'
+#' \url{http://symmys.com/node/170}
+#' See Meucci's script for "Raw2Cumul.m"
 #' @export
+
 Raw2Cumul = function( mu_ )
 {
   N = length( mu_ )
@@ -102,7 +117,8 @@ Raw2Cumul = function( mu_ )
     
   for ( i in 1:N )
   {
-    ka[i] = mu_[i]
+    ka[i] = mu_[i];
+
     for ( k in 1:(i-1) ) 
     { 
       if ( i != 1 ) { ka[i] = ka[i] - choose(i-1,k-1) * ka[k] * mu_[i-k] }
@@ -119,13 +135,19 @@ Raw2Cumul = function( mu_ )
 #'
 #' \deqn{ \tilde{ \mu }^{ \big(1\big) }_{X} \equiv \mu ^{\big(1\big)}_{X}
 #' \\ \tilde{ \mu }^{ \big(n\big) }_{X}  \equiv \mu ^{n}_{X} \sum_{k=0}^{n-1}  \big(-1\big)^{n-k+1}   \mu ^{n-k}_{X}  \tilde{ \mu }^{\big(k\big)}_{X} }
-
-#' @param   mu      a vector of central moments
-#' @return  mu_     a vector of non-central moments
+#'
+#'  @param   mu  : [vector] (length N corresponding to order N) central moments
+#'
+#'  @return  mu_ : [vector] (length N corresponding to order N) corresponding raw moments
+#'
 #' @author Ram Ahluwalia \email{rahluwalia@@gmail.com}
+#'
 #' @references 
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management". See page 10.
 #' Symmys site containing original MATLAB source code \url{http://www.symmys.com}
+#'
+#' \url{http://symmys.com/node/170}
+#' See Meucci's script for "Central2Raw.m"
 #' @export
 Central2Raw = function( mu )
 {
