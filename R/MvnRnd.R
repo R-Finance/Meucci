@@ -20,10 +20,10 @@ MvnRnd = function( M , S , J )
   return( X = X )
     
     # # compute sample covariance: NOTE defined as "cov(Y,1)", not as "cov(Y)"
-    # S_ = cov( Y , 1 )
+    # S_ = cov( Y )
     # 
     # # solve Riccati equation using Schur method
-    #     zerosMatrix = matrix( rep( 0 , length( N * N ) ) , nrow = N )
+    #     zerosMatrix = matrix( 0 ,  N ,  N );
     #     # define the Hamiltonian matrix
     #     H1 = cbind( zerosMatrix , -1*S_ )
     #     H2 = cbind( -S , zerosMatrix ) 

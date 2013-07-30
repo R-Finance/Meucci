@@ -10,9 +10,7 @@
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 #' @export
 
-
-library(scatterplot3d);
-
+if ( !require( "scatterplot3d" ) ) stop("scatterplot3d package installation required for this script")
 ###################################################################################################################
 ### Set inputs
 s  = c( 1, 1 ); # variances

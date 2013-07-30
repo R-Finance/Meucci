@@ -10,6 +10,8 @@ library(scatterplot3d);
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 #' @export
 
+if ( !require( "scatterplot3d" ) ) stop("scatterplot3d package installation required for this script")
+
 #################################################################################################################
 ### Input  
 

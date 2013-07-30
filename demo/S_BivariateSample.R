@@ -1,6 +1,3 @@
-library(mvtnorm);
-library(latticeExtra);
-
 #' This script generates draws from a bivariate distribution with different marginals,
 #' as described in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 2.
 #'
@@ -9,6 +6,8 @@ library(latticeExtra);
 #' See Meucci's script for "S_BivariateSample.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
+
+if ( !require( "latticeExtra" ) ) stop("latticeExtra package installation required for this script")
 
 ###################################################################################################################
 ### input parameters

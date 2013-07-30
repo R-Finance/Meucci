@@ -1,6 +1,3 @@
-library(mvtnorm);
-library(pracma);
-
 #'This script projects the distribution of the market invariants for the derivatives market
 #'Then it computes the distribution of prices at the investment horizon  as described in A. Meucci,
 #'"Risk and Asset Allocation", Springer, 2005,  Chapter 3.
@@ -9,8 +6,7 @@ library(pracma);
 #' \url{http://symmys.com/node/170}
 #' See Meucci's script for "S_CallsProjectionPricing.m"
 #'
-#' @author Xavier Valls \email{flamejat@@gmail.com}
-
+#' @author Xavier Valls \email{flamejat@@gmail.com} 
 
 ##################################################################################################################
 ### Load data

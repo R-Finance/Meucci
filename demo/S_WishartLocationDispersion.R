@@ -1,6 +1,3 @@
-library(mvtnorm);
-library(psych);
-
 #' This script computes the location-dispersion ellipsoid of the normalized (unit variance, zero expectation)
 #' first diagonal and off-diagonal elements of a 2x2 Wishart distribution as a function of the inputs,
 #' as described in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 2.

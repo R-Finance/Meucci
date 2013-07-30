@@ -1,5 +1,3 @@
-library( mvtnorm );
-
 #' Simulate invariants for the regression model, as described in  A. Meucci, 
 #' "Risk and Asset Allocation", Springer, 2005, Chapter 4.
 #'

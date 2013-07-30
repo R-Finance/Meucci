@@ -33,8 +33,7 @@ Depends:
     R.utils,
     mvtnorm,
     dlm,
-    quadprog,
-    signal
+    quadprog
 Suggests:
     limSolve,
     Matrix,
@@ -48,6 +47,8 @@ Suggests:
     expm,
     latticeExtra,
     scatterplot3d,
+    signal,
+    fExtremes
 License: GPL
 URL: http://r-forge.r-project.org/projects/returnanalytics/
 Copyright: (c) 2012
