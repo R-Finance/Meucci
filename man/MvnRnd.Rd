@@ -1,33 +1,34 @@
 \name{MvnRnd}
 \alias{MvnRnd}
-\title{Generates normal simulations whose sample moments match the population moments}
+\title{Generate normal simulations whose sample moments match the population moments,
+as described in  A. Meucci, "Risk and Asset Allocation", Springer, 2005.}
 \usage{
   MvnRnd(M, S, J)
 }
 \arguments{
-  \item{M}{a numeric indicating the sample first moment of
-  the distribution}
+  \item{M}{: [vector] (N x 1) expectation}
 
-  \item{S}{a covariance matrix}
+  \item{S}{: [matrix] (N x N) covariance matrix}
 
-  \item{J}{a numeric indicating the number of trials}
+  \item{J}{: [scalar] number of draws (even number)}
+}
+\value{
+  X : [matrix] (J x N) of drawsF_U : [vector] (J x 1) PDF
+  values
 }
 \description{
-  Adapted from file 'MvnRnd.m'. Most recent version of
-  article and code available at
-  http://www.symmys.com/node/162 see A. Meucci -
-  "Simulations with Exact Means and Covariances", Risk,
-  July 2009
+  Generate normal simulations whose sample moments match
+  the population moments, as described in A. Meucci, "Risk
+  and Asset Allocation", Springer, 2005.
 }
 \author{
-  Ram Ahluwalia \email{rahluwalia@gmail.com}
+  Xavier Valls \email{flamejat@gmail.com} and Ram Ahluwalia
+  \email{rahluwalia@gmail.com}
 }
 \references{
-  \url{http://www.symmys.com} TODO: Add Schur
-  decomposition. Right now function is only sampling from
-  mvrnorm so sample moments do no match population moments
-  I have sample code commented out below to implement this
-  correctly but I require a function that returns the
-  unitaryMatrix from a Schur decomposition
+  \url{http://symmys.com/node/170},
+  \url{http://www.symmys.com/node/162}{A. Meucci -
+  "Simulations with Exact Means and Covariances", Risk,
+  July 2009} See Meucci's script for "MvnRnd.m"
 }
 

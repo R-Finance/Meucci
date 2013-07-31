@@ -48,7 +48,8 @@ Suggests:
     latticeExtra,
     scatterplot3d,
     signal,
-    fExtremes
+    fExtremes,
+    QZ
 License: GPL
 URL: http://r-forge.r-project.org/projects/returnanalytics/
 Copyright: (c) 2012
