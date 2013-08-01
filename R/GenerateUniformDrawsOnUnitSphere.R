@@ -7,9 +7,9 @@
 #'	@return   X  : [matrix] (T x N) of draws
 #'
 #'@note
-#' \item{ Initial script by Xiaoyu Wang - Dec 2006}
-#' \item{ We decompose X=U*R, where U is a uniform distribution on unit sphere and
-#     R is a distribution on (0,1) proportional to r^(Dims-1), i.e. the area of surface of radius r }
+#' Initial script by Xiaoyu Wang - Dec 2006
+#' We decompose X=U*R, where U is a uniform distribution on unit sphere and
+#     R is a distribution on (0,1) proportional to r^(Dims-1), i.e. the area of surface of radius r 
 #'
 #' @references
 #' \url{http://symmys.com/node/170}

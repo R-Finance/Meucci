@@ -19,9 +19,9 @@
   Springer, 2005.
 }
 \note{
-  \item{ Initial script by Xiaoyu Wang - Dec 2006} \item{
-  We decompose X=U*R, where U is a uniform distribution on
-  unit sphere and
+  Initial script by Xiaoyu Wang - Dec 2006 We decompose
+  X=U*R, where U is a uniform distribution on unit sphere
+  and
 }
 \author{
   Xavier Valls \email{flamejat@gmail.com}

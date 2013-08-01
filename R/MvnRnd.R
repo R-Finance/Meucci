@@ -1,5 +1,3 @@
-if ( !require( "QZ" ) ) stop("QZ package installation required for this script")
-
 #' Generate normal simulations whose sample moments match the population moments,
 #' as described in  A. Meucci, "Risk and Asset Allocation", Springer, 2005.
 #'  
@@ -18,6 +16,7 @@ if ( !require( "QZ" ) ) stop("QZ package installation required for this script")
 
 MvnRnd = function( M, S, J )
 {
+	if ( !require( "QZ" ) ) stop("QZ package installation required for this script")
 	N = length(M);
 
 	# generate antithetic variables (mean = 0)
