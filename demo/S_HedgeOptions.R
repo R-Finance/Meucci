@@ -1,5 +1,14 @@
+#' This script compares hedging based on Black-Scholes deltas with Factors on Demand hedging, as described in 
+#' A. Meucci "Risk and Asset Allocation", Springer, 2005, Chapter 3.
+#'
+#' @references
+#' \url{http://symmys.com/node/170}
+#' See Meucci's script for "S_HedgeOptions.m"
+#'
+#' @author Xavier Valls \email{flamejat@@gmail.com}
+
 ##################################################################################################################
-### This script compares hedging based on Black-Scholes deltas with Factors on Demand hedging 
+### 
 ### == Chapter 3 ==
 ##################################################################################################################
 
