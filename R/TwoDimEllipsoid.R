@@ -32,8 +32,8 @@ TwoDimEllipsoid = function( Location, Square_Dispersion, Scale = 1, PlotEigVecto
 	for( i in 1 : NumSteps )
 	{
 	    # normalized variables (parametric representation of the ellipsoid)
-	    y = c( cos( Angle[ i ] ), sin( Angle[ i ] ) );
-	    Centered_Ellipse = c( Centered_Ellipse, Eigen$vectors %*% diag(sqrt(Eigen$values)) %*% y );   ##ok<AGROW>
+	    y = rbind( cos( Angle[ i ] ), sin( Angle[ i ] ) );
+	    Centered_Ellipse = c( Centered_Ellipse, Eigen$vectors %*% diag(sqrt(Eigen$values), length(Eigen$values)) %*% y );   ##ok<AGROW>
 	}
 
 	R = Location %*% array( 1, NumSteps ) + Scale * Centered_Ellipse;
