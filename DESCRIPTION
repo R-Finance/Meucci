@@ -87,3 +87,5 @@ Collate:
     'FitMultivariateGarch.R'
     'MvnRnd.R'
     'MleRecursionForStudentT.R'
+    '
+    FitOrnsteinUhlenbeck.R'
