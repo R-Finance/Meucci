@@ -87,5 +87,6 @@ Collate:
     'FitMultivariateGarch.R'
     'MvnRnd.R'
     'MleRecursionForStudentT.R'
+    'CovertCompoundedReturns2Price.R'
     '
     FitOrnsteinUhlenbeck.R'
