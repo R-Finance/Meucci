@@ -90,3 +90,4 @@ Collate:
     'CovertCompoundedReturns2Price.R'
     '
     FitOrnsteinUhlenbeck.R'
+    'MaxRsqCS.R'
