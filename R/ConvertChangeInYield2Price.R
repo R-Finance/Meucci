@@ -21,7 +21,8 @@
 ConvertChangeInYield2Price = function( Exp_DY, Cov_DY, Times2Mat, CurrentPrices )
 {
 	Mu    = log( CurrentPrices ) - Times2Mat * Exp_DY;
-	Sigma = diag( Times2Mat^2 ) %*% Cov_DY;
+	Sigma = diag( Times2Mat ^ 2, length(Times2Mat) ) %*% Cov_DY;
+
 
 	Exp_Prices = exp(Mu + (1/2) * diag( Sigma ));
 	Cov_Prices = exp(Mu + (1/2) * diag( Sigma )) %*% t(exp(Mu + (1/2) * diag(Sigma))) * ( exp( Sigma ) - 1);

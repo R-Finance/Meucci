@@ -109,7 +109,6 @@ MaxRsqCS = function(X, B, W, A = NULL, D = NULL, Aeq = NULL, Deq, lb = NULL, ub 
     
 
     b = ipop( c = matrix( FirstDegree ), H = SecondDegree, A = Amat, b = bvec, l = lb , u = ub , r = rep(0, length(bvec)) )
-    
     # reshape for output
     G = t( matrix( attributes(b)$primal, N, ) );
 

@@ -1,9 +1,3 @@
-
-##################################################################################################################
-### This script fits a cross-sectional linear factor model creating industry factors, 
-### 
-### == Chapter 3 ==
-##################################################################################################################
 #' This script fits a cross-sectional linear factor model creating industry factors, where the industry factors 
 #' are constrained to be uncorrelated with the market as described in A. Meucci, "Risk and Asset Allocation",
 #' Springer, 2005,  Chapter 3.
@@ -49,6 +43,8 @@ Deq = matrix( 0, K, 1 );
 #BOUNDARIES 
 lb = -100
 ub = 700
+
+#THE ROWS 3 and 6 should be 0 and instead of it we got outliers.
 G   = MaxRsqCS(X, B, W, A, D, Aeq, Deq, lb, ub);
 
 # compute intercept a and residual U
