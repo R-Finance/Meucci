@@ -92,5 +92,6 @@ Collate:
     'MaxRsqCS.R'
     'EfficientFrontierReturnsBenchmark.R'
     'EfficientFrontierReturns.R'
+    'EfficientFrontierPrices.R'
     '
     FitOrnsteinUhlenbeck.R'
