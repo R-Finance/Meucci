@@ -56,9 +56,9 @@
 }
 \references{
   \url{http://symmys.com/node/170} See Meucci's script for
-  "EfficientFrontierReturns.m"
+  "FitOrnsteinUhlenbeck.m"
 
   \url{http://symmys.com/node/170} See Meucci's script for
-  "FitOrnsteinUhlenbeck.m"
+  "EfficientFrontierReturns.m"
 }
 

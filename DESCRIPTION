@@ -94,3 +94,6 @@ Collate:
     'EfficientFrontierReturns.R'
     'EfficientFrontierPrices.R'
     'FitOrnsteinUhlenbeck.R'
+    '
+    FitOrnsteinUhlenbeck.R'
+    'PlotVolVsCompositionEfficientFrontier.R'
