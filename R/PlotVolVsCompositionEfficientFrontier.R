@@ -31,8 +31,5 @@ PlotVolVsCompositionEfficientFrontier = function( Portfolios, vol )
 	    y = rbind( 0, matrix(Data[ , N-n+1 ]), 0 );
 	    polygon( v, y, col = colors[ mod( n, numcolors ) + 1 ] );
 	}
-	#set(gca,'xlim',[v(1) v(end)],'ylim',[0 max(max(Data))])
-	#xlabel('Risk %')
-    #ylabel('Portfolio weights')
 
 }
