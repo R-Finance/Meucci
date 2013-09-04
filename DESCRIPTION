@@ -98,6 +98,4 @@ Collate:
     'BlackLittermanFormula.R'
     'Log2Lin.R'
     'PlotCompositionEfficientFrontier.R'
-    '
-    FitOrnsteinUhlenbeck.R'
     'MaxRsqTS.R'
