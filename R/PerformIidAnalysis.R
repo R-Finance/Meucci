@@ -17,7 +17,7 @@
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 #' @export
 
-PerformIidAnalysis = function( Dates = dim( Data, 1), Data, Str = "")
+PerformIidAnalysis = function( Dates = dim( Data)[1], Data, Str = "")
 {
 
 	##########################################################################################################

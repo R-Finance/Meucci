@@ -29,11 +29,11 @@ X = diff( derivatives$impVol[ eachFiveRowsSeq , maturityIndex, moneynessIndex ] 
 PerformIidAnalysis( 1:length(X), X, 'Changes in implied vol');
 
 Y = diff(log(derivatives$impVol[ eachFiveRowsSeq , maturityIndex, moneynessIndex ]));
-PerformIidAnalysis( 1:size(Y,1), Y, 'Changes in log of implied vol' );
+PerformIidAnalysis( 1:length( Y ), Y, 'Changes in log of implied vol' );
 
 ##################################################################################################################
 ### Multivariate test with AR(1) structure
-[T, Mat, Mon] 
+
 Dim = dim(derivatives$impVol[ eachFiveRowsSeq  , ,  ]);
 Z = matrix(log(derivatives$impVol[ eachFiveRowsSeq  , , ] ), Dim[ 1 ], Dim[ 2 ] * Dim[ 3 ]);
 # VAR(1) model by least square
@@ -41,9 +41,7 @@ X = Z[ -1,  ];
 F = cbind(matrix( 1, Dim[ 1 ]-1, 1),  Z[ -length( Z[1, ] ) , ]);
 E_XF = t( X ) %*% F / Dim[ 1 ];
 E_FF = t( F ) %*% F / Dim[ 1 ];
-B = E_XF %*% (E_FF \ diag( 1,  ncol(size(E_FF) ) ) );
+B = E_XF %*% solve(E_FF);
 Eps = X - F %*% t( B ); # residuals
 
-PerformIidAnalysis(1:size(Eps,1), Eps(:,3), 'VAR(1) residuals');
-
-### EOF
+PerformIidAnalysis(1:dim(Eps)[1], Eps[ , 3 ], "VAR(1) residuals");

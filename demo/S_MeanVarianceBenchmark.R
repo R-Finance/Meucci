@@ -138,7 +138,7 @@ legend( "topleft", 1.9, c( "total ret", "relative" ), col = c( "blue","red" ),
 # frontiers in relative return space
 dev.new();
 plot( Rel_Std_Deviation, Rel_ExpectedValue, type = "l", lwd = 2, col = "blue", xlab = "TE rets.", ylab = "EOP rets.",
-	xlim =c( Rel_Std_Deviation_b[1], Rel_Std_Deviation_b[length(Rel_Std_Deviation_b)] ), ylim = c( min( Rel_ExpectedValue_b ), max( Rel_ExpectedValue_b )) ););
+	xlim =c( Rel_Std_Deviation_b[1], Rel_Std_Deviation_b[length(Rel_Std_Deviation_b)] ), ylim = c( min( Rel_ExpectedValue_b ), max( Rel_ExpectedValue_b )) );
 lines( Rel_Std_Deviation_b, Rel_ExpectedValue_b, lwd = 2, col = "red" );
 legend( "topleft", 1.9, c( "total ret", "relative" ), col = c( "blue","red" ),
      lty=1, bg = "gray90" );

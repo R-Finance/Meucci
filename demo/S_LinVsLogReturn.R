@@ -54,7 +54,6 @@ R$q = exp( C$q ) - 1;
 
 Col = rgb( 0.8, 0.8, 0.8 );
 
-subplot('Position', ( 0.05, 0.55, 0.9, 0.4 ) );
 
 par(mfrow=c(2,1));
 

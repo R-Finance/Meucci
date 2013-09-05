@@ -139,12 +139,12 @@ par( mfrow = c( 2, 1) );
 b = barplot(Bias_Gesq +Ineff_Gesq , col = "red", main = "stress-test of estimator e");
 barplot( Ineff_Gesq, col="blue", add = TRUE);
 lines( b, Err_Gesq);
-legend( "topleft", 1.9, c( "bias²", "ineff²", "error²" ), col = c( "red","blue", "black" ),
+legend( "topleft", 1.9, c( "bias^2", "ineff^2", "error^2" ), col = c( "red","blue", "black" ),
      lty=1, lwd=c(5,5,1),bg = "gray90" );
 
 
 b = barplot(Bias_Gbsq+Ineff_Gbsq, col = "red", main = "stress-test of estimator b");
 barplot( Ineff_Gbsq, col="blue", add = TRUE);
 lines( b, Err_Gbsq);
-legend( "topleft", 1.9, c( "bias²", "ineff²", "error²" ), col = c( "red","blue", "black" ),
+legend( "topleft", 1.9, c( "bias^2", "ineff^2", "error^2" ), col = c( "red","blue", "black" ),
      lty=1, lwd=c(5,5,1),bg = "gray90" );

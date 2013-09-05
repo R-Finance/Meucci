@@ -8,11 +8,6 @@
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 
 ##################################################################################################################
-### 
-### == Chapter 3 ==
-##################################################################################################################
-
-##################################################################################################################
 ### Load data
 load( "../data/implVol.Rda" );
 
@@ -105,7 +100,7 @@ BSCP = BlackScholesCallPrice( spot_T, Strikes, r_free, impVol_T, Time2Mats / 252
 a_bs = BSCP$cash / BSCP$c * r_free * tau / 252;
 b_bs = t( BSCP$delta / BSCP$c * spot_T);
 
-printf( "OLS: a = [ %s\t]\n", sprintf("\t%7.4f", t(a) ) ));
+printf( "OLS: a = [ %s\t]\n", sprintf("\t%7.4f", t(a) ) );
 printf( "B-S: a = [ %s\t]\n", sprintf("\t%7.4f", t(a_bs) ) );
 printf( "OLS: b = [ %s\t]\n", sprintf("\t%7.4f", t(b) ) );
 printf( "B-S: b = [ %s\t]\n", sprintf("\t%7.4f", t(b_bs) ) );
@@ -113,6 +108,6 @@ printf( "B-S: b = [ %s\t]\n", sprintf("\t%7.4f", t(b_bs) ) );
 for( i in 1 : numCalls )
 {
     dev.new();
-    plot( Rsp, Rc[ , i ], xlab = "return underlying" , ylab = "return call option");
+    plot( Rsp, Rc[ , i ], xlab = "return underlying" , ylab = "return call option" );
 }
 

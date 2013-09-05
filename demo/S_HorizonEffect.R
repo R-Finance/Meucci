@@ -17,7 +17,7 @@
 
 ##################################################################################################################
 # Load parameters of the model: D, muX, sigmaF, sigmaEps
-load( "../data/DB_LinearModel.mat" );
+load( "../data/linearModel.Rda" );
 
 # Specify range of investment horizon, weeks
 tauRangeWeeks = 1:52;
@@ -95,4 +95,3 @@ lines(tauRangeWeeks, meanCorrU, col = "blue");
 lines(tauRangeWeeks, minCorrU, col = "green");
 legend( "topleft", 1.9, c( "max absolute corr", "mean absolute corr", "min absolute corr" ), col = c( "red","blue", "green" ),
      lty=1, bg = "gray90" );
-}

@@ -68,21 +68,20 @@ Y = matrix(Infl[ -nrow( dbFFP$Data ) ]);
 # DefineProbs = "5" : partial information prox. kernel damping
 # DefineProbs = "6" : partial information: match covariance
 
-DefineProbs = "6";
+DefineProbs = 1;
 
 T = dim(X)[1];
 p = matrix( 0, T, 1 );
 
 
-if( DefineProbs = 1)
+if( DefineProbs == 1)
 {
 	# rolling window
 
         tau = 2 * 252;
         p[ 1:tau ] = 1;
         p = p / sum( p );
-}
-} else if( DefineProbs = 2 )
+} else if( DefineProbs == 2 )
 { 	
 	# exponential smoothing
 
@@ -90,14 +89,14 @@ if( DefineProbs = 1)
         p   = exp( -lmd * ( T - ( 1 : T ) ) );
         p   = p / sum( p );
 
-} else if( DefineProbs = 3 )
+} else if( DefineProbs == 3 )
 { 
 	# market conditions
         Cond = Y >= 2.8;
         p[ Cond ] = 1;
         p = p / sum( p );
 
-} else if( DefineProbs = 4 )
+} else if( DefineProbs == 4 )
 { 
 	# kernel damping
         y  = 3;
@@ -105,7 +104,7 @@ if( DefineProbs = 1)
         p  = dmvnorm( Y, y, h2 );
         p  = p / sum( p );
     
-} else if( DefineProbs = 5 )
+} else if( DefineProbs == 5 )
 { 
 	# partial information prox. kernel damping
         y  = 3;
@@ -113,7 +112,7 @@ if( DefineProbs = 1)
         h2 = cov( 1 * diff( Y ) );
         p  = LeastInfoKernel( Y, y, h2 );
     
-} else if( DefineProbs = 6 ){ 
+} else if( DefineProbs == 6 ){ 
 	 #partial information: match covariance
 
 		l_c = 0.0055;

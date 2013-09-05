@@ -187,23 +187,23 @@ par( mfrow = c(4, 1) );
 b = barplot( Bias_Gasq + Ineff_Gasq, col = "red", main = "stress-test of estimator a" );
 barplot( Ineff_Gasq, col = "blue", add = TRUE);
 lines( b, Err_Gasq);
-legend( "topleft", 1.9, c( "bias²", "ineff²", "error²" ), col = c( "red","blue", "black" ),
+legend( "topleft", 1.9, c( "bias^2", "ineff^2", "error^2" ), col = c( "red","blue", "black" ),
      lty=1, lwd=c(5,5,1),bg = "gray90" );
 
 b = barplot( Bias_Gbsq + Ineff_Gbsq, col = "red", main = "stress-test of estimator b" );
 barplot( Ineff_Gbsq, col = "blue", add = TRUE);
 lines( b, Err_Gbsq);
-legend( "topleft", 1.9, c( "bias²", "ineff²", "error²" ), col = c( "red","blue", "black" ),
+legend( "topleft", 1.9, c( "bias^2", "ineff^2", "error^2" ), col = c( "red","blue", "black" ),
      lty=1, lwd=c(5,5,1),bg = "gray90" );
 
 b = barplot( Bias_Gcsq + Ineff_Gcsq, col = "red", main = "stress-test of estimator c" );
 barplot( Ineff_Gcsq, col = "blue", add = TRUE);
 lines( b, Err_Gcsq);
-legend( "topleft", 1.9, c( "bias²", "ineff²", "error²" ), col = c( "red","blue", "black" ),
+legend( "topleft", 1.9, c( "bias^2", "ineff^2", "error^2" ), col = c( "red","blue", "black" ),
      lty=1, lwd=c(5,5,1),bg = "gray90" );
 
 b = barplot( Bias_Gdsq + Ineff_Gdsq, col = "red", main = "stress-test of estimator d" );
 barplot( Ineff_Gdsq, col = "blue", add = TRUE);
 lines( b, Err_Gdsq);
-legend( "topleft", 1.9, c( "bias²", "ineff²", "error²" ), col = c( "red","blue", "black" ),
+legend( "topleft", 1.9, c( "bias^2", "ineff^2", "error^2" ), col = c( "red","blue", "black" ),
      lty=1, lwd=c(5,5,1),bg = "gray90" );
