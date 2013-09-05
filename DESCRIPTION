@@ -99,3 +99,7 @@ Collate:
     'Log2Lin.R'
     'PlotCompositionEfficientFrontier.R'
     'MaxRsqTS.R'
+    'PlotDistributions.R'
+    'DoubleDecay.R'
+    'Fit2Moms.R'
+    'LeastInfoKernel.R'

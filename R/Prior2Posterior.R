@@ -1,41 +1,36 @@
-#' Plot numerical and analytical prior and posterior distributions
+
+#' Calculate the full-confidence posterior distributions of Mu and Sigma
 #'
-#' @param X       a vector containing the dataset
-#' @param p       a vector cotaining the prior probability values
-#' @param Mu      a vector containing the prior means
-#' @param Sigma   a vector containing the prior standard deviations
-#' @param p_      a vector containing the posterior probability values
-#' @param Mu_     a vector containing the posterior means
-#' @param Sigma_  a vector containing the posterior standard deviations
+#' \deqn{ \tilde{ \mu }  \equiv \mu +  \Sigma  Q'    {\big(Q \Sigma  Q' \big)}^{-1}   \big( \tilde{\mu}_{Q} - Q \mu \big),
+#' \\ \tilde{ \Sigma } \equiv \Sigma + \Sigma G' \big({\big(G \Sigma  G' \big)}^{-1} \tilde{ \Sigma }_G {\big(G \Sigma  G' \big)}^{-1} - {\big(G \Sigma  G' \big)}^{-1} \big) G \Sigma }
+#' @param M     a numeric vector with the Mu of the normal reference model
+#' @param Q     a numeric vector used to construct a view on expectation of the linear combination QX
+#' @param M_Q   a numeric vector with the view of the expectations of QX
+#' @param S     a covariance matrix for the normal reference model
+#' @param G     a numeric vector used to construct a view on covariance of the linear combination GX
+#' @param S_G   a numeric with the expectation associated with the covariance of the linear combination GX
+#'
+#' @return a list with 
+#' @return M_   a numeric vector with the full-confidence posterior distribution of Mu
+#' @return S_   a covariance matrix with the full-confidence posterior distribution of Sigma
+#'
+#' @references 
+#' \url{http://www.symmys.com}
+#' \url{http://ssrn.com/abstract=1213325}
+#' A. Meucci - "Fully Flexible Views: Theory and Practice". See formula (21) and (22) on page 7
+#' See Meucci script Prior2Posterior.m attached to Entropy Pooling Paper
 #' @author Ram Ahluwalia \email{ram@@wingedfootcapital.com}
 #' @export
-PlotDistributions = function( X , p , Mu , Sigma , p_ , Mu_ , Sigma_ )
+
+Prior2Posterior = function( M , Q , M_Q , S , G , S_G )
 {
-  J = nrow( X )
-  N = ncol( X )
-    
-  NBins = round( 10*log( J ) )
-    
-  for ( n in 1:N )
-  {        
-    # set ranges
-    xl = min( X[ , n ] )
-    xh = max( X[ , n ] )
-    x = as.matrix(seq(from=xl, to=xh, by=(xh-xl)/100))
-        
-    # posterior numerical
-    # h3 = pHist(X[ ,n] , p_ , NBins )
-        
-    # posterior analytical        
-    y1 = dnorm( x , Mu_[n] , sqrt( Sigma_[n,n] ) )
-    h4 = plot( x , y1,  type='l', col='red', xlab='', ylab='' )        
-        
-    # prior analytical
-    par(new = TRUE)
-    y2 = dnorm( x , Mu[n] ,sqrt( Sigma[n,n] ) )
-    h2 = plot( x , y2, type='l', col='blue', xlab='', ylab='' )
-        
-    # xlim( cbind( xl , xh ) )
-    legend(x = 1.5, y =0.4 ,legend=c("analytical","prior"), lwd=c(0.2,0.2), lty=c(1,1), col=c("red", "blue"))
-  }
+  # Compute posterior moments
+  
+  if ( Q != 0 ) { M_ = M + S %*% t(Q) %*% solve( Q %*% S %*% t(Q) ) %*% ( M_Q - Q %*% M) }
+  else { M_ = M }
+  
+  if ( G != 0 ) { S_ = S + (S %*% t(G)) %*% ( solve(G %*% S %*% t(G)) %*% S_G %*% solve(G %*% S %*% t(G)) - solve( G %*% S %*% t(G)) ) %*% (G %*% S) }
+  else { S_ = S }
+  
+  return( list( M_ = M_ , S_ = S_ ) )
 }
