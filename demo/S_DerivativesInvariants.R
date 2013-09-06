@@ -11,7 +11,7 @@
 ##################################################################################################################
 ### Load implied vol for options on SPX for different time to maturity and moneyness
 # Variable name: derivatives
-load('../data/derivatives.Rda');
+load('../data/derivatives.rda');
 
 ##################################################################################################################
 ### Simple univariate test

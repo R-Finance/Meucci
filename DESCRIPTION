@@ -104,3 +104,4 @@ Collate:
     'DoubleDecay.R'
     'Fit2Moms.R'
     'LeastInfoKernel.R'
+    'data.R'

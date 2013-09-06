@@ -5,7 +5,7 @@
 #'"Risk and Asset Allocation", Springer, 2005,  Chapter 3.
 #'
 #' @references
-#' \url{http://}
+#' \url{http://symmys.com/node/170}
 #' See Meucci's script for "S_BondProjectionPricingNormal.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
