@@ -9,7 +9,7 @@
 
 ##################################################################################################################
 ### Load government yield curve and bond yield data for different dates
-load("../data/fixedIncome.Rda");
+load("../data/fixedIncome.rda");
 
 ##################################################################################################################
 ### Pick time-to-maturity for one point on the yield curve

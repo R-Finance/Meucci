@@ -13,7 +13,7 @@
 
 # load 'spot' for underlying and current vol surface, given by
 # 'impVol' for different 'days2Maturity' and 'moneyness' (K/S)
-load("../data/implVol.Rda");
+load("../data/implVol.rda");
 
 ##################################################################################################################
 ### Inputs

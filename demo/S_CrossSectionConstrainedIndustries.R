@@ -10,10 +10,10 @@
 
 ##################################################################################################################
 ### Loads weekly stock returns X and indices stock returns F
-load("../data/securitiesTS.Rda");
+load("../data/securitiesTS.rda");
 Data_Securities = securitiesTS$data[ , -1 ]; # 1st column is date
 
-load("../data/securitiesIndustryClassification.Rda");
+load("../data/securitiesIndustryClassification.rda");
 Securities_IndustryClassification = securitiesIndustryClassification$data;
 ##################################################################################################################
 ### Linear returns for stocks

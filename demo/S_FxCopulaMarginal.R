@@ -11,7 +11,7 @@
 ### Load data and select the pair to display
 
 library(pracma)
-load( "../data/fX.Rda" )
+load( "../data/fX.rda" )
 
 Display = c( 1, 2 );  # 1 = Spot USD/EUR; 2 = Spot USD/GBP; 3 = Spot USD/JPY; 
 

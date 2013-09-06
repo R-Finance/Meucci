@@ -17,7 +17,7 @@
 
 ##################################################################################################################
 # Load parameters of the model: D, muX, sigmaF, sigmaEps
-load( "../data/linearModel.Rda" );
+load( "../data/linearModel.rda" );
 
 # Specify range of investment horizon, weeks
 tauRangeWeeks = 1:52;

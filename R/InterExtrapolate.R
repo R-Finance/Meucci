@@ -28,15 +28,14 @@
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 #' @export
 
-#  examples
+#  examples (MATLAB)
 #
 #  [x1,x2] = meshgrid(0:.2:1);
 #  z = exp(x1+x2);
 #  Xi = rand(100,2)*2-.5;
 #  Zi = interpne(z,Xi,{0:.2:1, 0:.2:1},'linear');
 #  surf(0:.2:1,0:.2:1,z)
-#  hold on
-#  plot3(Xi(:,1),Xi(:,2),Zi,'ro')
+#  plot3( Xi(:,1),Xi(:,2),Zi,'ro')
 #
 
 InterExtrapolate = function( V, Xi, nodelist, method )

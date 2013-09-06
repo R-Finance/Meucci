@@ -10,13 +10,13 @@
 ##################################################################################################################
 ### Load data
 # loads weekly stock returns X and indices stock returns F
-load("../data/securitiesTS.Rda");
+load("../data/securitiesTS.rda");
 Data_Securities = securitiesTS$data[ , -1 ]; # 1st column is date
 
-load("../data/sectorsTS.Rda");
+load("../data/sectorsTS.rda");
 Data_Sectors = sectorsTS$data[ , -(1:2) ];
 
-load("../data/securitiesIndustryClassification.Rda");
+load("../data/securitiesIndustryClassification.rda");
 Securities_IndustryClassification = securitiesIndustryClassification$data;
 
 ##################################################################################################################
