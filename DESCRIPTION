@@ -50,7 +50,8 @@ Suggests:
     scatterplot3d,
     signal,
     fExtremes,
-    QZ
+    QZ,
+    PerformanceAnalytics
 License: GPL
 URL: http://r-forge.r-project.org/projects/returnanalytics/
 Copyright: (c) 2012

@@ -200,7 +200,7 @@ pHist = function( X , p , nBins, freq = FALSE )
 {      
   if ( length( match.call() ) < 3 )
   {
-    J = size( X , 1 )        
+    J = dim( X )[ 1 ]        
     nBins = round( 10 * log(J) )
   }
   

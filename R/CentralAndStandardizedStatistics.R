@@ -16,6 +16,7 @@
 
 CentralAndStandardizedStatistics = function( X, N )
 {
+	if(!require("PerformanceAnalytics")) stop("PerformanceAnalytics package required for this script");
 	# compute central moments
 	mu = matrix( 0, 1, N);
 	mu[ 1 ] = mean(X);

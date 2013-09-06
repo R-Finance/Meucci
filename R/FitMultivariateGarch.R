@@ -691,6 +691,7 @@ garch2f8 = function( y, c1, a1, b1, y1, h1, c2, a2, b2, y2, h2, df )
 
 minfro = function( A )
 {
+    if(!require("Matrix")) stop("Matrix package required for this script");
     if( any( diag( A ) < 0) )
     {
         stop("Diagonal Elements Must Be Non-Negative!");
@@ -726,7 +727,7 @@ minfro = function( A )
                 b   = a - rho * m;
                 # Newton's step
                 x = newton( M, i, b, m, aii, n, rho );  
-                P = sparse( diag( 1, n ) );
+                P = as( diag( 1, n ), "sparseMatrix" );
                 P[ i, 1:n ] = t(x); 
                 # update
                 Mtest   = P %*% M %*% t(P);         
@@ -740,7 +741,7 @@ minfro = function( A )
                 }           
             }
 
-            normj[ j+1 ] = oldnorm; ##ok<AGROW>
+            normj[ j+1 ] = oldnorm; 
             incj[ j ]    = oldnormj - oldnorm; 
             oldnormj     = oldnorm;       
 

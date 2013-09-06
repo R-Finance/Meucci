@@ -13,7 +13,7 @@ StackedBarChart = function( weightsMatrix )
   data = as.data.frame( weightsMatrix )
   data$aspect = 1:nrow(data)
   data2 = reshape2:::melt( data , id.vars = "aspect" )
-  p <- ggplot(data2, aes(x=factor(aspect), y = value, fill=factor(variable))) + geom_bar() #+ opts( title = expression( "Efficient Frontier Weights" ))
+  p <- ggplot(data2, aes( x = factor(aspect), y = value, fill = factor( variable ) ) ) + geom_bar() #+ opts( title = expression( "Efficient Frontier Weights" ))
   return( p )
 }
 
@@ -25,6 +25,7 @@ StackedBarChart = function( weightsMatrix )
 #' @param  Upper    a vector of indexes indicating which column is lower than the corresponding column number in Upper
 #' @export EntropyProg
 #  @example ViewRanking( X , p , Lower = c(3,4) , Upper = c(4,5) ) # two inequality views: asset 3 < asset 4 returns, and asset 4 < asset 5 returns
+
 ViewRanking = function( X , p , Lower , Upper )
 {
   library( matlab )
