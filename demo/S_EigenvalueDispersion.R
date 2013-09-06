@@ -1,7 +1,5 @@
-library(mvtnorm)
-
-#'This script displays the sample eigenvalues dispersion phenomenon, as described in A. Meucci,
-#'"Risk and Asset Allocation", Springer, 2005,  Chapter 4.
+#' This script displays the sample eigenvalues dispersion phenomenon, as described in A. Meucci,
+#' "Risk and Asset Allocation", Springer, 2005,  Chapter 4.
 #'
 #' @references
 #' \url{http://symmys.com/node/170}

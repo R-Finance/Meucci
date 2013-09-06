@@ -1,4 +1,4 @@
-#' This script illustrate the concept of co-dependence, as described 
+#' This script illustrates the concept of co-dependence, as described 
 #' in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 2.
 #'
 #' @references

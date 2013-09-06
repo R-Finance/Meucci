@@ -1,5 +1,3 @@
-library(mvtnorm);
-
 #' This script computes the multivariate shrinkage estimators of location and scatter under the normal assumption,
 #'  as described in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 4.
 #'

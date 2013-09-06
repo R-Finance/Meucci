@@ -1,5 +1,3 @@
-
-##################################################################################################################
 #' This script computes the correlation between explicit, time-series industry factor returns and implicit, 
 #' cross-section industry factor returns, as described in A. Meucci, "Risk and Asset Allocation", Springer, 2005,
 #'  Chapter 3.

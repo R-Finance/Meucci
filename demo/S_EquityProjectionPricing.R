@@ -1,8 +1,8 @@
 
 #' This script projects the distribution of the market invariants for the stock market (i.e. the compounded returns)
 #' from the estimation interval (normal assumption) to the investment horizon. Then it computes the distribution of prices
-#' at the investment horizon analytically, by full Monte Carlo, and by delta/duration approximationThis file performs 
-#' the quest for invariance in the stock market, as described in A. Meucci "Risk and Asset Allocation", Springer, 2005, 
+#' at the investment horizon analytically, by full Monte Carlo, and by delta/duration approximation.
+#' Described in A. Meucci "Risk and Asset Allocation", Springer, 2005, 
 #' chapter 3.
 #'
 #' @references

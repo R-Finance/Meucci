@@ -1,4 +1,3 @@
-library(mvtnorm);
 #' This script familiarizes the users with the objectives of different investors in a highly 
 #' non-normal bi-variate  market of securities, as described in A. Meucci,"Risk and Asset 
 #' Allocation",Springer, 2005,  Chapter 5.  

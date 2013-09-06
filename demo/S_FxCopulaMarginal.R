@@ -1,4 +1,4 @@
-#'This script display the empirical copula of a set of market variables, as described 
+#' This script displays the empirical copula of a set of market variables, as described 
 #' in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 2.
 #'
 #' @references

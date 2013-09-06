@@ -8,14 +8,14 @@ HermiteGrid_CaseStudy       		This script estimates the prior of a hedge fund re
 HermiteGrid_CVaR_Recursion  		This script illustrates the discrete Newton recursion  to process views on CVaR according to Entropy Pooling
 HermiteGrid_demo            		This script compares the performance of plain Monte Carlo versus grid in applying Entropy Pooling to process extreme views
 InvariantProjection         		This script projects summary statistics to arbitrary horizons under i.i.d. assumption
-logToArithmeticCovariance   		This example script generates arithmetric returns and arithmetric covariance matrix given a distribution of log returns
+MeanDiversificationFrontier This script computes the mean-diversification efficient frontier
 Prior2Posterior             		This example script compares the numerical and the analytical solution of entropy-pooling
 RankingInformation          		This script performs ranking allocation using the Entropy-Pooling approach by Attilio Meucci
 RobustBayesianAllocation    		This script replicates the example from Meucci's MATLAB script S_SimulationsCaseStudy.M             
 S_AnalyzeLognormalCorrelation		This script considers a bivariate lognormal market and display the correlation and the condition number of the covariance matrix
 S_AnalyzeNormalCorrelation      	This script considers a bivariate normal market and display the correlation and the condition number of the covariance matrix    
 S_AnalyzeNormalInverseWishart   	This script familiarizes the users with multivariate Bayesian estimation.   
-S_AutocorrelatedProcess				This script simulates a Ornstein-Uhlenbeck AR(1) process		             
+S_AutocorrelatedProcess				This script simulates a Ornstein-Uhlenbeck AR(1) process
 S_BivariateSample               	This script generates draws from a bivariate distribution with different marginals    
 S_BlackLittermanBasic           	This script describes to basic market-based Black-Litterman approach    
 S_BondProjectionPricingNormal   	This script projects the distribution of the market invariants for the bond markets from the estimation interval to the investment horizon   
@@ -29,63 +29,79 @@ S_CorrelationPriorUniform    		This script shows how a jointly uniform prior on 
 S_CovarianceEvolution       		This script represents the evolution of the covariance of an OU process in terms of the dispersion ellipsoid   
 S_CrossSectionConstrainedIndustries This script fits a cross-sectional linear factor model creating industry factors, where the industry factors are constrained to be uncorrelated with the market
 S_CrossSectionIndustries 			This script fits a cross-sectional linear factor model creating industry factors           
-S_DerivativesInvariants             
-S_DisplayLognormalCopulaPdf         
-S_DisplayNormalCopulaCdf            
-S_DisplayNormalCopulaPdf            
-S_DisplayStudentTCopulaPdf          
-S_ESContributionFactors             
-S_ESContributionsStudentT           
-S_EigenvalueDispersion              
-S_EllipticalNDim                    
-S_EquitiesInvariance                
-S_EquitiesInvariants                
-S_EquityProjectionPricing           
-S_EstimateExpectedValueEvaluation   
-S_EstimateMomentsComboEvaluation    
-S_EstimateQuantileEvaluation        
-S_Estimator                         
-S_EvaluationGeneric                 
-S_ExactMeanAndCovariance            
-S_ExpectationMaximizationHighYield  
-S_ExtremeValueTheory                
-S_FactorAnalysisNotOk               
-S_FactorResidualCorrelation         
-S_FitSwapToStudentT                 
-S_FixedIncomeInvariants             
-S_FullCodependence                  
-S_FxCopulaMarginal                  
-S_GenerateMixtureSample             
-S_HedgeOptions                      
-S_HorizonEffect                     
-S_InvestorsObjective                
-S_JumpDiffusionMerton               
-S_LinVsLogReturn                    
-S_LognormalSample                   
-S_MarkovChainMonteCarlo             
-S_MaxMinVariance                    
-S_MaximumLikelihood                 
-S_MeanVarianceBenchmark             
-S_MeanVarianceCalls                 
-S_MeanVarianceHorizon               
-S_MeanVarianceOptimization          
-S_MultiVarSqrRootRule               
-S_NonAnalytical                     
-S_NormalSample                      
-S_OrderStatisticsPdfLognormal       
-S_OrderStatisticsPdfStudentT        
-S_PasturMarchenko                   
-S_ProjectNPriceMvGarch              
-S_ProjectSummaryStatistics          
-S_PureResidualBonds                 
-S_ResidualAnalysisTheory            
-S_SelectionHeuristics               
-S_SemiCircular                      
-S_ShrinkageEstimators 
+S_DerivativesInvariants      		This script performs the quest for invariance in the derivatives market       
+S_DeterministicEvolution   			This script animates the evolution of the determinstic component of an OU process
+S_DisplayLognormalCopulaPdf         This script displays the pdf of the copula of a lognormal distribution 
+S_DisplayNormalCopulaCdf            This script displays the cdf of the copula of a normal distribution
+S_DisplayNormalCopulaPdf            This script displays the pdf of the copula of a normal distribution
+S_DisplayStudentTCopulaPdf          This script displays the pdf of the copula of a Student t distribution
+S_ESContributionFactors             This script computes the expected shortfall and the contributions to ES from each factor in simulations 	
+S_ESContributionsStudentT         	This script computes the expected shortfall and the contributions to ES from each security  
+S_EigenvalueDispersion              This script displays the sample eigenvalues dispersion phenomenon
+S_EllipticalNDim                    This script decomposes the N-variate normal distribution into its radial and uniform components to generate an elliptical distribution
+S_EquitiesInvariants                This file performs the quest for invariance in the stock market
+S_EquityProjectionPricing           This script projects the distribution of the market invariants for the stock market from the estimation interval (normal assumption) to the investment horizon. Then it computes the distribution of prices at the investment horizon analytically.
+S_EstimateExpectedValueEvaluation 	This script script familiarizes the user with the evaluation of an estimator replicability, loss, error, bias and inefficiency 
+S_EstimateMomentsComboEvaluation    This script familiarizes the user with the evaluation of an estimator: replicability, loss, error, bias and inefficiency 
+S_EstimateQuantileEvaluation        This script familiarizes the user with the evaluation of an estimator: replicability, loss, error, bias and inefficiency 
+S_Estimator                         This script familiarizes the user with the evaluation of an estimator: replicability, loss, error, bias and inefficiency 
+S_EvaluationGeneric                 This script determines the optimal allocation
+S_ExactMeanAndCovariance            Generate draws from a multivariate normal with matching mean and covariance
+S_ExpectationMaximizationHighYield  This script implements the Expectation-Maximization (EM) algoritm, which estimates the parameters of a multivariate normal distribution when some observations are randomly missing
+S_ExtremeValueTheory                This script computes the quantile (VaR) analytically, in simulations and using the extreme value theory approximation
+S_FactorAnalysisNotOk               This script illustrates the hidden factor analysis puzzle
+S_FactorResidualCorrelation         This script illustrates exogenous loadings and endogenous factors the true analytical VaR under the lognormal assumptions from the estimation interval to the investment horizon
+S_FitProjectRates           		This script fits the swap rates dynamics to a multivariate Ornstein-Uhlenbeck process and computes and plots the estimated future distribution
+S_FitSwapToStudentT                 This script demonstrates the recursive ML estimation of the location and scatter parameters of a multivariate Student t distribution
+S_FixedIncomeInvariants             This file performs the quest for invariance in the fixed income market
+S_FullCodependence                  This script illustrates the concept of co-dependence
+S_FxCopulaMarginal                  This script displays the empirical copula of a set of market variables
+S_GenerateMixtureSample             This script generates draws from a univarite mixture
+S_HedgeOptions                      This script compares hedging based on Black-Scholes deltas with Factors on Demand hedging
+S_HorizonEffect                     This script studies horizon effect on explicit factors / implicit loadings linear model
+S_InvestorsObjective                This script familiarizes the users with the objectives of different investors in a highly non-normal bi-variate  market of securities
+S_JumpDiffusionMerton               This script simulates a jump-diffusion process
+S_LinVsLogReturn                    This script project a distribution in the future according to the i.i.d.-implied square-root rule
+S_LognormalSample                   This script simulate univariate lognormal variables
+S_MarkovChainMonteCarlo             This script illustrates the Metropolis-Hastings algorithm
+S_MaxMinVariance                    This script dispays location-dispersion ellipsoid and statistic
+S_MaximumLikelihood                 This script performs ML under a non-standard parametric set of distributions
+S_MeanVarianceBenchmark             This script projects the distribution of the market invariants for the bond and stock markets from the estimation interval to the investment horizon. Then it computes the distribution of prices at the investment horizon and translates this distribution into the returns distribution
+S_MeanVarianceCalls                 This script computes the mean-variance frontier of a set of options
+S_MeanVarianceHorizon               This script projects the distribution of the market invariants for the bond and stock markets from the estimation interval to the investment horizon. Then it computes the distribution of prices at the investment horizon and performs the two-step mean-variance optimization in terms of returns and relative portfolio weights.
+S_MeanVarianceOptimization          This script projects the distribution of the market invariants for the bond and stock markets from the estimation interval to the investment horizon. Then it computes the distribution of prices at the investment horizon and performs the two-step mean-variance optimization.
+S_MultiVarSqrRootRule               This script illustrates the multivariate square root rule-of-thumb
+S_NonAnalytical                     This script generates draws for the sum of random variable
+S_NormalSample                      This script simulate univariate normal variables
+S_OrderStatisticsPdfLognormal       This script script shows that the pdf of the r-th order statistics of a lognormal random variable
+S_OrderStatisticsPdfStudentT        This script script shows that the pdf of the r-th order statistics of a tudent t random variable
+S_PasturMarchenko                   This script illustrate the Marchenko-Pastur limit of runifom matrix theory
+S_ProjectNPriceMvGarch              This script fits a multivariate GARCH model and projects the distribution of the compounded returns from the estimation interval to the investment horizon. Then it computes the distribution of prices at the investment horizon. 
+S_ProjectSummaryStatistics          This script projects summary statistics to arbitrary horizons
+S_PureResidualBonds                 This script models the joint distribution of the yet-to-be realized key rates of the government curve
+S_ResidualAnalysisTheory            This script performs the analysis of residuals
+S_SelectionHeuristics               Compute the r-square of selected factors
+S_SemiCircular                      This script illustrate the semi-circular law of random matrix theory
+S_ShrinkageEstimators 				This script computes the multivariate shrinkage estimators of location and scatter under the normal assumption
+S_SnPCaseStudy              		This script replicates the example from Meucci's MATLAB scriptS_SnPCaseStudy.M
+S_StatArbSwaps                      This script search for cointegrated stat-arb strategies among swap contracts
+S_StudentTSample                    This script simulate univariate Student-t variables
+S_SwapPca2Dim                       This script performs the principal component analysis of a simplified two-point swap curve
+S_TStatApprox                       Simulate invariants for the regression model
+S_TimeSeriesConstrainedIndustries   This script fits a time-series linear factor computing the industry factors loadings,  where the loadings are bounded and constrained to yield unit exposure
+S_TimeSeriesIndustries              This script fits a time-series linear factor computing the industry factors loadings
+S_TimeSeriesVsCrossSectionIndustries This script computes the correlation between explicit, time-series industry factor returns and implicit, cross-section industry factor returns
+S_Toeplitz                          This script shows that the eigenvectors of a Toeplitz matrix have a Fourier basis structure under t-distribution assumptions
+S_UtilityMax                        This script illustrates the constant weight dynamic strategy that maximizes power utility
+S_VaRContributionsUniform           This script computes the VaR and the contributions to VaR from each security anallitically and in simulations
+S_VolatilityClustering              This file generates paths for a volatility clustering
+S_Wishart                           This script generates a sample from the 2x2 Wishart distribution
+S_WishartCorrelation                This script computes the correlation of the first diagonal and off-diagonal elements of a 2x2 Wishart distribution as a function of the inputs
+S_WishartLocationDispersion   		This script computes the location-dispersion ellipsoid of the normalized first diagonal and off-diagonal elements of a 2x2 Wishart distribution as a function of the inputs
+S_ToyExample                This toy example illustrates the use of Entropy Pooling to compute Fully Flexible
+logToArithmeticCovariance   		This example script generates arithmetric returns and arithmetric covariance matrix given a distribution of log returns
 S_plotGaussHermite          This example script displays mesh points based on Gaussian-Hermite quadrature
-S_SnPCaseStudy              This script replicates the example from Meucci's MATLAB scriptS_SnPCaseStudy.M
-S_ToyExample                This toy example illustrates the use of Entropy Pooling to compute Fully Flexible Bayesian networks
-S_FitProjectRates           This script fits the swap rates dynamics to a multivariate Ornstein-Uhlenbeck process and computes and plots the estimated future distribution
+ Bayesian networks
 
-S_DeterministicEvolution    This script animates the evolution of the determinstic component of an OU process
-MeanDiversificationFrontier This script computes the mean-diversification efficient frontier
+
+
