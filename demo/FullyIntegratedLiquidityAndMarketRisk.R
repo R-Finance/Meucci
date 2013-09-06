@@ -1,4 +1,4 @@
-#'This his script computes the liquidity-risk and funding-risk adjusted P&L distribution, as described in 
+#' This script computes the liquidity-risk and funding-risk adjusted P&L distribution, as described in 
 #' A. Meucci, "A Fully Integrated Liquidity and Market Risk Model", Financial Analyst Journal, 68, 6, 35-47 (2012)
 #'
 #' @references 
