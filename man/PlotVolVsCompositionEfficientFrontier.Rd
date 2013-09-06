@@ -6,7 +6,7 @@ as described in  A. Meucci, "Risk and Asset Allocation", Springer, 2005.}
   PlotVolVsCompositionEfficientFrontier(Portfolios, vol)
 }
 \arguments{
-  \item{Portfolios:}{[matrix] (M x N) of portfolios
+  \item{Portfolios}{: [matrix] (M x N) of portfolios
   weights}
 
   \item{vol}{: [vector] (M x 1) of volatilities}

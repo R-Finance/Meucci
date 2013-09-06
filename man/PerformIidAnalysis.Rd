@@ -3,14 +3,14 @@
 \title{This function performs simple invariance (i.i.d.) tests on a time series, as described in
 A. Meucci "Risk and Asset Allocation", Springer, 2005}
 \usage{
-  PerformIidAnalysis(Dates = dim(Data, 1), Data, Str = "")
+  PerformIidAnalysis(Dates = dim(Data)[1], Data, Str = "")
 }
 \arguments{
   \item{Dates}{: [vector] (T x 1) dates}
 
   \item{Data}{: [matrix] (T x N) data}
 
-  \item{Starting_Prices}{: [vector] (N x 1)}
+  \item{Str}{: [string] title for the plot}
 }
 \description{
   This function performs simple invariance (i.i.d.) tests

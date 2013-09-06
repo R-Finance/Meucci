@@ -3,7 +3,7 @@
 #'
 #'  @param	Dates : [vector] (T x 1) dates
 #'	@param	Data  : [matrix] (T x N) data
-#'  @param	Starting_Prices : [vector] (N x 1) 
+#'  @param	Str   : [string]  title for the plot 
 #'  
 #'  @note it checks the evolution over time
 #   it checks that the variables are identically distributed by looking at the histogram of two subsamples

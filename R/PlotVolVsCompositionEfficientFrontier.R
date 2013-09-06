@@ -1,8 +1,8 @@
 #' Plot the efficient frontier in the plane of portfolio weights versus standard deviation,
 #' as described in  A. Meucci, "Risk and Asset Allocation", Springer, 2005.
 #'  
-#'	@param   Portfolios: [matrix] (M x N) of portfolios weights
-#'	@param   vol       : [vector] (M x 1) of volatilities
+#'	@param   Portfolios : [matrix] (M x N) of portfolios weights
+#'	@param   vol        : [vector] (M x 1) of volatilities
 #'
 #' @references
 #' \url{http://symmys.com/node/170}

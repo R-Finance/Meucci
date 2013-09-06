@@ -2,7 +2,7 @@
 \alias{InterExtrapolate}
 \title{Interpolate and extrapolate using n-linear interpolation (tensor product linear).}
 \usage{
-  InterExtrapolate(V, Xi, nodelist, method, ...)
+  InterExtrapolate(V, Xi, nodelist, method)
 }
 \arguments{
   \item{V}{: [array] p-dimensional array to be
@@ -33,15 +33,6 @@
   Vpred = interpne(V,Xi,nodelist) Vpred =
   interpne(V,Xi,nodelist,method) Extrapolating long
   distances outside the support of V is rarely advisable.
-}
-\examples{
-[x1,x2] = meshgrid(0:.2:1);
- z = exp(x1+x2);
- Xi = rand(100,2)*2-.5;
- Zi = interpne(z,Xi,{0:.2:1, 0:.2:1},'linear');
- surf(0:.2:1,0:.2:1,z)
- hold on
- plot3(Xi(:,1),Xi(:,2),Zi,'ro')
 }
 \author{
   Xavier Valls \email{flamejat@gmail.com}
