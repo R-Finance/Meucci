@@ -35,7 +35,7 @@ CallPrice = function( P, K, r, t, s )
 #'A. Meucci, "Personalized Risk Management: Historical Scenarios with Fully Flexible Probabilities"
 #'GARP Risk Professional, Dec 2010, p 47-51
 #'
-#' Most recent version of article and code available at
+#' Most recent version of article and MATLAB code available at
 #' http://www.symmys.com/node/150
 #' @references 
 #' \url{http://www.symmys.com/node/150}
