@@ -44,7 +44,7 @@
   Ram Ahluwalia \email{ram@wingedfootcapital.com}
 }
 \references{
-  \url{http://www.symmys.com}
+  \url{http://www.symmys.com/node/158}
   \url{http://ssrn.com/abstract=1213325} A. Meucci - "Fully
   Flexible Views: Theory and Practice". See formula (21)
   and (22) on page 7 See Meucci script Prior2Posterior.m

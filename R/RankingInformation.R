@@ -84,7 +84,8 @@ PlotResults = function( e, s, w, M, Lower = NULL , Upper = NULL)
 #'
 #' @author Ram Ahluwalia \email{ram@@wingedfootcapital.com}
 #' @export EntropyProg
-#' @example ViewRanking( X , p , Lower = c(3,4) , Upper = c(4,5) ) # two inequality views: asset 3 < asset 4 returns, and asset 4 < asset 5 returns
+
+# example ViewRanking( X , p , Lower = c(3,4) , Upper = c(4,5) ) # two inequality views: asset 3 < asset 4 returns, and asset 4 < asset 5 returns
 
 ViewRanking = function( X , p , Lower , Upper )
 {

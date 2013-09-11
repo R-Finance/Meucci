@@ -1,6 +1,7 @@
 \name{ViewRanking}
 \alias{ViewRanking}
-\title{view the rankings}
+\title{Computes posterior probabilities to view the rankings, as it appears in A. Meucci,
+"Fully Flexible Views: Theory and Practice", The Risk Magazine, October 2008, p 100-106.}
 \usage{
   ViewRanking(X, p, Lower, Upper)
 }
@@ -18,6 +19,17 @@
   is lower than the corresponding column number in Upper}
 }
 \description{
-  view the rankings
+  Computes posterior probabilities to view the rankings, as
+  it appears in A. Meucci, "Fully Flexible Views: Theory
+  and Practice", The Risk Magazine, October 2008, p
+  100-106.
+}
+\author{
+  Ram Ahluwalia \email{ram@wingedfootcapital.com}
+}
+\references{
+  A. Meucci, "Fully Flexible Views: Theory and Practice"
+  \url{http://www.symmys.com/node/158} See Meucci script
+  for "RankingInformation/ViewRanking.m"
 }
 

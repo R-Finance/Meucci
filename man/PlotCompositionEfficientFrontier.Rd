@@ -3,7 +3,7 @@
 \title{Plot the efficient frontier, as described in  A. Meucci,
 "Risk and Asset Allocation", Springer, 2005.}
 \usage{
-  PlotCompositionEfficientFrontier(Portfolios)
+  PlotCompositionEfficientFrontier(Portfolios, s, e)
 }
 \arguments{
   \item{Portfolios}{: [matrix] (M x N) M portfolios of size

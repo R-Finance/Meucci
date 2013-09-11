@@ -29,4 +29,9 @@
 \author{
   Ram Ahluwalia \email{ram@wingedfootcapital.com}
 }
+\references{
+  A. Meucci, "Fully Flexible Views: Theory and Practice"
+  \url{http://www.symmys.com/node/158} See Meucci script
+  for "PlotDistributions.m"
+}
 
