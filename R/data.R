@@ -209,3 +209,23 @@ NULL
 #' @references A. Meucci, Exercises in Advanced Risk and Portfolio Management. \url{http://symmys.com/node/170}
 #' @keywords data
 NULL
+
+#' @title Panel X of joint returns realizations and vector p of respective probabilities
+#'
+#' @name returnsDistribution
+#' @docType data
+#' @author Xavier Valls\email{flamejat@@gmail.com}
+#' @references A. Meucci, "Fully Flexible Views: Theory and Practice", The Risk Magazine,
+#' October 2008, p 100-106. \url{http://symmys.com/node/158}
+#' @keywords data
+NULL
+
+#' @title Factor Distribution Butterflies
+#'
+#' @name FDButterflies
+#' @docType data
+#' @author Xavier Valls\email{flamejat@@gmail.com}
+#' @references A. Meucci, "Fully Flexible Views: Theory and Practice", The Risk Magazine,
+#' October 2008, p 100-106. \url{http://symmys.com/node/158}
+#' @keywords data
+NULL
