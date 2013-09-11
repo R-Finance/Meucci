@@ -66,7 +66,6 @@ Collate:
     'MeanDiversificationFrontier.R'
     'MultivariateOUnCointegration.R'
     'Prior2Posterior.R'
-    'RankingInformation.R'
     'RobustBayesianAllocation.R'
     'LognormalMoments2Parameters.R'
     'LognormalParameters2Statistics.R'
@@ -105,3 +104,5 @@ Collate:
     'Fit2Moms.R'
     'LeastInfoKernel.R'
     'data.R'
+    'ButterflyTradingFunctions.R'
+    'RankingInformationFunctions.R'
