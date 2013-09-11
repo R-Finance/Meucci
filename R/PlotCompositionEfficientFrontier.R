@@ -10,7 +10,7 @@
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 #' @export
 
-PlotCompositionEfficientFrontier = function( Portfolios, s, e )
+PlotCompositionEfficientFrontier = function( Portfolios )
 {
 	dev.new();
 

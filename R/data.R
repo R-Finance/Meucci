@@ -229,3 +229,13 @@ NULL
 #' October 2008, p 100-106. \url{http://symmys.com/node/158}
 #' @keywords data
 NULL
+
+#' @title Butterflies Analytics
+#'
+#' @name butterfliesAnalytics
+#' @docType data
+#' @author Xavier Valls\email{flamejat@@gmail.com}
+#' @references A. Meucci, "Fully Flexible Views: Theory and Practice", The Risk Magazine,
+#' October 2008, p 100-106. \url{http://symmys.com/node/158}
+#' @keywords data
+NULL
