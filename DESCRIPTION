@@ -41,7 +41,6 @@ Suggests:
     MASS,
     reshape2,
     Hmisc,
-    fOptions,
     moments,
     nloptr,
     ggplot2,

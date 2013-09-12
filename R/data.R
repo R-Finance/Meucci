@@ -210,7 +210,7 @@ NULL
 #' @keywords data
 NULL
 
-#' @title Panel X of joint returns realizations and vector p of respective probabilities
+#' @title Panel X of joint returns realizations and vector p of respective probabilities for returns
 #'
 #' @name returnsDistribution
 #' @docType data
@@ -220,9 +220,9 @@ NULL
 #' @keywords data
 NULL
 
-#' @title Factor Distribution Butterflies
+#' @title Panel X of joint factors realizations and vector p of respective probabilities for factors
 #'
-#' @name FDButterflies
+#' @name factorsDistribution
 #' @docType data
 #' @author Xavier Valls\email{flamejat@@gmail.com}
 #' @references A. Meucci, "Fully Flexible Views: Theory and Practice", The Risk Magazine,
@@ -230,7 +230,7 @@ NULL
 #' @keywords data
 NULL
 
-#' @title Butterflies Analytics
+#' @title list of securities with analytics computed.
 #'
 #' @name butterfliesAnalytics
 #' @docType data

@@ -1,9 +1,15 @@
 \name{BlackScholesCallPrice}
 \alias{BlackScholesCallPrice}
-\title{Compute the Black-Scholes price of a European call option
-as described in  A. Meucci, "Risk and Asset Allocation", Springer, 2005.}
+\alias{BlackScholesCallPutPrice}
+\alias{BlackScholesPutPrice}
+\title{Compute the Black-Scholes price of a European call or put option
+ as described in  A. Meucci, "Risk and Asset Allocation", Springer, 2005.}
 \usage{
   BlackScholesCallPrice(spot, K, r, vol, T)
+
+  BlackScholesPutPrice(spot, K, r, vol, T)
+
+  BlackScholesCallPutPrice(spot, K, r, vol, T)
 }
 \arguments{
   \item{spot}{: [scalar] spot price of underlying}
@@ -20,14 +26,16 @@ as described in  A. Meucci, "Risk and Asset Allocation", Springer, 2005.}
 \value{
   c : [scalar] price of European call(s)
 
-  delta : [scalar] delta of the call(s)
+  p : [scalar] price of European put(s)
+
+  delta : [scalar] delta of the call(s) or put(s)
 
   cash : [scalar] cash held in a replicating portfolio
 }
 \description{
-  Compute the Black-Scholes price of a European call option
-  as described in A. Meucci, "Risk and Asset Allocation",
-  Springer, 2005.
+  Compute the Black-Scholes price of a European call or put
+  option as described in A. Meucci, "Risk and Asset
+  Allocation", Springer, 2005.
 }
 \note{
   Code is vectorized, so the inputs can be vectors or

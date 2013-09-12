@@ -1,10 +1,10 @@
 \docType{data}
 \name{returnsDistribution}
 \alias{returnsDistribution}
-\title{Panel X of joint returns realizations and vector p of respective probabilities}
+\title{Panel X of joint returns realizations and vector p of respective probabilities for returns}
 \description{
   Panel X of joint returns realizations and vector p of
-  respective probabilities
+  respective probabilities for returns
 }
 \author{
   Xavier Valls\email{flamejat@gmail.com}

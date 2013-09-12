@@ -1,9 +1,9 @@
 \docType{data}
 \name{butterfliesAnalytics}
 \alias{butterfliesAnalytics}
-\title{Butterflies Analytics}
+\title{list of securities with analytics computed.}
 \description{
-  Butterflies Analytics
+  list of securities with analytics computed.
 }
 \author{
   Xavier Valls\email{flamejat@gmail.com}
