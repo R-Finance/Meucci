@@ -63,7 +63,7 @@ View( optimalPortfolios ) # Note that composition is measured in dollars. Here w
 
 PlotFrontier( optimalPortfolios$Exp , optimalPortfolios$CVaR , optimalPortfolios$Composition )
 
-[Exp,SDev,CVaR,w] = LongShortMeanCVaRFrontier(PnL,p,butterfliesAnalytics,Options);
+#[Exp,SDev,CVaR,w] = LongShortMeanCVaRFrontier(PnL,p,butterfliesAnalytics,Options);
 #PlotEfficientFrontier(Exp,CVaR,w)
 
 ###########################################################################################################
