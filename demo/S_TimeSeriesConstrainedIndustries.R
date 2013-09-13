@@ -10,10 +10,10 @@
 
 ##################################################################################################################
 ### Loads weekly stock returns X and indices stock returns F
-load("../data/securitiesTS.rda");
+data("securitiesTS");
 Data_Securities = securitiesTS$data[ , -1 ]; # 1st column is date
 
-load("../data/sectorsTS.rda");
+data("sectorsTS");
 Data_Sectors = sectorsTS$data[ , -(1:2) ]; #1st column is date, 2nd column is SPX
 
 ##################################################################################################################

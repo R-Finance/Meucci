@@ -9,7 +9,7 @@
 #' @export 
 
 ### Load data and select the pair to display
-load( "../data/fX.rda" )
+data("fX" )
 
 Display = c( 1, 2 );  # 1 = Spot USD/EUR; 2 = Spot USD/GBP; 3 = Spot USD/JPY; 
 

@@ -4,7 +4,7 @@
 # source on www.symmys.com
 ####################################################################
 
-load("../data/sectorsSnP500.rda")
+data("sectorsSnP500")
 
 p_m = 0.1 # aversion to estimation risk for mu
 p_s = 0.1 # aversion to estimation risk for sigma

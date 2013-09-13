@@ -47,7 +47,7 @@ CallPrice = function( P, K, r, t, s )
 # risk drivers scenarios
 ###########################################################################
 
-load( "../data/dbFFP.rda" )
+data("dbFFP" )
 
 Infl = dbFFP$Data[ , length( dbFFP$Names ) ];
 Vix = dbFFP$Data[ , length( dbFFP$Names ) - 1 ];

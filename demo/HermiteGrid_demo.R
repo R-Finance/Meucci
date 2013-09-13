@@ -25,7 +25,7 @@ monteCarlo.p = normalizeProb( 1/monteCarlo.J * ones( monteCarlo.J , 1 ) )
 
 # numerical (Gauss-Hermite grid) prior 
 ghqMesh = emptyMatrix
-load( "ghq1000.rda" )
+load( "ghq1000" )
 
 tmp = ( ghqx - min( ghqx ) ) / ( max( ghqx ) - min( ghqx ) ) # rescale GH zeros so they belong to [0,1]
 epsilon = 1e-10

@@ -17,7 +17,7 @@
 # Load panel X of joint returns realizations and vector p of respective probabilities
 # In real life, these are provided by the estimation process
 #############################################################################
-load("../data/returnsDistribution.rda");
+data("returnsDistribution");
 
 ###########################################################################################################
 # compute and plot efficient frontier based on prior market distribution

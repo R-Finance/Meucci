@@ -25,7 +25,7 @@ Capital_perDailyVolume = 0.2;
 # load  fILMR$Daily_Prices: closing prices 
 #       fILMR$Daily_Volumes_Shares: daily volumes   
 #       fILMR$Daily_Liq: Morgan Stanley liquidity index 
-load("../data/fILMR.rda")
+data("fILMR")
 
 # Prices and returns
 #Daily_Prices = Daily_Prices(:,Selectstock);

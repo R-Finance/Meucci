@@ -275,6 +275,22 @@ ViewCurveSlope = function( X , p )
   return( p_ );
 }
 
+#' Computes the conditional value at risk as it appears in A. Meucci, "Fully Flexible Views: Theory and Practice",
+#' The Risk Magazine, October 2008, p 100-106
+#'  
+#'  @param   Units         panel of joint factors realizations 
+#'  @param   Scenarios     vector of probabilities
+#'  @param   Conf          Confidence 
+#'
+#'  @return  CVaR          Conditional Value at Risk
+#'
+#' @references 
+#' A. Meucci, "Fully Flexible Views: Theory and Practice" \url{http://www.symmys.com/node/158}
+#' See Meucci script for "ButterflyTrading/ComputeCVaR.m"
+#'
+#' @author Ram Ahluwalia \email{ram@@wingedfootcapital.com}
+#' @export
+
 ComputeCVaR = function( Units , Scenarios , Conf )
 {
   PnL = Scenarios %*% Units
@@ -287,6 +303,26 @@ ComputeCVaR = function( Units , Scenarios , Conf )
   
   return( CVaR )
 }
+
+#' Computes the long-short conditional value at risk frontier as it appears in A. Meucci,
+#' "Fully Flexible Views: Theory and Practice", The Risk Magazine, October 2008, p 100-106
+#'  
+#'  @param   PnL           Profit and Loss scenarios
+#'  @param   Probs         vector of probabilities
+#'  @param   Butterflies   list of securities with some analytics computed.         
+#'  @param   Options       list of options
+#'
+#'  @return  Exp           vector of expected returns for each asset
+#'  @return  SDev          vector of security volatilities along the efficient frontier
+#'  @return  CVaR          Conditional Value at Risk for each portfolio
+#'  @return  Composition   matrix of compositions (security weights) for each portfolio along the efficient frontier
+#'
+#' @references 
+#' A. Meucci, "Fully Flexible Views: Theory and Practice" \url{http://www.symmys.com/node/158}
+#' See Meucci script for "ButterflyTrading/LongShortMeanCVaRFrontier.m"
+#'
+#' @author Ram Ahluwalia \email{ram@@wingedfootcapital.com}, Xavier Valls \email{flamejat@@gmail.com}
+#' @export
 
 LongShortMeanCVaRFrontier = function( PnL , Probs , Butterflies , Options )
 {
@@ -378,17 +414,3 @@ LongShortMeanCVaRFrontier = function( PnL , Probs , Butterflies , Options )
   
   return( list( Exp = Exp , SDev = SDev , CVaR = CVaR , Composition = Composition ) )
 }
-
-
-MapVol = function( sig , y , K , T )
-{
-  # in real life a and b below should be calibrated to security-specific time series
-  
-  a = -0.00000000001
-  b = 0.00000000001 
-  
-  s = sig + a/sqrt(T) * ( log(K) - log(y) ) + b/T*( log(K) - log(y) )^2
-  
-  return( s )
-}
-

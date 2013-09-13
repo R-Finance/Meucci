@@ -1,3 +1,4 @@
+
 #' This script performs the butterfly-trading case study for the Entropy-Pooling approach by Attilio Meucci, 
 #' as it appears in A. Meucci, "Fully Flexible Views: Theory and Practice", The Risk Magazine, October 2008, 
 #' p 100-106
@@ -16,28 +17,14 @@
 # In real life, these are provided by the estimation process
 ###########################################################################################################
 
-load( "../data/factorsDistribution.rda" )
-
-emptyMatrix = matrix( nrow = 0 , ncol = 0 )
+data("factorsDistribution" )
 
 ###########################################################################################################
 # Load current prices, deltas and other analytics of the securities 
 # In real life, these are provided by data provider
 ###########################################################################################################
-load("../data/butterfliesAnalytics.rda")
 
-
-
-# create Butterflies as a list of named arrays
-Butterflies = as.matrix( Butterflies[[1]] , nrow = 8 , ncol = 9 )
-Butterflies = matrix(Butterflies, ncol = 9 , nrow = 8 )
-rownames( Butterflies ) = c( "Name" , "P_0" , "Y_0" , "K" , "T" , "sig_0" , "Delta" , "Vega" )
-colnames( Butterflies ) = c( "MSFT_vol_30" , "MSFT_vol_91" , "MSFT_vol_182" , 
-                             "YHOO_vol_30" , "YHOO_vol_91" , "YHOO_vol_182" ,	
-                             "GOOG_vol_30" , "GOOG_vol_91" , "GOOG_vol_182" )
-
-colnames( X ) = FactorNames
-Butterflies = lapply( seq_len( ncol( Butterflies ) ), function( i ) Butterflies[ , i ] )
+data("butterfliesAnalytics")
 
 ###########################################################################################################
 # Map factors scenarios into p&l scenarios at the investment horizon
@@ -59,11 +46,10 @@ Options$Limit 		 = 10000 	# limit to absolute value of each investment
 
 optimalPortfolios = LongShortMeanCVaRFrontier( PnL , as.matrix(factorsDistribution$p ) , butterfliesAnalytics , Options )
 
-View( optimalPortfolios ) # Note that composition is measured in dollars. Here we are short GOOG_vol_91 and long GOOG_vol_182
+#View( optimalPortfolios ) # Note that composition is measured in dollars. Here we are short GOOG_vol_91 and long GOOG_vol_182
 
 PlotFrontier( optimalPortfolios$Exp , optimalPortfolios$CVaR , optimalPortfolios$Composition )
 
-#[Exp,SDev,CVaR,w] = LongShortMeanCVaRFrontier(PnL,p,butterfliesAnalytics,Options);
 #PlotEfficientFrontier(Exp,CVaR,w)
 
 ###########################################################################################################
