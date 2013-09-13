@@ -4,15 +4,15 @@
 # source on www.symmys.com
 ####################################################################
 
-load("SectorsSnP500")
+load("../data/sectorsSnP500.rda")
 
 p_m = 0.1 # aversion to estimation risk for mu
 p_s = 0.1 # aversion to estimation risk for sigma
 
-Ps <- P[seq(from=1, to=nrow(P),by=5),]
+Ps <- sectorsSnP500$P[seq(from=1, to=nrow(sectorsSnP500$P),by=5),]
 R <- data.frame((Ps[2:nrow(Ps),]/Ps[1:nrow(Ps)-1,]) - 1)
-Dates_P <- DP[seq(from=1, to=nrow(DP), by=5),]
-Dates_R <- DP[2:nrow(DP),]
+Dates_P <- sectorsSnP500$DP[seq(from=1, to=nrow(sectorsSnP500$DP), by=5),]
+Dates_R <- sectorsSnP500$DP[2:nrow(DP),]
 Ttot = nrow(R)
 N = ncol(R)
 

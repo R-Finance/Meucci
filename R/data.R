@@ -248,3 +248,13 @@ NULL
 #' @references A. Meucci, "Stress-Testing with Fully Flexible Causal Inputs" \url{http://symmys.com/node/152}
 #' @keywords data
 NULL
+
+
+#' @title data from the sectors in the S&P 500
+#'
+#' @name sectorsSnP500
+#' @docType data
+#' @author Xavier Valls\email{flamejat@@gmail.com}
+#' @references  Attilio Meucci, 2011, "Robust Bayesian Allocation". \url{http://symmys.com/node/102}
+#' @keywords data
+NULL
