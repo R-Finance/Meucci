@@ -3,8 +3,9 @@
 \title{Construct a Bayesian mean-variance efficient frontier and identifies the most robust portfolio}
 \usage{
   robustBayesianPortfolioOptimization(mean_post, cov_post,
-    nu_post, riskAversionMu = 0.1, riskAversionSigma = 0.1,
-    discretizations = 10, longonly = FALSE, volatility)
+    nu_post, time_post, riskAversionMu = 0.1,
+    riskAversionSigma = 0.1, discretizations = 10,
+    longonly = FALSE, volatility)
 }
 \arguments{
   \item{mean_post}{the posterior vector of means (after
@@ -17,6 +18,8 @@
   the prior vs. the sample data. A value of 2 indicates
   twice as much weight to assign to the prior vs. the
   sample data. Must be greater than or equal to zero}
+
+  \item{time_post}{a numeric}
 
   \item{riskAversionMu}{risk aversion coefficient for
   estimation of means.}

@@ -87,6 +87,7 @@ efficientFrontier = function( discretizations , cov , mu , longonly = FALSE )
 #' @param mean_post          the posterior vector of means (after blending prior and sample data)
 #' @param cov_post           the posterior covariance matrix (after blending prior and sample data)
 #' @param nu_post            a numeric with the relative confidence in the prior vs. the sample data. A value of 2 indicates twice as much weight to assign to the prior vs. the sample data. Must be greater than or equal to zero
+#' @param time_post          a numeric
 #' @param riskAversionMu     risk aversion coefficient for estimation of means. 
 #' @param riskAversionSigma  risk aversion coefficient for estimation of Sigma.
 #' @param discretizations    an integer with the number of portfolios to generate along efficient frontier (equally distanced in return space). Parameter must be an integer greater or equal to 1.
@@ -111,7 +112,7 @@ efficientFrontier = function( discretizations , cov , mu , longonly = FALSE )
 #' \url{ http://papers.ssrn.com/sol3/papers.cfm?abstract_id=681553 }
 #' @author Ram Ahluwalia \email{ram@@wingedfootcapital.com}
 #' @export
-robustBayesianPortfolioOptimization = function( mean_post , cov_post , nu_post , riskAversionMu = .1 , riskAversionSigma = .1 , discretizations = 10 , longonly = FALSE , volatility )
+robustBayesianPortfolioOptimization = function( mean_post , cov_post , nu_post , time_post, riskAversionMu = .1 , riskAversionSigma = .1 , discretizations = 10 , longonly = FALSE , volatility )
 {    
   # parameter checks    
   N = length( mean ) # number of assets    

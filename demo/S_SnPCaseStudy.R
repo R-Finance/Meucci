@@ -6,8 +6,8 @@
 
 load("SectorsSnP500")
 
-p_m = .1 # aversion to estimation risk for mu
-p_s = .1 # aversion to estimation risk for sigma
+p_m = 0.1 # aversion to estimation risk for mu
+p_s = 0.1 # aversion to estimation risk for sigma
 
 Ps <- P[seq(from=1, to=nrow(P),by=5),]
 R <- data.frame((Ps[2:nrow(Ps),]/Ps[1:nrow(Ps)-1,]) - 1)

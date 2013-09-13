@@ -8,15 +8,14 @@
 # upload scenarios table and prior distribution for changes in
 # SWAP2YR SWAP10YR CDXIG S&P500 DollarIndex Crude Gold VIX 10YRInflationSwapRate
 library( matlab )
-data( "MeucciFreaqEst" ) 
-Names = unlist( Names )
-colnames( X ) = colnames( DY ) = colnames( Data ) = Names
-rownames( Data ) = Dates
+data( "freaqEst" ) 
+colnames( freaqEst$X ) = colnames( freaqEst$DY ) = colnames( freaqEst$Data ) = freaqEst$Names
+rownames( freaqEst$Data ) = freaqEst$Dates
 
-J = nrow( X ) ; N = ncol( X )
-e = .01
+J = nrow( freaqEst$X ) ; N = ncol( freaqEst$X )
+e = 0.01
 p = ( 1 - e ) * p + e * ones( J , 1 ) / J # assigns a minimum probability to each scenario of e * number of scenarios
-moments = ComputeMoments( X , p )
+moments = ComputeMoments( freaqEst$X , p )
 m = moments$means ; s = moments$sd ; C = moments$correlationMatrix ; rm( moments )
 
 ##################################################################################
@@ -76,12 +75,12 @@ View[[k]]$sgn = -1
 View[[k]]$c = .1
 
 # create linear constraint representation of views on probabilities
-constraints = CondProbViews( View , X )
+constraints = CondProbViews( View , freaqEst$X )
 A = constraints$A ; b = constraints$b ; g = constraints$g ; rm( constraints )
 
 # add constraint for view on correlation
 C_12_ = .6
-New_A = t( X[ , 1 ] * X[ , 2 ] )
+New_A = t( freaqEst$X[ , 1 ] * freaqEst$X[ , 2 ] )
 New_b = s[1] * s[2] * C_12_ + m[1] * m[2]
 New_g = -log( 1 - .1 )
 

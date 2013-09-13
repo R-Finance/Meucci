@@ -76,6 +76,7 @@ for( j in 1:J )
   frontierResults = robustBayesianPortfolioOptimization( mean_post = mean_post , 
                                                          cov_post = cov_post , 
                                                          nu_post = nu_post ,
+                                                         time_post = time_post,
                                                          riskAversionMu = p_m , 
                                                          riskAversionSigma = p_s , 
                                                          discretizations = NumPortf ,

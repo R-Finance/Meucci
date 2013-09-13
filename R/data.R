@@ -239,3 +239,12 @@ NULL
 #' October 2008, p 100-106. \url{http://symmys.com/node/158}
 #' @keywords data
 NULL
+
+#' @title scenarios table and prior distribution for changes in SWAP2YR SWAP10YR CDXIG S&P500 DollarIndex Crude Gold VIX 10YRInflationSwapRate
+#'
+#' @name freaqEst
+#' @docType data
+#' @author Xavier Valls\email{flamejat@@gmail.com}
+#' @references A. Meucci, "Stress-Testing with Fully Flexible Causal Inputs" \url{http://symmys.com/node/152}
+#' @keywords data
+NULL
