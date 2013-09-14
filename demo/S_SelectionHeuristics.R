@@ -191,7 +191,7 @@ SelectRejectByS = function(OutOfWho, RejectBy, Metric)
 
 SelectExactNChooseK = function( OutOfWho, K, M )
 {	
-	Combos = t(combn( OutOfWho[ i ], K ) );
+	Combos = t(combn( OutOfWho, K ) );
 	L = dim(Combos)[1];
 	a = matrix( 0, 1, L );
 	

@@ -9,4 +9,7 @@ Xavi's notes:
 * Confirm every datafile is different from the others.
 * Change coding style to one more R alike
 * Still 2 scripts left from the book: S_MeanVarianceCallsRobust from chapter 9 and S_OptionReplication from chapter 6
+* Improve documentation for every script from the book: 
+	- find the exercises and sections they come from
+	- write down the formulas
 
