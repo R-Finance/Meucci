@@ -2,11 +2,12 @@
 #' A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 1.
 #'
 #' @references
-#' \url{http://}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 23- Simulation of univariate random normal variable".
+#'
 #' See Meucci's script for "S_NormalSample.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
-#' @export
 
 ##################################################################################################################
 ### Input parameters
@@ -50,7 +51,7 @@ legend( "bottomright", 1.9, c("empirical", "exact"), col = c("red", "blue"), lty
 
 # plot empirical quantile
 dev.new();
-u= seq( 0.01, 0.99, 0.01 ); # range of quantiles (values between zero and one)
+u = seq( 0.01, 0.99, 0.01 ); # range of quantiles (values between zero and one)
 q = quantile( X, u );
 plot( u, q, type = "l", xlab="Grade", ylab="Quantile",  lty = 1, col = "red",  main = "quantile of normal distribution" );
 

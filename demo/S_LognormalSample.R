@@ -2,14 +2,13 @@
 #' A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 1.
 #'
 #' @references
-#' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}., "E 25- Simulation of a lognormal random variable"
-#' See Meucci's script for "S_LognormalSample.m"
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}, 
+#' E 25- Simulation of a lognormal random variable".
+#'
+#' See Meucci's script for "S_LognormalSample.m".
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 #' @export
-
-source("../R/LognormalMoments2Parameters.R");
 
 ##################################################################################################################
 ### Input parameters

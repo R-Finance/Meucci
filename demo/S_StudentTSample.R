@@ -2,11 +2,12 @@
 #' A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 1.
 #'
 #' @references
-#' \url{http://}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 24- Simulation of a Student t random variable".
+#'
 #' See Meucci's script for "S_StudentTSample.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
-#' @export
 
 ##################################################################################################################
 ### Input parameters
@@ -38,7 +39,7 @@ X_b = mu + Y / sqrt( Z / nu );
 ##################################################################################################################
 ### Generate Student t sample with above parameters using grade inversion
 
-U = runif( nSim );
+U   = runif( nSim );
 X_c = mu + sigma * qt( U, nu );
 
 ##################################################################################################################
@@ -46,21 +47,15 @@ X_c = mu + sigma * qt( U, nu );
 NumBins = round(10 * log(nSim));
 
 dev.new();
-par( mfrow = c( 3, 1) );
+par( mfrow = c( 3, 1 ) );
 
 hist( X_a, NumBins, main = "built-in generator" );
 hist( X_b, NumBins, main = "stoch. representation" );
 hist( X_c, NumBins, main = "grade inversion" );
 
-
-#axisLimits = [min(axisLimits(:, 1)), max(axisLimits(:, 2)), min(axisLimits(:, 3)), max(axisLimits(:, 4))];
-#subplot(3, 1, 1), axis(axisLimits);
-#subplot(3, 1, 2), axis(axisLimits);
-#subplot(3, 1, 3), axis(axisLimits);
-
 ##################################################################################################################
 ### Compare empirical quantiles of the three simuations
-u= seq( 0.01, 0.99, 0.01 ); # range of quantiles (values between zero and one) = 0.01 : 0.01 : 0.99;  # range of quantiles (values between zero and one)
+u   = seq( 0.01, 0.99, 0.01 ); # range of quantiles (values between zero and one) = 0.01 : 0.01 : 0.99;  # range of quantiles (values between zero and one)
 q_a = quantile( X_a, u );
 q_b = quantile( X_b, u );
 q_c = quantile( X_c, u );

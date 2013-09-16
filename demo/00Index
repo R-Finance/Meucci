@@ -98,7 +98,7 @@ S_VolatilityClustering               generates paths for a volatility clustering
 S_Wishart                            generates a sample from the 2x2 Wishart distribution
 S_WishartCorrelation                 computes the correlation of the first diagonal and off-diagonal elements of a 2x2 Wishart distribution as a function of the inputs
 S_WishartLocationDispersion   		 computes the location-dispersion ellipsoid of the normalized first diagonal and off-diagonal elements of a 2x2 Wishart distribution as a function of the inputs
-S_ToyExample               			 illustrates the use of Entropy Pooling to compute Fully Flexible probabilities
+S_ToyExample               			 illustrates the use of Entropy Pooling to compute Fully Flexible Probabilities
 logToArithmeticCovariance   		 generates arithmetric returns and arithmetric covariance matrix given a distribution of log returns
 S_plotGaussHermite          		 displays mesh points based on Gaussian-Hermite quadrature Bayesian networks
 

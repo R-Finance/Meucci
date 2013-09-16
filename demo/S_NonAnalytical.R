@@ -2,11 +2,12 @@
 #' A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 1.
 #'
 #' @references
-#' \url{http://}
-#' See Meucci's script for "S_NonAnalytical.m"
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 22- Sum of random variables via simulation".
+#'
+#' See Meucci's script for "S_NonAnalytical.m".
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
-#' @export
 
 ##################################################################################################################
 ### Input parameters
