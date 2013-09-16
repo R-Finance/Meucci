@@ -16,8 +16,9 @@
 #' @author Ram Ahluwalia \email{rahluwalia@@gmail.com}
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management".
-#' Symmys site containing original MATLAB source code \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}, 
+#' "E 16- Raw Moments to central moments".
+#'
 #' See Meucci's script for "Raw2Central.m"
 #' @export
 Raw2Central = function( mu_ )
@@ -140,10 +141,9 @@ Raw2Cumul = function( mu_ )
 #' @author Ram Ahluwalia \email{rahluwalia@@gmail.com}
 #'
 #' @references 
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management". See page 10.
-#' Symmys site containing original MATLAB source code \url{http://www.symmys.com}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}, 
+#' "E 16- Raw moments to central moments".
 #'
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
 #' See Meucci's script for "Central2Raw.m"
 #' @export
 Central2Raw = function( mu )

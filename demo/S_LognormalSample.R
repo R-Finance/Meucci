@@ -3,7 +3,7 @@
 #'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}, 
-#' E 25- Simulation of a lognormal random variable".
+#' "E 25- Simulation of a lognormal random variable".
 #'
 #' See Meucci's script for "S_LognormalSample.m".
 #'

@@ -30,8 +30,9 @@
 }
 \references{
   A. Meucci - "Exercises in Advanced Risk and Portfolio
-  Management". Symmys site containing original MATLAB
-  source code \url{http://symmys.com/node/170}. See
-  Meucci's script for "Raw2Central.m"
+  Management" \url{http://symmys.com/node/170}, "E 16- Raw
+  Moments to central moments".
+
+  See Meucci's script for "Raw2Central.m"
 }
 
