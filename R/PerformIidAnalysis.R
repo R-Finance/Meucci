@@ -11,7 +11,7 @@
 #     under i.i.d. the location-dispersion ellipsoid should be a circle
 #'
 #' @references
-#' \url{http://symmys.com/node/170}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
 #' See Meucci's script for "PerformIidAnalysis.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

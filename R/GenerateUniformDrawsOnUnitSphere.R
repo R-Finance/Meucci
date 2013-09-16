@@ -12,7 +12,7 @@
 #     R is a distribution on (0,1) proportional to r^(Dims-1), i.e. the area of surface of radius r 
 #'
 #' @references
-#' \url{http://symmys.com/node/170}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
 #' See Meucci's script for "GenerateUniformDrawsOnUnitSphere.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

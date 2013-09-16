@@ -17,7 +17,7 @@
 #'  inv(Sigma) ~ W(Nu_0,inv(Sigma_0)/Nu_0)
 #'
 #' @references
-#' \url{http://symmys.com/node/170}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
 #' See Meucci's script for "RandNormalInverseWishart.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

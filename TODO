@@ -11,5 +11,5 @@ Xavi's notes:
 * Still 2 scripts left from the book: S_MeanVarianceCallsRobust from chapter 9 and S_OptionReplication from chapter 6
 * Improve documentation for every script from the book: 
 	- find the exercises and sections they come from
-	- write down the formulas
-
+	- write down the equations
+* Not Sure if EntropyProg returns what it should with empty matrices as arguments for the constraints

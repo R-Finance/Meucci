@@ -15,10 +15,10 @@ MapVol = function( sig , y , K , T )
 #'  Compute the pricing in the horizon, as it appears in A. Meucci, "Fully Flexible Views: Theory and Practice",
 #'  The Risk Magazine, October 2008, p 100-106.
 #'  
-#'  @param   Butterflies   : List of securities with some analytics computed.
-#'  @param   X             : Panel of joint factors realizations 
+#'  @param   Butterflies    List of securities with some analytics computed.
+#'  @param   X              Panel of joint factors realizations 
 #'
-#'  @return  PnL           : Matrix of profit and loss scenarios
+#'  @return  PnL            Matrix of profit and loss scenarios
 #'
 #'  @references 
 #'  A. Meucci, "Fully Flexible Views: Theory and Practice" \url{http://www.symmys.com/node/158}

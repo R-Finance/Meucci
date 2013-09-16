@@ -9,7 +9,7 @@
 #'  @return	Cov_Prices    : [matrix] (N x N) covariance matrix of prices
 #'
 #' @references
-#' \url{http://symmys.com/node/170}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
 #' See (6.77)-(6.79) in "Risk and Asset Allocation"-Springer (2005), by A. Meucci
 #' See Meucci's script for "ConvertCompoundedReturns2Price.m"
 #'

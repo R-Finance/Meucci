@@ -4,7 +4,7 @@
 #'	@param   Portfolios : [matrix] (M x N) M portfolios of size N (weights)
 #'
 #' @references
-#' \url{http://symmys.com/node/170}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
 #' See Meucci's script for "PlotCompositionEfficientFrontier.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

@@ -9,7 +9,7 @@
 #'  @return  CountLoop : [scalar] number of iterations of the algorithm
 #'
 #' @references
-#' \url{http://symmys.com/node/170}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
 #' See Meucci's script for "FitExpectationMaximization.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

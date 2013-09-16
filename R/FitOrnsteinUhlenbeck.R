@@ -13,7 +13,7 @@
 #'	o dB_t: vector of Brownian motions
 #'
 #' @references
-#' \url{http://symmys.com/node/170}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
 #' See Meucci's script for "FitOrnsteinUhlenbeck.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

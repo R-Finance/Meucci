@@ -2,7 +2,7 @@
 #' Described in A. Meucci,"Risk and Asset Allocation", Springer, 2005,  Chapter 6.
 #'
 #' @references
-#' \url{http://symmys.com/node/170}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
 #' See Meucci's script for "S_MeanVarianceCalls.m"
 #
 #' @author Xavier Valls \email{flamejat@@gmail.com}

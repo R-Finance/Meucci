@@ -22,7 +22,7 @@
 #'  Extrapolating long distances outside the support of V is rarely advisable.
 #'
 #' @references
-#' \url{http://symmys.com/node/170}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
 #' See Meucci's script for "InterExtrapolate.R"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

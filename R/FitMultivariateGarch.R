@@ -14,7 +14,7 @@
 #' @note Initially written by Olivier Ledoit and Michael Wolf
 #'
 #' @references
-#' \url{http://symmys.com/node/170}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
 #' See Meucci's script for "FitMultivariateGarch.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -127,7 +127,7 @@ FitMultivariateGarch = function( returns, demean = 1, eps = 0, df = 500 )
 #'  Difference with garch1f: errors come from the score alone
 #' 
 #' @references
-#' \url{http://symmys.com/node/170}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
 #' See Meucci's script for "FitMultivariateGarch.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -390,7 +390,7 @@ for( i in 1 : n )
 #'  Steepest Ascent on boundary, Hessian off boundary, no grid search
 #' 
 #' @references
-#' \url{http://symmys.com/node/170}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
 #' See Meucci's script for "FitMultivariateGarch.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

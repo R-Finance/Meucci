@@ -1,6 +1,6 @@
 #' Transforms the first n raw moments into the first n central moments
 #'
-#' step 6 of projection process: 
+#' Step 6 of projection process: 
 #' 
 #' compute multi-period central moments. 
 #' 
@@ -16,10 +16,8 @@
 #' @author Ram Ahluwalia \email{rahluwalia@@gmail.com}
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management". See page 9
-#' Symmys site containing original MATLAB source code \url{http://www.symmys.com}
-#' 
-#' \url{http://symmys.com/node/170}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management".
+#' Symmys site containing original MATLAB source code \url{http://symmys.com/node/170}.
 #' See Meucci's script for "Raw2Central.m"
 #' @export
 Raw2Central = function( mu_ )
@@ -44,7 +42,7 @@ Raw2Central = function( mu_ )
 
 #' Map cumulative moments into raw moments.
 #'
-#' step 5 of the projection process: 
+#' Step 5 of the projection process: 
 #' 
 #' From the cumulants of Y we compute the raw non-central moments of Y
 #' 
@@ -61,11 +59,10 @@ Raw2Central = function( mu_ )
 #' @author Ram Ahluwalia \email{rahluwalia@@gmail.com}
 #'
 #' @references
-#' \url{http://symmys.com/node/170}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
 #' See Meucci's script for "Cumul2Raw.m".
 #'
-#' A. Meucci - "Annualization and General Projection of Skewness, Kurtosis and All Summary Statistics" - formula (24)
-#' Symmys site containing original MATLAB source code \url{http://www.symmys.com/node/136}
+#' A. Meucci - "Annualization and General Projection of Skewness, Kurtosis and All Summary Statistics" - formula (24) \url{http://www.symmys.com/node/136}
 #' @export
 
 Cumul2Raw = function( ka )
@@ -106,7 +103,7 @@ Cumul2Raw = function( ka )
 #' A. Meucci - "Annualization and General Projection of Skewness, Kurtosis and All Summary Statistics" - formula (21)
 #' Symmys site containing original MATLAB source code \url{http://www.symmys.com/node/136}
 #'
-#' \url{http://symmys.com/node/170}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
 #' See Meucci's script for "Raw2Cumul.m"
 #' @export
 
@@ -130,7 +127,7 @@ Raw2Cumul = function( mu_ )
 
 #' Transforms first n central moments into first n raw moments (first central moment defined as expectation)
 #'
-#' step 2 of projection process: From the central moments of step 1, we compute the non-central moments. To do so we start
+#' Step 2 of projection process: From the central moments of step 1, we compute the non-central moments. To do so we start
 #' with the first non-central moment and apply recursively an identity (formula 20)
 #'
 #' \deqn{ \tilde{ \mu }^{ \big(1\big) }_{X} \equiv \mu ^{\big(1\big)}_{X}
@@ -146,7 +143,7 @@ Raw2Cumul = function( mu_ )
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management". See page 10.
 #' Symmys site containing original MATLAB source code \url{http://www.symmys.com}
 #'
-#' \url{http://symmys.com/node/170}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
 #' See Meucci's script for "Central2Raw.m"
 #' @export
 Central2Raw = function( mu )
@@ -170,7 +167,7 @@ Central2Raw = function( mu )
 
 #' Compute summary stats
 #'
-#' step 0 in projection process: Compute summary stats (mean, skew, kurtosis, etc.) of the invariant X-t
+#' Step 0 in projection process: Compute summary stats (mean, skew, kurtosis, etc.) of the invariant X-t
 #' step 1 in the project process We collect the first 'n' central moments of the invariant X-t. 
 #'
 #' @param    X    an invariant

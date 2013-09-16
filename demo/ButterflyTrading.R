@@ -77,7 +77,7 @@ p_3 = ViewCurveSlope( factorsDistribution$X, factorsDistribution$p );
 # .2 is the confidence on View 1; .25 is the confidence on View 2; .2 is the confidence on View 3
 
 c = cbind( 0.35 , 0.2 , 0.25 , 0.2 )
-p_= cbind( p , p_1 , p_2 , p_3 ) %*% t(c) # compute the uncertainty weighted posterior probabilities
+p_= cbind( factorsDistribution$p , p_1 , p_2 , p_3 ) %*% t(c) # compute the uncertainty weighted posterior probabilities
 
 
 ###########################################################################################################

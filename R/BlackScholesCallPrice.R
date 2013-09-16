@@ -16,7 +16,7 @@
 #'	Code is vectorized, so the inputs can be vectors or matrices (but sizes must match)
 #'
 #' @references
-#' \url{http://symmys.com/node/170}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
 #' See Meucci's script for "BlackScholesCallPrice.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

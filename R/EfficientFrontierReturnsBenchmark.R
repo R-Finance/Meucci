@@ -12,7 +12,7 @@
 #'  @return Composition    : [matrix] (NumPortf x N) optimal portfolios 
 #'
 #' @references
-#' \url{http://symmys.com/node/170}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
 #' See Meucci's script for "EfficientFrontierReturnsBenchmark.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

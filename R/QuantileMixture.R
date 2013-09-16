@@ -13,7 +13,7 @@
 #'  @return	Q   : [scalar] quantile
 #'
 #' @references
-#' \url{http://symmys.com/node/170}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
 #' See Meucci's script for "QuantileMixture.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

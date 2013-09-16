@@ -8,7 +8,7 @@
 #'	@return  X : [matrix] (J x N) of drawsF_U   : [vector] (J x 1) PDF values
 #'
 #' @references
-#' \url{http://symmys.com/node/170}, \url{http://www.symmys.com/node/162}{A. Meucci - "Simulations with Exact Means and Covariances", Risk, July 2009}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}., \url{http://www.symmys.com/node/162}{A. Meucci - "Simulations with Exact Means and Covariances", Risk, July 2009}
 #' See Meucci's script for "MvnRnd.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com} and Ram Ahluwalia \email{rahluwalia@@gmail.com}

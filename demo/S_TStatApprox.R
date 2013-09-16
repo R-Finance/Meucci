@@ -13,7 +13,7 @@
 #'  @return  F       : [vector] ( J x 1 ) 
 #'
 #' @references
-#' \url{http://symmys.com/node/170}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
 #' See Meucci's script for "GenerateInvariants.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -45,7 +45,7 @@ GenerateInvariants = function( mu_x, sig_x, nu_f, sig_f, nu_w, Sigma_w, J )
 #' as described in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 4.
 #'
 #' @references
-#' \url{http://symmys.com/node/170}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
 #' See Meucci's script for "S_TStatApprox.m"
 #'
 
