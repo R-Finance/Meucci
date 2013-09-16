@@ -1,17 +1,21 @@
-#' Perform the horizon projection of a Student t invariant, as described in 
+#' @title Perform the horizon projection of a Student t invariant
+#'
+#' @description Perform the horizon projection of a Student t invariant, as described in 
 #' A. Meucci "Risk and Asset Allocation", Springer, 2005
 #'
-#'  @param	nu    : [scalar] degree of freedom
-#'	@param	s     : [scalar] scatter parameter
-#'  @param	m     : [scalar] location parameter
-#'  @param	T     : [scalar] multiple of the estimation period to the invesment horizon 
+#'  @param	nu     [scalar] degree of freedom
+#'	@param	s      [scalar] scatter parameter
+#'  @param	m      [scalar] location parameter
+#'  @param	T      [scalar] multiple of the estimation period to the invesment horizon 
 #'  
-#'  @return	x_Hor : [scalar]
-#'  @return	f_Hor : [scalar]
-#'	@return	F_Hor : [scalar]
+#'  @return	x_Hor  [scalar] probabilities at horizon
+#'  @return	f_Hor  [scalar] horizon discretized pdf (non-standarized)
+#'	@return	F_Hor  [scalar] horizon discretized cdf (non-standarized)
 #'
 #' @references
-#' \url{http://}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 141 – Fixed-income market: projection of Student t invariants".
+#'
 #' See Meucci's script for "ProjectionStudentT.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

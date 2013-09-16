@@ -3,7 +3,9 @@
 #'"Risk and Asset Allocation", Springer, 2005,  Chapter 3.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 143 – Derivatives market: projection of invariants".
+#'
 #' See Meucci's script for "S_CallsProjectionPricing.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com} 
@@ -27,8 +29,8 @@ r_free = 0.04;    # risk-free rate
 J = 10000;       # number of simulations
 
 ##################################################################################################################
-numCalls   = length( Time2Mats );
-timeLength = length( implVol$spot );
+numCalls      = length( Time2Mats );
+timeLength    = length( implVol$spot );
 numSurfPoints = length( implVol$days2Maturity ) * length( implVol$moneyness );
 
 ##################################################################################################################
@@ -36,6 +38,7 @@ numSurfPoints = length( implVol$days2Maturity ) * length( implVol$moneyness );
 # variables in X are changes in log(spot) and changes in log(imp.vol)
 # evaluated at the 'numSurfPoints' points on the vol surface (vectorized).
 X = matrix( 0, timeLength - 1, numSurfPoints + 1 );
+
 # log-changes of underlying spot
 X[ , 1 ] = diff( log( implVol$spot ) );
 
@@ -46,12 +49,12 @@ for( i in 1 : numSurfPoints )
     X[ , i+1 ] = diff( log( impVolSeries[ , i ] ) );
 }
 
-muX = apply( X , 2, mean );
+muX    = apply( X , 2, mean );
 SigmaX = cov( X );
 
 ##################################################################################################################
 ### Project distribution to investment horizon
-muX = muX * tau / tau_tilde;
+muX    = muX * tau / tau_tilde;
 SigmaX = SigmaX * tau / tau_tilde;
 
 ##################################################################################################################

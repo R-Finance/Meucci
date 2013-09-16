@@ -1,4 +1,7 @@
-#' Solve for G that maximises sample r-square of X*G'*B' with X under constraints A*G<=D
+#' @title Solve for G that maximises sample r-square of X*G'*B' with X under constraints A*G<=D
+#' and Aeq*G=Deq
+#'
+#' @description Solve for G that maximises sample r-square of X*G'*B' with X under constraints A*G<=D
 #' and Aeq*G=Deq (A,D, Aeq,Deq conformable matrices),as described in  A. Meucci, 
 #' "Risk and Asset Allocation", Springer, 2005.
 #'  
@@ -19,6 +22,8 @@
 #'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' Used in "E 123 – Cross-section factors: generalized cross-section industry factors".
+#'
 #' See Meucci's script for "MaxRsqCS.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

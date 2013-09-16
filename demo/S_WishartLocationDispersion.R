@@ -22,11 +22,11 @@ nSim = 10000;
 ###################################################################################################################
 ### Set input parameters
 
-W_xx  = matrix( NaN, nSim, 1 ); 
-W_yy  = matrix( NaN, nSim, 1 ); 
-W_xy  = matrix( NaN, nSim, 1 ); 
-Vec_W = matrix( NaN, nSim, 4 ); 
-Dets  = matrix( NaN, nSim, 1 ); 
+W_xx   = matrix( NaN, nSim, 1 ); 
+W_yy   = matrix( NaN, nSim, 1 ); 
+W_xy   = matrix( NaN, nSim, 1 ); 
+Vec_W  = matrix( NaN, nSim, 4 ); 
+Dets   = matrix( NaN, nSim, 1 ); 
 Traces = matrix( NaN, nSim, 1 ); 
 
 
@@ -80,7 +80,7 @@ E_hat = t( apply( X, 2, mean) );
 S = diag( 1 / c( sqrt( var_Wxx ), sqrt( var_Wxy ))) %*% S_xx_xy %*% diag( 1 / c( sqrt( var_Wxx ), sqrt( var_Wxy )));
 S_hat = cov( X );
 
-figure();
+dev.new();
 plot( X_1, X_2, xlab = "X_1", ylab = "X_2");
 
 TwoDimEllipsoid(E, S, 1, TRUE, FALSE);

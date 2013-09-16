@@ -1,17 +1,21 @@
-#' Convert change in yield-to-maturity to price for fixed-income securities, as described in 
+#' @title Convert change in yield-to-maturity to price for fixed-income securities
+#'
+#' @description Convert change in yield-to-maturity to price for fixed-income securities, as described in 
 #' A. Meucci "Risk and Asset Allocation", Springer, 2005
 #'
-#'  @param	Exp_DY        : [vector] (N x 1) expected value of change in yield to maturity
-#'	@param	Cov_DY        : [matrix] (N x N) covariance of change in yield to maturity
-#'  @param	Times2Mat     : [scalar] time to maturity
-#'  @param	CurrentPrices : [vector] (N x 1) current prices
+#'  @param	Exp_DY         [vector] (N x 1) expected value of change in yield to maturity
+#'	@param	Cov_DY         [matrix] (N x N) covariance of change in yield to maturity
+#'  @param	Times2Mat      [scalar] time to maturity
+#'  @param	CurrentPrices  [vector] (N x 1) current prices
 #'  
-#'  @return	Exp_Prices    : [vector] (N x 1) expected prices
-#'  @return	Cov_Prices    : [matrix] (N x N) covariance of prices
+#'  @return	Exp_Prices     [vector] (N x 1) expected prices
+#'  @return	Cov_Prices     [matrix] (N x N) covariance of prices
 #'
 #' @references
-#' \url{http://}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#'
 #' See (6.77)-(6.79) in "Risk and Asset Allocation"-Springer (2005), by A. Meucci
+#'
 #' See Meucci's script for "ConvertChangeInYield2Price.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

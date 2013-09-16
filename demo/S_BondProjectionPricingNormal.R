@@ -1,15 +1,15 @@
-
 #'This script projects the distribution of the market invariants for the bond markets 
 #'(i.e. the changes in yield to maturity) from the estimation interval to the investment horizon 
 #'Then it computes the distribution of prices at the investment horizon  as described in A. Meucci,
 #'"Risk and Asset Allocation", Springer, 2005,  Chapter 3.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 140 – Fixed-income market: projection of normal invariants".
+#'
 #' See Meucci's script for "S_BondProjectionPricingNormal.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
-#' 
 
 ##################################################################################################################
 ### Inputs
@@ -61,5 +61,3 @@ BondExp_Prices = t( apply(BondMarket_Scenarios, 2, mean) );
 BondCov_Prices = cov( BondMarket_Scenarios );
 print( BondExp_Prices );
 print( BondCov_Prices );
-
-### EOF

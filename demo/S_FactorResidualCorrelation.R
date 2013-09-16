@@ -3,7 +3,9 @@
 #' "Risk and Asset Allocation", Springer, 2005,  Chapter 3.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 125 – Correlation factors-residual: normal example".
+#'
 #' See Meucci's script for "S_FactorResidualCorrelation.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -14,8 +16,8 @@ N     = 4; # market size
 nSim  = 10000;
 mu    = 0.1 + 0.3 * runif(N);
 sigma = 0.5 * mu; 
-dd = matrix(rnorm( N*N ), N, N );
-Corr = cov2cor( dd %*% t( dd ) );
+dd    = matrix(rnorm( N*N ), N, N );
+Corr  = cov2cor( dd %*% t( dd ) );
 Sigma = diag( sigma, length(sigma) ) %*% Corr %*% diag( sigma, length(sigma) ); 
 
 ##################################################################################################################
@@ -24,7 +26,7 @@ X = MvnRnd(mu, Sigma, nSim);
 
 ##################################################################################################################
 ### Generate a random vector beta
-beta = matrix(1, N ) + rnorm(N) * 0.1;
+beta = matrix( 1, N ) + rnorm(N) * 0.1;
 
 ##################################################################################################################
 ### Compute factor realization by cross-sectional regression and residuals

@@ -2,12 +2,12 @@
 #' A. Meucci "Risk and Asset Allocation", Springer, 2005, chapter 3.
 #'
 #' @references
-#' \url{http://}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 135 – Equity market: quest for invariance".
+#'
 #' See Meucci's script for "S_EquitiesInvariants.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
-
-
 
 ##################################################################################################################
 ### Load daily stock prices from the utility sector in the S&P 500
@@ -35,4 +35,3 @@ PerformIidAnalysis( 1 : length(Z), Z, 'Analysis for Z' );
 # fourth invariant
 W = P[ 3 : length( P ) ] - 2 * P[ 2: ( length( P ) -1 ) ] + P[ 1 : ( length( P ) -2 ) ];
 PerformIidAnalysis( 1 : length( W ), W, 'Analysis for W' );
-

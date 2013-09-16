@@ -2,7 +2,9 @@
 #' in A. Meucci,"Risk and Asset Allocation", Springer, 2005,  Chapter 3.
 #'
 #' @references
-#' \url{http://}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 142 - Derivatives market: quest for invariance".
+#'
 #' See Meucci's script for "S_DerivativesInvariants.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

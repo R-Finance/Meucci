@@ -1,28 +1,27 @@
 #' Interpolate and extrapolate using n-linear interpolation (tensor product linear).
 #'
-#'  @param   V        : [array] p-dimensional array to be interpolated/extrapolated at the list of points in the array Xi.
+#'  @param   V          [array] p-dimensional array to be interpolated/extrapolated at the list of points in the array Xi.
 #                       interpne will work in any number of dimensions >= 1
-#'  @param   Xi       : [array] (n x p) array of n points to interpolate/extrapolate. Each point is one row of the array Xi.
-#'  @param   nodelist : [cell array] (optional) cell array of nodes in each dimension.
+#'  @param   Xi         [array] (n x p) array of n points to interpolate/extrapolate. Each point is one row of the array Xi.
+#'  @param   nodelist   [cell array] (optional) cell array of nodes in each dimension.
 #                       If nodelist is not provided, then by default I will assume nodelist[[i]] = 1:size(V,i). The nodes in
 #                       nodelist need not be uniformly spaced.
-#'  @param   method   : [string] (optional) chacter string, denotes the interpolation method used. default method = 'linear'
+#'  @param   method     [string] (optional) chacter string, denotes the interpolation method used. default method = 'linear'
 #                       'linear'  --> n-d linear tensor product interpolation/extrapolation
 #                       'nearest' --> n-d nearest neighbor interpolation/extrapolation
 #                       in 2-d, 'linear' is equivalent to a bilinear interpolant
 #                       in 3-d, it is commonly known as trilinear interpolation.
 #'  
-#'  @return Vpred     : [array] (n x 1) array of interpolated/extrapolated values
+#'  @return Vpred       [array] (n x 1) array of interpolated/extrapolated values
 #'  
 #'  @note   
-#'  Initially written by John D'Errico
-#'  Vpred = interpne(V,Xi)
-#'  Vpred = interpne(V,Xi,nodelist)
-#'  Vpred = interpne(V,Xi,nodelist,method)
+#'  Initially written by John D'Errico.
+#'
 #'  Extrapolating long distances outside the support of V is rarely advisable.
 #'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#'
 #' See Meucci's script for "InterExtrapolate.R"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -33,12 +32,12 @@
 #  [x1,x2] = meshgrid(0:.2:1);
 #  z = exp(x1+x2);
 #  Xi = rand(100,2)*2-.5;
-#  Zi = interpne(z,Xi,{0:.2:1, 0:.2:1},'linear');
+#  Zi = InterExtrapolate(z,Xi,{0:.2:1, 0:.2:1},'linear');
 #  surf(0:.2:1,0:.2:1,z)
 #  plot3( Xi(:,1),Xi(:,2),Zi,'ro')
 #
 
-InterExtrapolate = function( V, Xi, nodelist, method )
+InterExtrapolate = function( V, Xi, nodelist = NULL, method = NULL )
 {
     # get some sizes
 
@@ -147,7 +146,7 @@ InterExtrapolate = function( V, Xi, nodelist, method )
             # tensor product linear is not too nasty.
             Vpred = matrix( 0, nrow(Xi), 1);
             # define the 2^ndims corners of a hypercube (MATLAB's corners = (dec2bin(0:(2^ndims-1))== '1');)
-            corners = lapply( strsplit( intToBin ( 0 : ( 2^ndims - 1 ) ), split=""), as.integer ); 
+            corners = lapply( strsplit( intToBin ( 0 : ( 2^ndims - 1 ) ), split = "" ), as.integer ); 
             
             nc = length( corners );
             

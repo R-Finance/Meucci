@@ -1,8 +1,7 @@
 \name{MaxRsqCS}
 \alias{MaxRsqCS}
 \title{Solve for G that maximises sample r-square of X*G'*B' with X under constraints A*G<=D
-and Aeq*G=Deq (A,D, Aeq,Deq conformable matrices),as described in  A. Meucci,
-"Risk and Asset Allocation", Springer, 2005.}
+and Aeq*G=Deq}
 \usage{
   MaxRsqCS(X, B, W, A = NULL, D = NULL, Aeq = NULL, Deq,
     lb = NULL, ub = NULL)
@@ -43,7 +42,10 @@ and Aeq*G=Deq (A,D, Aeq,Deq conformable matrices),as described in  A. Meucci,
 }
 \references{
   A. Meucci - "Exercises in Advanced Risk and Portfolio
-  Management" \url{http://symmys.com/node/170}. See
-  Meucci's script for "MaxRsqCS.m"
+  Management" \url{http://symmys.com/node/170}. Used in "E
+  123 – Cross-section factors: generalized cross-section
+  industry factors".
+
+  See Meucci's script for "MaxRsqCS.m"
 }
 

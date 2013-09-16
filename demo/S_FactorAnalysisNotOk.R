@@ -2,11 +2,12 @@
 #'"Risk and Asset Allocation", Springer, 2005,  Chapter 3.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 111 – Hidden factors: puzzle".
+#'
 #' See Meucci's script for "S_FactorAnalysisNotOk.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
-
 
 ##################################################################################################################
 ### Inputs
@@ -36,12 +37,13 @@ X = MvnRnd( matrix( 0, N, 1 ), S, J );
 FA = factanal(X, K, scores = "Bartlett" );
 
 # factor analysis recovers the structure exactly however...
-S_ = FA$loadings %*% t( FA$loadings ) + diag( FA$uniquenesses, length( FA$uniquenesses) );
+S_    = FA$loadings %*% t( FA$loadings ) + diag( FA$uniquenesses, length( FA$uniquenesses) );
 Match = 1 - max( abs( ( S - S_) / S) );
 print(Match);
 
 # ...the systematic+idiosyncratic decomposition is NOT recovered
-U_ = X - FA$scores %*% t(FA$loadings); # compute residuals
+U_  = X - FA$scores %*% t(FA$loadings); # compute residuals
 S_U = cor( U_ ); # compute correlations
+
 # residuals are not idiosyncratic
 print( S_U );

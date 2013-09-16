@@ -2,7 +2,9 @@
 #' "Risk and Asset Allocation", Springer, 2005, Chapter 3.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 139 – Fixed-income market: quest for invariance".
+#'
 #' See Meucci's script for "S_FixedIncomeInvariants.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

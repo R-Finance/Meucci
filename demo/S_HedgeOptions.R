@@ -2,7 +2,9 @@
 #' A. Meucci "Risk and Asset Allocation", Springer, 2005, Chapter 3.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 127 – Factors on demand: no-Greek hedging".
+#'
 #' See Meucci's script for "S_HedgeOptions.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -23,8 +25,8 @@ J = 10000;     # number of simulations
 
 ##################################################################################################################
 ### Underlying and volatility surface
-numCalls = length( Time2Mats );
-timeLength = length( implVol$spot );
+numCalls      = length( Time2Mats );
+timeLength    = length( implVol$spot );
 numSurfPoints = length( implVol$days2Maturity ) * length( implVol$moneyness );
 
 ##################################################################################################################

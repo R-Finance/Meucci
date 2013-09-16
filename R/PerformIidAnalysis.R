@@ -1,4 +1,6 @@
-#' This function performs simple invariance (i.i.d.) tests on a time series, as described in
+#' @title Performs simple invariance (i.i.d.) tests on a time series.
+#'
+#' @description This function performs simple invariance (i.i.d.) tests on a time series, as described in
 #' A. Meucci "Risk and Asset Allocation", Springer, 2005
 #'
 #'  @param	Dates : [vector] (T x 1) dates
@@ -6,12 +8,16 @@
 #'  @param	Str   : [string]  title for the plot 
 #'  
 #'  @note it checks the evolution over time
-#   it checks that the variables are identically distributed by looking at the histogram of two subsamples
-#   it checks that the variables are independent by looking at the 1-lag scatter plot
-#     under i.i.d. the location-dispersion ellipsoid should be a circle
+#'
+#'   it checks that the variables are identically distributed by looking at the histogram of two subsamples
+#'
+#'   it checks that the variables are independent by looking at the 1-lag scatter plot
+#'
+#'   under i.i.d. the location-dispersion ellipsoid should be a circle
 #'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#'
 #' See Meucci's script for "PerformIidAnalysis.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -52,9 +58,5 @@ PerformIidAnalysis = function( Dates = dim( Data)[1], Data, Str = "")
 	m = cbind( apply( cbind( X, Y ), 2, mean ));
 	S = cov( cbind( X, Y ));
 	TwoDimEllipsoid( m, S, 2, FALSE, FALSE);
-	#axisLimits = axis;
-	#textX = axisLimits(1:2)*[-0.1,1.1]';
-	#textY = axisLimits(3:4)*[0.1,0.9]';
-	#text(textX, textY, Str);
 
 }

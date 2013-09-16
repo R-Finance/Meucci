@@ -1,13 +1,14 @@
-
 #' This script projects the distribution of the market invariants for the stock market (i.e. the compounded returns)
 #' from the estimation interval (normal assumption) to the investment horizon. Then it computes the distribution of prices
 #' at the investment horizon analytically, by full Monte Carlo, and by delta/duration approximation.
-#' Described in A. Meucci "Risk and Asset Allocation", Springer, 2005, 
-#' chapter 3.
+#'
+#' Described in A. Meucci "Risk and Asset Allocation", Springer, 2005, chapter 3.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
-#' See Meucci's script for "S_EquitiesInvariance.m"
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 138 – Equity market: linear vs. compounded returns projection II".
+#'
+#' See Meucci's script for "S_EquityProjectionPricing.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 

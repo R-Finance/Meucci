@@ -1,16 +1,26 @@
-
 #'This script studies horizon effect on explicit factors / implicit loadings linear model, as described in 
 #'A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 3.
-#'Compounded returns follow the linear model X = tau*muX + D*F + epsilon, where 
+#'Compounded returns follow the linear model X = tau*muX + D*F + epsilon, where: 
+#'
 #' tau: investment horizon (in weeks)
+#'
 #' muX: expected weekly compounded returns
+#'
 #' F: factor compounded returns, with zero expectation and tau-proportional covariance
+#'
 #' D: matrix of factor loadings
+#'
 #' epsilon: uncorrelated (idiosyncratic) shocks.
+#'
 #' R = exp(X)-1 and Z = exp(F)-1 are the linear returns
 #'
-#' @references
+#' @note See "E 116 – Time series factors: analysis of residuals I" from 
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#'
+#' @references
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 126 – Factors on demand: horizon effect".
+#'
 #' See Meucci's script for "S_HorizonEffect.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -76,6 +86,7 @@ for( i in 1 : ntauRangeWeeks )
 
 ##################################################################################################################
 ### Plots
+
 # relationship between the constant nd the intercept
 dev.new();
 plot(tauRangeWeeks, aMinusTauMuX, type= "l", xlab = expression(paste("investment horizon, ", tau,", weeks")),
@@ -84,8 +95,6 @@ plot(tauRangeWeeks, aMinusTauMuX, type= "l", xlab = expression(paste("investment
 # relationship between the loadings D in and the loadings B
 dev.new();
 plot(tauRangeWeeks, normDminusB, type = "l", xlab = expression(paste("investment horizon, ", tau,", weeks")), main = expression("norm of (D-B)"^t));
-
-
 
 # determine if U idiosyncratic
 dev.new();
