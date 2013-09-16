@@ -27,7 +27,8 @@ as described in  A. Meucci, "Risk and Asset Allocation", Springer, 2005.}
   Xavier Valls \email{flamejat@gmail.com}
 }
 \references{
-  \url{http://symmys.com/node/170} See Meucci's script for
-  "FitExpectationMaximization.m"
+  A. Meucci - "Exercises in Advanced Risk and Portfolio
+  Management" \url{http://symmys.com/node/170}. See
+  Meucci's script for "FitExpectationMaximization.m"
 }
 

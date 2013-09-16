@@ -36,7 +36,8 @@
   (21) Symmys site containing original MATLAB source code
   \url{http://www.symmys.com/node/136}
 
-  \url{http://symmys.com/node/170} See Meucci's script for
-  "Raw2Cumul.m"
+  A. Meucci - "Exercises in Advanced Risk and Portfolio
+  Management" \url{http://symmys.com/node/170}. See
+  Meucci's script for "Raw2Cumul.m"
 }
 

@@ -15,7 +15,7 @@
   mu central moments
 }
 \description{
-  step 0 in projection process: Compute summary stats
+  Step 0 in projection process: Compute summary stats
   (mean, skew, kurtosis, etc.) of the invariant X-t step 1
   in the project process We collect the first 'n' central
   moments of the invariant X-t.

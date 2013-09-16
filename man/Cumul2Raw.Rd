@@ -13,7 +13,7 @@
   corresponding raw moments
 }
 \description{
-  step 5 of the projection process:
+  Step 5 of the projection process:
 }
 \details{
   From the cumulants of Y we compute the raw non-central
@@ -30,12 +30,12 @@
   Ram Ahluwalia \email{rahluwalia@gmail.com}
 }
 \references{
-  \url{http://symmys.com/node/170} See Meucci's script for
-  "Cumul2Raw.m".
+  A. Meucci - "Exercises in Advanced Risk and Portfolio
+  Management" \url{http://symmys.com/node/170}. See
+  Meucci's script for "Cumul2Raw.m".
 
   A. Meucci - "Annualization and General Projection of
   Skewness, Kurtosis and All Summary Statistics" - formula
-  (24) Symmys site containing original MATLAB source code
-  \url{http://www.symmys.com/node/136}
+  (24) \url{http://www.symmys.com/node/136}
 }
 

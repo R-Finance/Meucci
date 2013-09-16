@@ -17,7 +17,8 @@
   Xavier Valls \email{flamejat@gmail.com}
 }
 \references{
-  \url{http://symmys.com/node/170} See Meucci's script for
-  "PlotCompositionEfficientFrontier.m"
+  A. Meucci - "Exercises in Advanced Risk and Portfolio
+  Management" \url{http://symmys.com/node/170}. See
+  Meucci's script for "PlotCompositionEfficientFrontier.m"
 }
 

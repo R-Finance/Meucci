@@ -26,7 +26,8 @@ as described in  A. Meucci, "Risk and Asset Allocation", Springer, 2005.}
   \email{rahluwalia@gmail.com}
 }
 \references{
-  \url{http://symmys.com/node/170},
+  A. Meucci - "Exercises in Advanced Risk and Portfolio
+  Management" \url{http://symmys.com/node/170}.,
   \url{http://www.symmys.com/node/162}{A. Meucci -
   "Simulations with Exact Means and Covariances", Risk,
   July 2009} See Meucci's script for "MvnRnd.m"

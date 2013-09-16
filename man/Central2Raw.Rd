@@ -13,7 +13,7 @@
   corresponding raw moments
 }
 \description{
-  step 2 of projection process: From the central moments of
+  Step 2 of projection process: From the central moments of
   step 1, we compute the non-central moments. To do so we
   start with the first non-central moment and apply
   recursively an identity (formula 20)
@@ -32,7 +32,8 @@
   Management". See page 10. Symmys site containing original
   MATLAB source code \url{http://www.symmys.com}
 
-  \url{http://symmys.com/node/170} See Meucci's script for
-  "Central2Raw.m"
+  A. Meucci - "Exercises in Advanced Risk and Portfolio
+  Management" \url{http://symmys.com/node/170}. See
+  Meucci's script for "Central2Raw.m"
 }
 

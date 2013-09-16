@@ -13,7 +13,7 @@
   moments
 }
 \description{
-  step 6 of projection process:
+  Step 6 of projection process:
 }
 \details{
   compute multi-period central moments.
@@ -30,10 +30,8 @@
 }
 \references{
   A. Meucci - "Exercises in Advanced Risk and Portfolio
-  Management". See page 9 Symmys site containing original
-  MATLAB source code \url{http://www.symmys.com}
-
-  \url{http://symmys.com/node/170} See Meucci's script for
-  "Raw2Central.m"
+  Management". Symmys site containing original MATLAB
+  source code \url{http://symmys.com/node/170}. See
+  Meucci's script for "Raw2Central.m"
 }
 

@@ -6,13 +6,13 @@
   HorizonPricing(Butterflies, X)
 }
 \arguments{
-  \item{Butterflies}{: List of securities with some
-  analytics computed.}
+  \item{Butterflies}{List of securities with some analytics
+  computed.}
 
-  \item{X}{: Panel of joint factors realizations}
+  \item{X}{Panel of joint factors realizations}
 }
 \value{
-  PnL : Matrix of profit and loss scenarios
+  PnL Matrix of profit and loss scenarios
 }
 \description{
   Compute the pricing in the horizon, as it appears in A.
