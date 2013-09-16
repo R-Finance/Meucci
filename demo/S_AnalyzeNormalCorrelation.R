@@ -1,12 +1,14 @@
 #' This script considers a bivariate normal market and display the correlation and the condition number of the
-#' covariance matrix, as described in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 2.
+#' covariance matrix, as described in A. Meucci, "Risk and Asset Allocation", Springer, 2005, Chapter 2.
 #'
 #' @references
-#' \url{http://}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}, 
+#' "E 84 - Correlation in normal markets".
+#'
 #' See Meucci's script for "S_AnalyzeNormalCorrelation.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
-#' @export
+#' 
 
 ###################################################################################################################
 ### Set input parameters
@@ -14,10 +16,10 @@
 Mu = rbind( 0, 0 )
 s  = c( 1, 1 );
 
-rhos = seq( -0.99, 0.99, 0.01 );
+rhos  = seq( -0.99, 0.99, 0.01 );
 nrhos = length( rhos );
 
-Cs = array( NaN, nrhos ); 
+Cs  = array( NaN, nrhos ); 
 CRs = array( NaN, nrhos ); 
 
 
@@ -26,7 +28,7 @@ CRs = array( NaN, nrhos );
 
 for ( n in 1 : nrhos )
 {
-	rho = rhos[ n ] ;
+	rho   = rhos[ n ] ;
     Sigma = rbind( c(s[1]^2, rho * s[1] * s[2]), c(rho * s[1] * s[2], s[2]^2) );
 
     Covariance = Sigma;

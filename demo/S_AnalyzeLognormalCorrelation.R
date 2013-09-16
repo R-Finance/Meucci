@@ -1,12 +1,14 @@
 #' This script considers a bivariate lognormal market and display the correlation and the condition number of the
 #' covariance matrix, as described in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 2.
 #'
-#' @references
-#' \url{http://}
+#' @references 
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}, 
+#' "E 85 - Correlation in lognormal markets".
+#'
 #' See Meucci's script for "S_AnalyzeLognormalCorrelation.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
-#' @export
+#' 
 
 
 ###########################################################################################################################################

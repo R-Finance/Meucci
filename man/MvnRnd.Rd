@@ -1,7 +1,6 @@
 \name{MvnRnd}
 \alias{MvnRnd}
-\title{Generate normal simulations whose sample moments match the population moments,
-as described in  A. Meucci, "Risk and Asset Allocation", Springer, 2005.}
+\title{Generate normal simulations whose sample moments match the population moments}
 \usage{
   MvnRnd(M, S, J)
 }
@@ -22,14 +21,14 @@ as described in  A. Meucci, "Risk and Asset Allocation", Springer, 2005.}
   and Asset Allocation", Springer, 2005.
 }
 \author{
-  Xavier Valls \email{flamejat@gmail.com} and Ram Ahluwalia
-  \email{rahluwalia@gmail.com}
+  Xavier Valls \email{flamejat@gmail.com}
 }
 \references{
   A. Meucci - "Exercises in Advanced Risk and Portfolio
-  Management" \url{http://symmys.com/node/170}.,
-  \url{http://www.symmys.com/node/162}{A. Meucci -
-  "Simulations with Exact Means and Covariances", Risk,
-  July 2009} See Meucci's script for "MvnRnd.m"
+  Management" \url{http://symmys.com/node/170}, "E 64 -
+  Simulation of a multivariate normal random variable with
+  matching moments".
+
+  See Meucci's script for "MvnRnd.m".
 }
 

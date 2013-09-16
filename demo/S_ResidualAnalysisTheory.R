@@ -6,7 +6,7 @@
 #' See Meucci's script for "S_ResidualAnalysisTheory.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
-#' @export
+#' 
 
 ##################################################################################################################
 ### Inputs

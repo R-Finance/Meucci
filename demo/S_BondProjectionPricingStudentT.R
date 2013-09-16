@@ -8,7 +8,7 @@
 #' See Meucci's script for "S_BondProjectionPricingStudentT.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
-#' @export
+#' 
 
 ##################################################################################################################
 ### Inputs

@@ -2,12 +2,12 @@
 #' in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 2.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}, 
+#' "E 53 - Location-dispersion ellipsoid and statistics".
+#'
 #' See Meucci's script for "S_MaxMinVariance.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
-
-if ( !require( "mvtnorm" ) ) stop("mvtnorm package installation required for this script")
 
 ##################################################################################################################
 ### Input parameters
@@ -81,7 +81,7 @@ lines( v_max[ , 1 ], v_max[ , 2 ], col = "red" );
 # plot statistics versus geometry
 dev.new();
 Scaled_Theta = Theta / (pi / 2);
- # plot standard deviation as function of direction
+# plot standard deviation as function of direction
 plot( Scaled_Theta, SDev, type = "l", xlab = "theta/(pi/2)", xlim = c( Scaled_Theta[ 1 ], Scaled_Theta[length(Scaled_Theta)] ) );
 # plot radius of ellipsoid as function of direction
 lines( Scaled_Theta, Radius, col="red" ); 

@@ -6,7 +6,6 @@
 #' See Meucci's script for "S_DerivativesInvariants.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
-#' @export 
 
 ##################################################################################################################
 ### Load implied vol for options on SPX for different time to maturity and moneyness

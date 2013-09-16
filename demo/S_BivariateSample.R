@@ -2,7 +2,9 @@
 #' as described in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 2.
 #'
 #' @references
-#' \url{http://}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}, 
+#' "E 38 - Normal copula and given marginals".
+#'
 #' See Meucci's script for "S_BivariateSample.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

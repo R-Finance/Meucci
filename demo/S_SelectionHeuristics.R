@@ -215,7 +215,6 @@ SelectExactNChooseK = function( OutOfWho, K, M )
 #' See Meucci's script for "S_SelectionHeuristics.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
-#'  
 
 
 ##################################################################################################################

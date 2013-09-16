@@ -1,4 +1,6 @@
-#' Generate normal simulations whose sample moments match the population moments,
+#' @title Generate normal simulations whose sample moments match the population moments
+#'
+#' @description Generate normal simulations whose sample moments match the population moments,
 #' as described in  A. Meucci, "Risk and Asset Allocation", Springer, 2005.
 #'  
 #'	@param   M : [vector] (N x 1) expectation
@@ -8,15 +10,18 @@
 #'	@return  X : [matrix] (J x N) of drawsF_U   : [vector] (J x 1) PDF values
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}., \url{http://www.symmys.com/node/162}{A. Meucci - "Simulations with Exact Means and Covariances", Risk, July 2009}
-#' See Meucci's script for "MvnRnd.m"
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}, 
+#' "E 64 - Simulation of a multivariate normal random variable with matching moments".
 #'
-#' @author Xavier Valls \email{flamejat@@gmail.com} and Ram Ahluwalia \email{rahluwalia@@gmail.com}
+#' See Meucci's script for "MvnRnd.m".
+#'
+#' @author Xavier Valls \email{flamejat@@gmail.com}
 #' @export
 
 MvnRnd = function( M, S, J )
 {
-	if ( !require( "QZ" ) ) stop("QZ package installation required for this script")
+	if ( !require( "QZ" ) ) stop("QZ package installation required for this script");
+
 	N = length(M);
 
 	# generate antithetic variables (mean = 0)
@@ -28,9 +33,6 @@ MvnRnd = function( M, S, J )
 
 	# solve Riccati equation using Schur method
 	H = rbind( cbind( matrix( 0, N, N ), -S ), cbind( -S, matrix( 0, N, N ) ) );
-	 
-	#Schur = Schur( H );
-	#U = ordschur(U_,T_,'lhp');
 	
 	U = ordqz( H, keyword = "lhp" )$Q;
 

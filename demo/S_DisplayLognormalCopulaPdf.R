@@ -1,13 +1,14 @@
-
-#'This script displays the pdf of the copula of a lognormal distribution, as described 
+#' This script displays the pdf of the copula of a lognormal distribution, as described 
 #' in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 2.
 #'
 #' @references
-#' \url{http://}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}, 
+#' "E 36 - Pdf of the lognormal copula".
+#'
 #' See Meucci's script for "S_DisplayLognormalCopulaPdf.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
-#' @export
+#' 
 
 #############################################################################################################
 ### Input parameters
@@ -21,7 +22,7 @@ Sigma = diag( c( sigmas ) ) %*% rbind( c( 1, r ), c( r, 1 ) ) %*% diag( c( sigma
 ### Grid
 GridSide1 = seq( 0.05, 0.95, 0.05 );
 GridSide2 = GridSide1;
-nMesh = length(GridSide1);
+nMesh     = length(GridSide1);
 
 #############################################################################################################
 ### Compute pdf of copula

@@ -1,18 +1,21 @@
 #' This script generates a sample from the 2x2 Wishart distribution.
-#' it shows that determinant and trace are positive, i.e. the matrix is positive
-#' it shows that the marginal diagonal are gamma-distributed
+#'  - it shows that determinant and trace are positive, i.e. the matrix is positive
+#'  - it shows that the marginal diagonal are gamma-distributed
 #' Described in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 2.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}, 
+#' "E 75 - Simulation of a Wishart random variable".
+#'
 #' See Meucci's script for "S_Wishart.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
-#' @export
 
 if ( !require( "scatterplot3d" ) ) stop("scatterplot3d package installation required for this script")
+
 ###################################################################################################################
 ### Set inputs
+
 s  = c( 1, 1 ); # variances
 r  = 0.3; # correlation
 Sigma = diag( c( s ) ) %*% rbind( c( 1, r ), c( r, 1 ) ) %*% diag( c( s ) );
@@ -23,11 +26,11 @@ nSim = 10000;
 ### Generate draws
 
 # initialize storage vectors/matrices
-W_xx  = matrix( NaN, nSim, 1 ); 
-W_yy  = matrix( NaN, nSim, 1 ); 
-W_xy  = matrix( NaN, nSim, 1 ); 
-Vec_W = matrix( NaN, nSim, 4 ); 
-Dets  = matrix( NaN, nSim, 1 ); 
+W_xx   = matrix( NaN, nSim, 1 ); 
+W_yy   = matrix( NaN, nSim, 1 ); 
+W_xy   = matrix( NaN, nSim, 1 ); 
+Vec_W  = matrix( NaN, nSim, 4 ); 
+Dets   = matrix( NaN, nSim, 1 ); 
 Traces = matrix( NaN, nSim, 1 ); 
 
 # generate draws and store elements of W, trace and determinant
@@ -112,4 +115,3 @@ print(Expected_Value);
 print(Covariance);
 print(Sample_Mean);
 print(Sample_Covariance);
-

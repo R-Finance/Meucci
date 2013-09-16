@@ -1,6 +1,9 @@
-#' This script computes the location-dispersion ellipsoid of the normalized (unit variance, zero expectation)
-#' first diagonal and off-diagonal elements of a 2x2 Wishart distribution as a function of the inputs,
-#' as described in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 2.
+#'@title Computes the location-dispersion ellipsoid of the normalized first diagonal and off-diagonal elements
+#' of a 2x2 Wishart distribution as a function of the inputs
+#'
+#' @description This function computes the location-dispersion ellipsoid of the normalized (unit variance,
+#' zero expectation)first diagonal and off-diagonal elements of a 2x2 Wishart distribution as a function 
+#' of the inputs, as described in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 2.
 #'
 #'  @param	Location 	      : [vector] (2 x 1) location vector (typically the expected value
 #'	@param	Square_Dispersion : [matrix] (2 x 2) scatter matrix Square_Dispersion (typically the covariance matrix)
@@ -11,7 +14,8 @@
 #'	@return	E                 : [figure handle]
 #'
 #' @references
-#' \url{http://}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#'
 #' See Meucci's script for "TwoDimEllipsoid.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

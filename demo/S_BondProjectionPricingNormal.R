@@ -9,7 +9,7 @@
 #' See Meucci's script for "S_BondProjectionPricingNormal.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
-#' @export
+#' 
 
 ##################################################################################################################
 ### Inputs

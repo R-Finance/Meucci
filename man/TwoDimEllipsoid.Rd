@@ -1,8 +1,7 @@
 \name{TwoDimEllipsoid}
 \alias{TwoDimEllipsoid}
-\title{This script computes the location-dispersion ellipsoid of the normalized (unit variance, zero expectation)
-first diagonal and off-diagonal elements of a 2x2 Wishart distribution as a function of the inputs,
-as described in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 2.}
+\title{Computes the location-dispersion ellipsoid of the normalized first diagonal and off-diagonal elements
+of a 2x2 Wishart distribution as a function of the inputs}
 \usage{
   TwoDimEllipsoid(Location, Square_Dispersion, Scale = 1,
     PlotEigVectors = FALSE, PlotSquare = FALSE)
@@ -28,8 +27,8 @@ as described in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter
   E : [figure handle]
 }
 \description{
-  This script computes the location-dispersion ellipsoid of
-  the normalized (unit variance, zero expectation) first
+  This function computes the location-dispersion ellipsoid
+  of the normalized (unit variance, zero expectation)first
   diagonal and off-diagonal elements of a 2x2 Wishart
   distribution as a function of the inputs, as described in
   A. Meucci, "Risk and Asset Allocation", Springer, 2005,
@@ -39,6 +38,9 @@ as described in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter
   Xavier Valls \email{flamejat@gmail.com}
 }
 \references{
-  \url{http://} See Meucci's script for "TwoDimEllipsoid.m"
+  A. Meucci - "Exercises in Advanced Risk and Portfolio
+  Management" \url{http://symmys.com/node/170}.
+
+  See Meucci's script for "TwoDimEllipsoid.m"
 }
 

@@ -1,12 +1,12 @@
-#'This script displays the pdf of the copula of a normal distribution, as described 
+#' This script displays the pdf of the copula of a normal distribution, as described 
 #' in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 2.
 #'
 #' @references
-#' \url{http://}
-#' See Meucci's script for "S_DisplayNormalCopulaPdf.m"
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}, 
+#' "E 33 - Pdf of the normal copula".
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
-#' @export
+#' 
 
 #############################################################################################################
 ### input parameters

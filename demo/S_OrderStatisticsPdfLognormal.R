@@ -1,14 +1,14 @@
-library(scatterplot3d);
-
 #' This script script shows that the pdf of the r-th order statistics of a lognormal random variable,
 #' as described in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 2.
 #'
 #' @references
-#' \url{http://}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}, 
+#' "E 78 - Order statistics".
+#'
 #' See Meucci's script for "S_OrderStatisticsPdfLognormal.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
-#' @export
+#' 
 
 if ( !require( "scatterplot3d" ) ) stop("scatterplot3d package installation required for this script")
 

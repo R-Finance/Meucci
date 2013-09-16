@@ -2,12 +2,14 @@
 #' in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 2.
 #'
 #' @references
-#' \url{http://}
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}, 
+#' "E 39 - FX copula-marginal factorization".
+#'
 #' See Meucci's script for "S_FxCopulaMarginal.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
-#' @export 
 
+#############################################################################################################
 ### Load data and select the pair to display
 data("fX" )
 
@@ -48,12 +50,8 @@ NumBins = round(10 * log(NumObs));
 
 layout( matrix(c(1,2,2,1,2,2,0,3,3), 3, 3, byrow = TRUE), heights=c(1,2,1));
 
-
-
-#hist( X[ , Display[ 2 ] ], NumBins, xlab = db_FX$Fields[[ Display[ 2 ] + 1 ]], ylab = "", main = "");
 barplot( table( cut( X[ , Display[ 2 ] ], NumBins )), horiz=TRUE, yaxt="n")
 axis( 2, at = seq(0, 100, 20), labels = seq( 0, 1, 0.2 ) );
-
 
 # scatter plot
 plot( Copula[ , Display[ 1 ] ], Copula[ , Display[ 2 ] ], main = "Copula", 

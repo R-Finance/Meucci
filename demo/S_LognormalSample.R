@@ -8,7 +8,7 @@
 #' See Meucci's script for "S_LognormalSample.m".
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
-#' @export
+#' 
 
 ##################################################################################################################
 ### Input parameters

@@ -2,11 +2,12 @@
 #' in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 2.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}, 
+#' "E 64 - Simulation of a multivariate normal random variable with matching moments".
+#'
 #' See Meucci's script for "S_ExactMeanAndCovariance.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
-
 
 ########################################################################################################
 ### Inputs
@@ -23,7 +24,6 @@ A  = matrix( runif( N * N ), c( N, N )) - 0.5;
 S = A %*% t( A );
 
 # generate sample of size J from multivariate normal N(M,S)
-#X = mvnrnd(M, S, J); # no match between sample and population moments (built-in) function
 X = MvnRnd( M, S, J ); # exact match between sample and population moments
 
 ########################################################################################################

@@ -3,11 +3,13 @@
 #' as described in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 2.
 #'
 #' @references
-#' \url{http://}
-#' See Meucci's script for "S_WishartCorrelation.m"
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}, 
+#' "E 87 - Correlation and location-dispersion ellipsoid", "E 75 - Simulation of a Wishart random variable".
+#'
+#' See Meucci's script for "S_WishartLocationDispersion.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
-#' @export
+#' 
 
 ###################################################################################################################
 ### Set input parameters
