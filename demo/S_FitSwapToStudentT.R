@@ -2,7 +2,9 @@
 #' Student t distribution, as described in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 4.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 188 - Maximum likelihood estimation of a multivariate Student t distribution".
+#'
 #' See Meucci's script for "S_FitSwapToStudentT.m"
 #'
 #' TO DO: Change colors from TwoDimEllipsoid in each iteration

@@ -39,6 +39,6 @@ Described in A. Meucci "Risk and Asset Allocation", Springer, 2005}
 \references{
   A. Meucci - "Exercises in Advanced Risk and Portfolio
   Management" \url{http://symmys.com/node/170}. See
-  Meucci's script for "QuantileMixture.m"
+  Meucci's script for "PlotMarginalsNormalInverseWishart.m"
 }
 

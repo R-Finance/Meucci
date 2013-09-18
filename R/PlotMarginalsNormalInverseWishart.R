@@ -17,7 +17,7 @@
 #'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
-#' See Meucci's script for "QuantileMixture.m"
+#' See Meucci's script for "PlotMarginalsNormalInverseWishart.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 #' @export

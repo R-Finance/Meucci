@@ -2,7 +2,9 @@
 #' "Risk and Asset Allocation", Springer, 2005,  Chapter 4.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 168 - Sample covariance and eigenvalue dispersion".
+#'
 #' See Meucci's script for "S_EigenValueDispersion.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -10,15 +12,15 @@
 ##################################################################################################################
 ### Inputs
 
-N = 50;
-SampleLenght = seq( N , 10 * N, N)
+N    = 50;
 nSim = 50;
+SampleLenght = seq( N , 10 * N, N)
 
 ##################################################################################################################
 ### Generate mesh and surface
 
-Mu = matrix( 0, N, 1 );
-Sigma= diag( 1, N );
+Mu    = matrix( 0, N, 1 );
+Sigma = diag( 1, N );
 
 # compute true eigenvalues
 Eigen = eigen(Sigma);
@@ -27,7 +29,7 @@ EVec  = Eigen$vectors[ , Index ];
 EVal  = diag( Eigen$Values[ Index, Index ]);
 
 # compute eigenvalues of sample estimator
-nSampleLenght = length( SampleLenght );
+nSampleLenght  = length( SampleLenght );
 Store_EVal_Hat = matrix( NaN, nSampleLenght, N ); # preallocation for speed
 for( i in 1 : nSampleLenght )
  {  

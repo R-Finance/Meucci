@@ -16,7 +16,7 @@
 #'  @note	Inverts the formulas (1.98)-(1.99) in "Risk and Asset Allocation", Springer, 2005.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}, "E 25- Simulation of a lognormal random variable".
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}, "E 25 - Simulation of a lognormal random variable".
 #'
 #' See Meucci's script for "LognormalMoments2Parameters.m"
 #'

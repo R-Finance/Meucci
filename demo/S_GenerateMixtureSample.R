@@ -2,7 +2,9 @@
 #' Springer, 2005,  Chapter 4.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 184 - Estimation of a quantile of a mixture I".
+#'
 #' See Meucci's script for "S_GenerateMixtureSample.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}### 
@@ -15,7 +17,7 @@ s_Y = 0.2;
 m_Z = 0;
 s_Z = 0.15;
 
-T = 52;
+T   = 52;
 
 ##################################################################################################################
 ### Computations

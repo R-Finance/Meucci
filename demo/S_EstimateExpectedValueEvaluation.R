@@ -2,7 +2,9 @@
 #' and inefficiency, as described in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 4.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 182 - Moment-based functional of a mixture III ".
+#'
 #' See Meucci's script for "S_EigenValueDispersion.R"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

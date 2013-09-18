@@ -2,9 +2,10 @@
 #' "Risk and Asset Allocation", Springer, 2005,  Chapter 4.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
-#' See Meucci's script for "S_SemiCircular.m"
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 189 - Random matrix theory: semi-circular law".
 #'
+#' See Meucci's script for "S_SemiCircular.m"
 
 ##################################################################################################################
 ### Inputs
@@ -13,9 +14,9 @@ N = 1000; # matrix size
 ##################################################################################################################
 ### Empirical eigenvalues
 
-#X=rnorm(N);                # normal
-#X=( runif(N)-0.5 ) * sqrt(12);   # uniform
-X = log( matrix( runif(N^2), N, N )) + 1;           # exponential
+#X = rnorm( N );                           # normal
+#X = ( runif(N)-0.5 ) * sqrt(12);   	   # uniform
+X = log( matrix( runif(N^2), N, N )) + 1;  # exponential
 
 Y = (X + t(X) ) / ( 2 * sqrt( 2 * N ));    # symmetrize and rescale
 E = t(eigen(Y)$values);
@@ -35,6 +36,5 @@ h = b / (D * N);
 ##################################################################################################################
 ### Plots
 dev.new();
-#bar(t_, h);
-plot(t_, h, type = "h", lwd = 5);
-lines(t, g, col = "red", lwd = 3);
+plot( t_, h, type = "h" , lwd = 5 );
+lines( t, g, col = "red", lwd = 3 );

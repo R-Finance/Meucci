@@ -5,16 +5,14 @@
   CentralAndStandardizedStatistics(X, N)
 }
 \arguments{
-  \item{X}{: [vector] (J x 1) draws from the distribution}
+  \item{X}{[vector] (J x 1) draws from the distribution}
 
-  \item{N}{: [scalar] highest degree for the central
-  moment}
+  \item{N}{[scalar] highest degree for the central moment}
 }
 \value{
-  ga : [vector] (1 x N) standardized statistics up to order
-  N
+  ga [vector] (1 x N) standardized statistics up to order N
 
-  mu : [vector] (1 x N) central moments up to order N
+  mu [vector] (1 x N) central moments up to order N
 }
 \description{
   Compute central and standardized statistics, as described
@@ -38,8 +36,8 @@
   summary statistics". See Meucci's script for
   "CentralAndStandardizedStatistics.m"
 
-  Kendall, M., Stuart, A., 1969. The Advanced Theory of
-  Statistics, Volume, 3rd Edition. Griffin.
+  Kendall, M., Stuart, A. - "The Advanced Theory of
+  Statistics", 1969. Volume, 3rd Edition. Griffin.
 
   A. Meucci - "Annualization and general projection of
   skweness, kurtosis, and all summary statistics", GARP
