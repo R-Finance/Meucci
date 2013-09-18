@@ -11,10 +11,12 @@
 #'	@return   CTMF    : [matrix] coefficient matrix C-tilde (in the notation of the paper)
 #'	@return   Hhat    : [matrix] forecasted conditional covariance matrix
 #'
-#' @note Initially written by Olivier Ledoit and Michael Wolf
+#' @note Code for MATLAB initially written by Olivier Ledoit and Michael Wolf
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 136 - Equity market: multivariate GARCH process".
+#'
 #' See Meucci's script for "FitMultivariateGarch.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -123,11 +125,14 @@ FitMultivariateGarch = function( returns, demean = 1, eps = 0, df = 500 )
 #'
 #' @note 
 #'  MATLAB's script initially written by Olivier Ledoit, 4/28/1997
-#'  Uses a conditional t-distribution with fixed degrees of freedom
-#'  Difference with garch1f: errors come from the score alone
+#'
+#'   Uses a conditional t-distribution with fixed degrees of freedom
+#'
+#'   Difference with garch1f: errors come from the score alone
 #' 
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#'
 #' See Meucci's script for "FitMultivariateGarch.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -385,13 +390,16 @@ for( i in 1 : n )
 #'  @return   hferr : [scalar] standard error on hf
 #'
 #' @note 
-#'  Initially written by Olivier Ledoit, 4/28/1997
-#'  Uses a conditional t-distribution with fixed degrees of freedom
-#'  Steepest Ascent on boundary, Hessian off boundary, no grid search
+#'  MATLAB's code initially written by Olivier Ledoit, 4/28/1997
+#'
+#'   Uses a conditional t-distribution with fixed degrees of freedom
+#'
+#'   Steepest Ascent on boundary, Hessian off boundary, no grid search
 #' 
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
-#' See Meucci's script for "FitMultivariateGarch.m"
+#'
+#'  See Meucci's script for "FitMultivariateGarch.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 #' @export
@@ -681,10 +689,11 @@ garch2f8 = function( y, c1, a1, b1, y1, h1, c2, a2, b2, y2, h2, df )
 #  @return   XXX : [matrix] positive semi-definite matrix with same diagonal elements as A that is closest
 #                           to A according to the Frobenius norm
 #
-# @note Written initially by Ilya Sharapov (1997)
+# @note MATLAB's code written initially by Ilya Sharapov (1997)
 #
 # @references
-# \url{http://symmys.com/node/170}
+#  A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#
 # See Meucci's script for "FitMultivariateGarch.m"
 #
 # @author Xavier Valls \email{flamejat@@gmail.com}

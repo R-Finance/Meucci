@@ -7,7 +7,9 @@
 #'  @return g   : [scalar] r-square for the selected factors
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 128 - Factors on demand: selection heuristics".
+#'
 #' See Meucci's script for "SelectGoodness.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -38,7 +40,9 @@ SelectGoodness = function( Who, M )
 #'  @note sorted by ascending order
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 128 - Factors on demand: selection heuristics".
+#'
 #' See Meucci's script for "SelectNaive.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -82,7 +86,9 @@ SelectNaive = function( OutOfWho, Metric )
 #'  @note same than recursive rejection, but it starts from the empty set, instead of from the full set
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 128 - Factors on demand: selection heuristics".
+#'
 #' See Meucci's script for "SelectAcceptByS.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -137,7 +143,9 @@ SelectAcceptByS = function( OutOfWho, AcceptBy, Metric )
 #'     	  problem by eliminating the factors one at a time starting from the full set
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 128 - Factors on demand: selection heuristics".
+#'
 #' See Meucci's script for "SelectRejectByS.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -184,7 +192,9 @@ SelectRejectByS = function(OutOfWho, RejectBy, Metric)
 #'     	  o !!! extremely time consuming !!!
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 128 - Factors on demand: selection heuristics".
+#'
 #' See Meucci's script for "SelectRejectByS.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -211,7 +221,9 @@ SelectExactNChooseK = function( OutOfWho, K, M )
 #' as described in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 3.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 128 - Factors on demand: selection heuristics".
+#'
 #' See Meucci's script for "S_SelectionHeuristics.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

@@ -5,7 +5,7 @@
 #'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
-#' "E 140 – Fixed-income market: projection of normal invariants".
+#' "E 140 - Fixed-income market: projection of normal invariants".
 #'
 #' See Meucci's script for "S_BondProjectionPricingNormal.m"
 #'

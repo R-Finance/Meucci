@@ -3,7 +3,7 @@
 #'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
-#' "E 127 – Factors on demand: no-Greek hedging".
+#' "E 127 - Factors on demand: no-Greek hedging".
 #'
 #' See Meucci's script for "S_HedgeOptions.m"
 #'

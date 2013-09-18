@@ -31,16 +31,20 @@
 }
 \note{
   MATLAB's script initially written by Olivier Ledoit,
-  4/28/1997 Uses a conditional t-distribution with fixed
-  degrees of freedom Difference with garch1f: errors come
-  from the score alone
+  4/28/1997
+
+  Uses a conditional t-distribution with fixed degrees of
+  freedom
+
+  Difference with garch1f: errors come from the score alone
 }
 \author{
   Xavier Valls \email{flamejat@gmail.com}
 }
 \references{
   A. Meucci - "Exercises in Advanced Risk and Portfolio
-  Management" \url{http://symmys.com/node/170}. See
-  Meucci's script for "FitMultivariateGarch.m"
+  Management" \url{http://symmys.com/node/170}.
+
+  See Meucci's script for "FitMultivariateGarch.m"
 }
 

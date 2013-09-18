@@ -1,22 +1,28 @@
-
-#' This function simulates a jump diffusion process, as described in A. Meucci "Risk and Asset Allocation",
-#' Springer, 2005
+#'@title Simulates a Merton jump-diffusion process.
 #'
-#'  @param  m  : [scalar] deterministic drift of diffusion
-#'  @param  s  : [scalar] standard deviation of diffusion
-#'  @param  l  : [scalar] Poisson process arrival rate
-#'  @param  a  : [scalar] drift of log-jump
-#'  @param  D  : [scalar] st.dev of log-jump
-#'  @param  ts : [vector] time steps
-#'  @param  J  : [scalar] number of simulations
+#' @description This function simulates a jump diffusion process, as described in A. Meucci "Risk and Asset Allocation",
+#' Springer, 2005.
 #'
-#'  @return  X  : [matrix] (J x length(ts)) of simulations
+#'  @param  m   [scalar] deterministic drift of diffusion
+#'  @param  s   [scalar] standard deviation of diffusion
+#'  @param  l   [scalar] Poisson process arrival rate
+#'  @param  a   [scalar] drift of log-jump
+#'  @param  D   [scalar] st.dev of log-jump
+#'  @param  ts  [vector] time steps
+#'  @param  J   [scalar] number of simulations
+#'
+#'  @return  X  [matrix] (J x length(ts)) of simulations
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 132 - Simulation of a jump-diffusion process".
+#'
 #' See Meucci's script for "SimulateJumpDiffusionMerton.m"
 #'
-#' @author Xavier Valls \email{flamejat@@gmail.com}
+#' Merton, R. C., 1976. "Option pricing when underlying stocks are discontinuous". Journal of Financial
+#' Economics 3, 125–144.
+#' 
+#'@author Xavier Valls \email{flamejat@@gmail.com}
 #' @export
 
 SimulateJumpDiffusionMerton = function( m, s, l, a, D, ts, J )

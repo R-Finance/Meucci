@@ -36,7 +36,7 @@ and Aeq*G=Deq (A,D, Aeq,Deq conformable matrices),as described in  A. Meucci,
   and Asset Allocation", Springer, 2005.
 }
 \note{
-  Initial code by Tai-Ho Wang
+  Initial MATLAB's code by Tai-Ho Wang.
 }
 \author{
   Xavier Valls \email{flamejat@gmail.com}

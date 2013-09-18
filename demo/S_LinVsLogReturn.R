@@ -2,7 +2,9 @@
 #'  in A. Meucci "Risk and Asset Allocation", Springer, 2005, chapter 3.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 137 - Equity market: linear vs. compounded returns projection I".
+#'
 #' See Meucci's script for "S_LinVsLogReturn.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

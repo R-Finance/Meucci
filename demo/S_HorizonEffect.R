@@ -14,12 +14,12 @@
 #'
 #' R = exp(X)-1 and Z = exp(F)-1 are the linear returns
 #'
-#' @note See "E 116 – Time series factors: analysis of residuals I" from 
+#' @note See "E 116 - Time series factors: analysis of residuals I" from 
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
 #'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
-#' "E 126 – Factors on demand: horizon effect".
+#' "E 126 - Factors on demand: horizon effect".
 #'
 #' See Meucci's script for "S_HorizonEffect.m"
 #'

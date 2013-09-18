@@ -1,7 +1,6 @@
 \name{FitOrnsteinUhlenbeck}
 \alias{FitOrnsteinUhlenbeck}
-\title{Fit a multivariate OU process at estimation step tau, as described in  A. Meucci
-"Risk and Asset Allocation", Springer, 2005}
+\title{Fits a multivariate Ornstein - Uhlenbeck process at estimation step tau.}
 \usage{
   FitOrnsteinUhlenbeck(Y, tau)
 }
@@ -33,7 +32,8 @@
 }
 \references{
   A. Meucci - "Exercises in Advanced Risk and Portfolio
-  Management" \url{http://symmys.com/node/170}. See
-  Meucci's script for "FitOrnsteinUhlenbeck.m"
+  Management" \url{http://symmys.com/node/170}.
+
+  See Meucci's script for "FitOrnsteinUhlenbeck.m"
 }
 

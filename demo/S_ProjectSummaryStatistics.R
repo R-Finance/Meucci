@@ -3,7 +3,9 @@
 #' "Risk and Asset Allocation", Springer, 2005, chapter 3.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 97 - Projection of skewness, kurtosis, and all standardized summary statistics".
+#'
 #' See Meucci's script for "S_ProjectSummaryStatistics.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

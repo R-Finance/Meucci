@@ -3,7 +3,7 @@
 #'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
-#' "E 133 – Simulation of a Ornstein-Uhlenbeck process".
+#' "E 133 - Simulation of a Ornstein-Uhlenbeck process".
 #'
 #' See Meucci's script for "S_AutocorrelatedProcess.m"
 #'

@@ -4,7 +4,9 @@
 #'"Risk and Asset Allocation", Springer, 2005,  Chapter 3.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 136 - Equity market: multivariate GARCH process".
+#'
 #' See Meucci's script for "S_ProjectNPriceMvGarch.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -19,9 +21,9 @@ data("equities" );
 ### Inputs
 
 Prices = Equities$Prices[ , c(4, 5)];
-J = 10000; # numbers of MC scenarios
+J = 10000;        # numbers of MC scenarios
 N = ncol(Prices); # numbers of securities 
-T = 22; # projection horizon 
+T = 22;           # projection horizon 
 
 ##################################################################################################################
 ### Estimation of daily compounded returns distribution

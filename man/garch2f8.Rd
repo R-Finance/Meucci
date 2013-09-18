@@ -58,8 +58,12 @@
   when diagonal parameters are given.
 }
 \note{
-  Initially written by Olivier Ledoit, 4/28/1997 Uses a
-  conditional t-distribution with fixed degrees of freedom
+  MATLAB's code initially written by Olivier Ledoit,
+  4/28/1997
+
+  Uses a conditional t-distribution with fixed degrees of
+  freedom
+
   Steepest Ascent on boundary, Hessian off boundary, no
   grid search
 }
@@ -68,7 +72,8 @@
 }
 \references{
   A. Meucci - "Exercises in Advanced Risk and Portfolio
-  Management" \url{http://symmys.com/node/170}. See
-  Meucci's script for "FitMultivariateGarch.m"
+  Management" \url{http://symmys.com/node/170}.
+
+  See Meucci's script for "FitMultivariateGarch.m"
 }
 

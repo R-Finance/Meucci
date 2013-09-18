@@ -43,7 +43,7 @@ and Aeq*G=Deq}
 \references{
   A. Meucci - "Exercises in Advanced Risk and Portfolio
   Management" \url{http://symmys.com/node/170}. Used in "E
-  123 – Cross-section factors: generalized cross-section
+  123 - Cross-section factors: generalized cross-section
   industry factors".
 
   See Meucci's script for "MaxRsqCS.m"

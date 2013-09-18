@@ -1,9 +1,10 @@
-
 #' This script models the joint distribution of the yet-to-be realized key rates of the government curve,
 #' as described in A. Meucci "Risk and Asset Allocation", Springer, 2005, chapter 3.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 112 - Pure residual models: duration/curve attribution".
+#'
 #' See Meucci's script for "S_PureResidualBonds.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

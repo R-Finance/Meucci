@@ -3,7 +3,7 @@
 #'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
-#' "E 135 – Equity market: quest for invariance".
+#' "E 135 - Equity market: quest for invariance".
 #'
 #' See Meucci's script for "S_EquitiesInvariants.m"
 #'

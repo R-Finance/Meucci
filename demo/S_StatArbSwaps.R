@@ -2,9 +2,11 @@
 #' "Risk and Asset Allocation", Springer, 2005,  Chapter 3.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 144 – Statistical arbitrage: co-integration trading ".
 #' See Meucci's script for "S_StatArbSwaps.m"
 #'
+#' A. Meucci - "Review of statistical arbitrage, cointegration, and multivariate Ornstein-Uhlenbeck", 2009. \url{http://symmys.com/node/132}
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 
 # TODO: Check the loadings of the principal components analysis, fix the date ticks on the plots.
@@ -19,13 +21,13 @@ S   = cov( swapParRates$Rates );
 PC  = princomp( covmat=S );
 E   = PC$loadings
 Lam = ( PC$sdev )^2
+
 ##################################################################################################################
 ### Set up dates ticks
 dev.new(); 
 h = plot(swapParRates$Dates, swapParRates$Dates); 
 XTick = NULL;
 years = as.numeric(format(swapParRates$Dates[1],"%Y")) : as.numeric(format(swapParRates$Dates[length(swapParRates$Dates)],"%Y"))
-
 
 for( n in years )
 {
@@ -61,8 +63,6 @@ for( n in 1 : nLam )
     
     #set(gca(), 'xlim', X_Lim, 'XTick', XTick);
     #datetick('x','yy','keeplimits','keepticks');
-    #grid off;
-    #title(['eigendirection n. ' num2str(n) ',    theta = ' num2str(Theta)],'FontWeight','bold');
 }
 
 dev.new();

@@ -2,7 +2,9 @@
 #' "Risk and Asset Allocation", Springer, 2005,  Chapter 3.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 114 – Time series factors: unconstrained time series industry factors".
+#'
 #' See Meucci's script for "S_TimeSeriesIndustries.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

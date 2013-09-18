@@ -1,10 +1,13 @@
-#'This script simulates a jump-diffusion process, as described in A. Meucci, "Risk and Asset Allocation",
+#' This script simulates a jump-diffusion process, as described in A. Meucci, "Risk and Asset Allocation",
 #' Springer, 2005,  Chapter 3.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
-#' See Meucci's script for "S_JumoDiffusionMerton.m"
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 132 - Simulation of a jump-diffusion process".
 #'
+#' See Meucci's script for "S_JumpDiffusionMerton.m"
+#' @note see  Merton, R. C., 1976. "Option pricing when underlying stocks are discontinuous". Journal of Financial
+#' Economics 3, 125–144.
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 
 ##################################################################################################################

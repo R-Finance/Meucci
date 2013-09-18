@@ -38,14 +38,17 @@
   Estimation of multivariate GARCH models
 }
 \note{
-  Initially written by Olivier Ledoit and Michael Wolf
+  Code for MATLAB initially written by Olivier Ledoit and
+  Michael Wolf
 }
 \author{
   Xavier Valls \email{flamejat@gmail.com}
 }
 \references{
   A. Meucci - "Exercises in Advanced Risk and Portfolio
-  Management" \url{http://symmys.com/node/170}. See
-  Meucci's script for "FitMultivariateGarch.m"
+  Management" \url{http://symmys.com/node/170}, "E 136 -
+  Equity market: multivariate GARCH process".
+
+  See Meucci's script for "FitMultivariateGarch.m"
 }
 

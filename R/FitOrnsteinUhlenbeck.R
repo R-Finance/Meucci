@@ -1,4 +1,6 @@
-#' Fit a multivariate OU process at estimation step tau, as described in  A. Meucci 
+#'  @title Fits a multivariate Ornstein - Uhlenbeck process at estimation step tau.
+#'
+#'  @description Fit a multivariate OU process at estimation step tau, as described in  A. Meucci 
 #' "Risk and Asset Allocation", Springer, 2005
 #'
 #'  @param  Y   : [matrix] (T x N)
@@ -14,6 +16,7 @@
 #'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#'
 #' See Meucci's script for "FitOrnsteinUhlenbeck.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

@@ -15,7 +15,7 @@
 #'  @return   B   : [matrix] (N x K)
 #'
 #'  @note
-#'  Initial code by Tai-Ho Wang 
+#'  Initial MATLAB's code by Tai-Ho Wang. 
 #'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.

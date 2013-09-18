@@ -6,7 +6,7 @@
 #'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
-#' "E 138 – Equity market: linear vs. compounded returns projection II".
+#' "E 138 - Equity market: linear vs. compounded returns projection II".
 #'
 #' See Meucci's script for "S_EquityProjectionPricing.m"
 #'

@@ -3,7 +3,9 @@
 #' Springer, 2005,  Chapter 3.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 115 – Time series factors: generalized time-series industry factors".
+#'
 #' See Meucci's script for "S_TimeSeriesConstrainedIndustries.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

@@ -2,9 +2,12 @@
 #' Springer, 2005,  Chapter 3.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
-#' See Meucci's script for "S_ResidualAnalysisTheory.m"
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 117 - Time series factors: analysis of residuals II".
 #'
+#' See Meucci's script for "S_ResidualAnalysisTheory.m"
+#' @note See #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 116 - Time series factors: analysis of residuals I".
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 #' 
 

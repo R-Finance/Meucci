@@ -2,7 +2,9 @@
 #' assumptions, as described in A. Meucci, "Risk and Asset Allocation", Springer, 2005,  Chapter 3.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 130 – Eigenvectors for Toeplitz structure".
+#'
 #' See Meucci's script for "S_Toeplitz.R"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -21,7 +23,6 @@ for( n in 1 : (N - 1) )
 
     T = T + Decay^n * ( cbind(  matrix( 0, N, N -( N-n ) ), diag( 1, N , N-n) ) +
       cbind( rbind( matrix(0, N-(N-n), N-n ), diag( 1, N-n)), matrix(0, N, N-(N-n) ) )) ;
-
 
 }
 eig = eigen( T );

@@ -3,7 +3,7 @@
 #'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
-#' "E 111 – Hidden factors: puzzle".
+#' "E 111 - Hidden factors: puzzle".
 #'
 #' See Meucci's script for "S_FactorAnalysisNotOk.m"
 #'
