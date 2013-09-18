@@ -4,7 +4,7 @@
 #'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
-#' "E 124 – Cross-section factors: comparison cross-section with time-series industry factors". 
+#' "E 124 - Cross-section factors: comparison cross-section with time-series industry factors". 
 #' See Meucci's script for "S_TimeSeriesVsCrossSectionIndustries.m"
 #'
 #' A. Meucci - "Review of linear factor models: Unexpected common features and the systematic-plus-idiosyncratic myth", 2010. \url{http://www.symmys.com/node/336}

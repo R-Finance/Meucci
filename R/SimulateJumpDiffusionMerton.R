@@ -1,4 +1,4 @@
-#'@title Simulates a Merton jump-diffusion process.
+#' @title Simulates a Merton jump-diffusion process.
 #'
 #' @description This function simulates a jump diffusion process, as described in A. Meucci "Risk and Asset Allocation",
 #' Springer, 2005.
@@ -20,7 +20,7 @@
 #' See Meucci's script for "SimulateJumpDiffusionMerton.m"
 #'
 #' Merton, R. C., 1976. "Option pricing when underlying stocks are discontinuous". Journal of Financial
-#' Economics 3, 125–144.
+#' Economics 3, 125-144.
 #' 
 #'@author Xavier Valls \email{flamejat@@gmail.com}
 #' @export

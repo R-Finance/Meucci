@@ -10,7 +10,7 @@
 #'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
-#' "E 110 – Hidden factors: principal component analysis of a two-point swap curve".
+#' "E 110 - Hidden factors: principal component analysis of a two-point swap curve".
 #'
 #' See Meucci's script for "S_SwapPca2Dim.m"
 #'

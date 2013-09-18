@@ -3,7 +3,7 @@
 #'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
-#' "E 114 – Time series factors: unconstrained time series industry factors".
+#' "E 114 - Time series factors: unconstrained time series industry factors".
 #'
 #' See Meucci's script for "S_TimeSeriesIndustries.m"
 #'

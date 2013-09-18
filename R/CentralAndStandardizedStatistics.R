@@ -21,7 +21,7 @@
 #' Kendall, M., Stuart, A., 1969. The Advanced Theory of Statistics, Volume, 3rd Edition. Griffin.
 #'
 #' A. Meucci - "Annualization and general projection of skweness, kurtosis, and all summary statistics",
-#' GARP Risk Professional August 2010, 55–56. \url{http://symmys.com/node/136}.
+#' GARP Risk Professional August 2010, 55-56. \url{http://symmys.com/node/136}.
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 #' @export
 

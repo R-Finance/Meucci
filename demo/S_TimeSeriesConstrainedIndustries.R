@@ -4,7 +4,7 @@
 #'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
-#' "E 115 – Time series factors: generalized time-series industry factors".
+#' "E 115 - Time series factors: generalized time-series industry factors".
 #'
 #' See Meucci's script for "S_TimeSeriesConstrainedIndustries.m"
 #'

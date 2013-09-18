@@ -39,6 +39,6 @@
 
   Merton, R. C., 1976. "Option pricing when underlying
   stocks are discontinuous". Journal of Financial Economics
-  3, 125–144.
+  3, 125-144.
 }
 

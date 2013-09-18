@@ -16,11 +16,9 @@
   sig2 [scalar] variance of the normal distribution
 }
 \description{
-  determines $\mu$ and $\sigma^2$ from $\Expect\{X\}$ and
-  $\Var\{X\}$, and uses it to determine $\mu$ and
-  $\sigma^{2}$ such that $\Expect\left\{ X\right\} \equiv
-  3$ and $\Var\left\{ X\right\} \equiv 5$, as described in
-  A. Meucci, "Risk and Asset Allocation", Springer, 2005.
+  Computes the mean and standard deviation of a lognormal
+  distribution from its parameters, as described in A.
+  Meucci, "Risk and Asset Allocation", Springer, 2005.
 
   \deqn{\sigma^{2} = \ln \left( 1 + \frac{V}{E^{2}} \right)
   , } \deqn{\mu = \ln(E) - \frac{1}{2} \ln \left( 1 +

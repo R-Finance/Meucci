@@ -3,7 +3,7 @@
 #'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
-#' "E 144 – Statistical arbitrage: co-integration trading ".
+#' "E 144 - Statistical arbitrage: co-integration trading ".
 #' See Meucci's script for "S_StatArbSwaps.m"
 #'
 #' A. Meucci - "Review of statistical arbitrage, cointegration, and multivariate Ornstein-Uhlenbeck", 2009. \url{http://symmys.com/node/132}

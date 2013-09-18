@@ -3,7 +3,7 @@
 #'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
-#' "E 134 – Simulation of a GARCH process".
+#' "E 134 - Simulation of a GARCH process".
 #'
 #' See Meucci's script for "S_VolatilityClustering.m"
 #'
