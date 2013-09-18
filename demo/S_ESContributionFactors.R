@@ -1,22 +1,23 @@
-library(MASS);
-library(Matrix);
 #' This script computes the expected shortfall and the contributions to ES from each factor in simulations, using 
 #' the conditional expectation definition of the contributions as described in A. Meucci,"Risk and Asset Allocation",
 #' Springer, 2005,  Chapter 5. 
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 235 - Expected shortfall and linear factor models".
+#'
 #' See Meucci's script for "S_ESContributionFactors.m"
 #
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 
 ###################################################################################################################
 ### Inputs 
+if( !require( "Matrix" ) ) stop( "Matrix package installation is required to run this demo script" );
 
-N = 30; # number of securities
-K = 10; # number of factors
+N = 30;       # number of securities
+K = 10;       # number of factors
 a = runif(N); # allocation
-c = 0.95;      # ES confidence
+c = 0.95;     # ES confidence
 
 ###################################################################################################################
 ### Generate market simulations
@@ -41,6 +42,7 @@ for( n in 1:(N - 1) )
 sigma = as.matrix(.bdiag(list( eps * sigma_f, eps^2 * sigma_u))) #block diagonal matrix
 corr  = cov2cor( sigma );
 diag_sigma = sqrt( diag( sigma ) );
+
 # scenarios
 nSim = 10000;
 l = matrix( 1, nSim);
@@ -55,17 +57,18 @@ M = F %*% t( B ) + U;
 
 ###################################################################################################################
 ### Risk management
+
 # compute the objective
 Psi = M %*% a; 
 
 # compute ES
-th = ceiling((1-c) * nSim); # threshold
+th  = ceiling((1-c) * nSim); # threshold
 spc = matrix( 0, nSim, 1 );
 spc[ 1 : th ] = 1;
 spc = spc / sum( spc );
 
 Sort_Psi = sort( Psi );
-Index = order( Psi );
+Index    = order( Psi );
 ES_simul = t(Sort_Psi) %*% spc;
 
 # augment factor set to include residual
@@ -74,8 +77,7 @@ F_ = cbind( F, U%*%a );
 b_ = cbind( t(a)%*%B, 1 );
 
 # sort factors according to order induced by objective's realizations
-
-Sort_F_ = F_[Index, ];
+Sort_F_   = F_[Index, ];
 DES_simul = matrix( NaN, 1, K+1 );
 for( k in 1 : (K+1) )
 {

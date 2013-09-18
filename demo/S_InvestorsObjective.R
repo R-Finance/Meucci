@@ -3,7 +3,9 @@
 #' Allocation",Springer, 2005,  Chapter 5.  
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 236 - Simulation of the investor’s objectives".
+#'
 #' See Meucci's script for "S_InvestorsObjective.m"
 #
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -33,19 +35,19 @@ b = matrix( c( 2, 1 ));
 ### Compute current prices
 p_1 = nu_1 * s2_1;
 p_2 = exp( mu_2 + 0.5 * s2_2 ^ 2 );
-p = matrix( c( p_1, p_2 ));
+p   = matrix( c( p_1, p_2 ));
 
 ##################################################################################################################
 ### Generate samnple of prices at the investment horizon
-N = rmvnorm(J, cbind( 0, 0 ), rbind( c(1, r), c(r, 1)));
+N   = rmvnorm(J, cbind( 0, 0 ), rbind( c(1, r), c(r, 1)));
 N_1 = N[ , 1 ];
 N_2 = N[ , 2 ];
 
 U_1 = pnorm( N_1 );
 U_2 = pnorm( N_2 );
 
-aa = nu_1 / 2;
-bb = 2 * s2_1;
+aa  = nu_1 / 2;
+bb  = 2 * s2_1;
 P_1 = qgamma( U_1, aa, scale = bb);
 P_2 = qlnorm( U_2, mu_2, sqrt(s2_2));
 
@@ -58,7 +60,7 @@ W = P %*% a;
 PnL = (P - matrix( 1, J, 1) %*% t( p )) %*% a;
 
 # generate sample of benchmark-relative wealth
-K = diag(1, 2) - p %*% t(b) / (t(b) %*% p)[1];
+K    = diag(1, 2) - p %*% t(b) / (t(b) %*% p)[1];
 WRel = P %*% t(K) %*% a;
 
 ##################################################################################################################

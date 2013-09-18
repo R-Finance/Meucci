@@ -2,7 +2,9 @@
 #'assumptions as described in A. Meucci,"Risk and Asset Allocation", Springer, 2005,  Chapter 5.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 223 - Cornish-Fisher approximation of the Value-at-Risk".
+#'
 #' See Meucci's script for "S_CornishFisher.m"
 #
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -21,7 +23,7 @@ Sk_X = sqrt( exp( sig ^ 2 ) - 1 ) * ( exp( sig ^ 2 ) + 2 );
 c = seq(0.001, 0.999, 0.001 );
 z = qnorm( c );
 
-Q_CF = E_X + Sd_X * ( z + Sk_X  /  6 * ( z ^ 2 - 1 ) );
+Q_CF   = E_X + Sd_X * ( z + Sk_X  /  6 * ( z ^ 2 - 1 ) );
 Q_true = qlnorm( c,mu,sig );
 
 x = Q_true;

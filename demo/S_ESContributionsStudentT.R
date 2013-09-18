@@ -1,12 +1,12 @@
-library(MASS);
-library(Matrix);
 #' This script computes the expected shortfall and the contributions to ES from each security: 
 #' - analytically, under the Student t assumption for the market
 #' - in simulations, using the conditional expectation definition of the contributions
 #' Described in A. Meucci,"Risk and Asset Allocation",Springer, 2005,  Chapter 5.  
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 234 - Expected shortfall in elliptical markets III".
+#'
 #' See Meucci's script for "S_ESContributionsStudentT.m"
 #
 #' @author Xavier Valls \email{flamejat@@gmail.com}

@@ -1,4 +1,3 @@
-
 #' This script computes the VaR and the contributions to VaR from each security 
 #'  - analytically, under the elliptical-uniform assumption for the market
 #'  - in simulations, using the conditional expectation definition of the contributions
@@ -6,8 +5,10 @@
 #' Allocation",Springer, 2005,  Chapter 5.  
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
-#' See Meucci's script for "S_VaRContributionsUniform.m"
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 222 - Value-at-Risk in elliptical markets III".
+#'
+#' See Meucci's script for "S_VaRContributionsUniform.m" and E 220 from the book.
 #
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 
@@ -17,8 +18,8 @@
 N = 10; 
 
 # market parameters (uniform on ellipsoid)
-Mu = matrix(runif(N));
-A  = matrix( runif(N*N), N, N) - 0.5;
+Mu    = matrix(runif(N));
+A     = matrix( runif(N*N), N, N) - 0.5;
 Sigma = A * t(A);
 
 # allocation
@@ -37,10 +38,11 @@ M = matrix( 1, nSim, 1) %*% t(Mu) + X %*% t(A);
 ###################################################################################################################
 ### Compute contributions by simulations (brute-force approach)
 # compute and sort the objective
-Psi = M %*% a;
+Psi   = M %*% a;
 Q_sim = quantile( Psi, (1 - c) );
 
 e = mean( abs( a )) / 100; # perturbation
+
 DQ_simul = matrix( NaN, 1, N) ;
 for( n in 1 : N )
 {
@@ -48,10 +50,11 @@ for( n in 1 : N )
     a_e = a;
     a_e[ n ] = a[ n ] + e;
     
-    Psi_e = M %*% a_e;
+    Psi_e   = M %*% a_e;
     Q_sim_e = quantile(Psi_e, (1 - c) );
     DQ_simul[ n ] = ( Q_sim_e - Q_sim )/e;
 }
+
 # compute contributions
 ContrQ_simul = a * t( DQ_simul );
 
@@ -61,8 +64,8 @@ ContrQ_simul = a * t( DQ_simul );
 gc = quantile(X[  ,1 ], (1 - c));
 
 # ...the dependence on the allocation is analytical
-Q_an  = t(Mu) %*% a + gc * sqrt( t(a) %*% Sigma %*% a );
-DQ_an = Mu + gc * Sigma %*% a / sqrt( t(a) %*% Sigma %*% a )[1];
+Q_an      = t(Mu) %*% a + gc * sqrt( t(a) %*% Sigma %*% a );
+DQ_an     = Mu + gc * Sigma %*% a / sqrt( t(a) %*% Sigma %*% a )[1];
 ContrQ_an = a * DQ_an;
 
 ###################################################################################################################

@@ -1,4 +1,6 @@
-#' Generate a uniform sample on the unit hypersphere, as described in  A. Meucci,
+#' @title Generate a uniform sample on the unit hypersphere.
+#'  
+#' @description Generate a uniform sample on the unit hypersphere, as described in  A. Meucci,
 #'  "Risk and Asset Allocation", Springer, 2005.
 #'  
 #'	@param   J : [scalar] number of draws
@@ -6,10 +8,11 @@
 #'  
 #'	@return   X  : [matrix] (T x N) of draws
 #'
-#'@note
-#' Initial script by Xiaoyu Wang - Dec 2006
+#' @note
+#' Initial MATLAB's script by Xiaoyu Wang - Dec 2006
+#'
 #' We decompose X=U*R, where U is a uniform distribution on unit sphere and
-#     R is a distribution on (0,1) proportional to r^(Dims-1), i.e. the area of surface of radius r 
+#  R is a distribution on (0,1) proportional to r^(Dims-1), i.e. the area of surface of radius r.
 #'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
