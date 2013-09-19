@@ -2,7 +2,9 @@
 #' Springer, 2005,  Chapter 7.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 280 - Markov chain Monte Carlo".
+#'
 #' See Meucci's script for "S_MarkovChainMonteCarlo.m"
 #
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -19,9 +21,10 @@ sig = 5;
 ##################################################################################################################
 ### Set up MH algorithm
 nSim = 10000;
-xt = matrix( NaN, nSim, 1);
-xt[ 1 ] = 0;
+xt   = matrix( NaN, nSim, 1);
 nacc = 0;
+xt[ 1 ] = 0;
+
 for( i in 2 : nSim )
 {
     # normal candidate
@@ -30,12 +33,13 @@ for( i in 2 : nSim )
     f1 = kernel( r );
     # kernel at past
     f2 = kernel( xt[ i-1 ] );
-    prob = f1 / f2;
+    
+    prob    = f1 / f2;
     xt[ i ] = xt[ i-1 ];
     if( prob > 1 || runif(1) > (1 - prob) )
     {
         xt[ i ] = r; 
-        nacc = nacc + 1;   
+        nacc    = nacc + 1;   
     }  
 }
 ##################################################################################################################

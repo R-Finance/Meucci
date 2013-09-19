@@ -3,7 +3,9 @@
 #'  Chapter 7.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 281 - Bayesian: prior on correlation".
+#'
 #' See Meucci's script for "S_CorrelationPriorUniform.m"
 #
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -18,13 +20,13 @@ J = 10000; # number of simulations
 ### Compute correlations in all scenarios
 CorrsAsTensor = array(0, dim = c(J,N,N) );
 Eigs = NULL;
-j = 1;
+j    = 1;
 
 while( j < J )
 {
-    C = 2 * matrix( runif(K), 1, K ) - 1;
+    C    = 2 * matrix( runif(K), 1, K ) - 1;
     Corr = diag( 1, N );
-    k = 0;
+    k    = 0;
     for( n in 1 : ( N - 1 ) )
     {
         for( m in ( n + 1 ) : N )
@@ -58,7 +60,7 @@ for( n in 1 : (N-1) )
 #####################################################################################################################
 ### Plots
 # univariate marginals
-K = nrow( CorrsAsEntries );
+K     = nrow( CorrsAsEntries );
 Nbins = round( 5 * log( J ) );
 for( k in 1 : K )
 {
