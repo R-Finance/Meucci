@@ -1,6 +1,6 @@
 \name{HorizonPricing}
 \alias{HorizonPricing}
-\title{Compute the pricing in the horizon, as it appears in A. Meucci, "Fully Flexible Views: Theory and Practice",
+\title{Compute the pricing in the horizon as it appears in A. Meucci, "Fully Flexible Views: Theory and Practice",
  The Risk Magazine, October 2008, p 100-106.}
 \usage{
   HorizonPricing(Butterflies, X)
@@ -15,7 +15,7 @@
   PnL Matrix of profit and loss scenarios
 }
 \description{
-  Compute the pricing in the horizon, as it appears in A.
+  Compute the pricing in the horizon as it appears in A.
   Meucci, "Fully Flexible Views: Theory and Practice", The
   Risk Magazine, October 2008, p 100-106.
 }

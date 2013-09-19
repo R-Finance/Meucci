@@ -1,7 +1,6 @@
 \name{PlotCompositionEfficientFrontier}
 \alias{PlotCompositionEfficientFrontier}
-\title{Plot the efficient frontier, as described in  A. Meucci,
-"Risk and Asset Allocation", Springer, 2005.}
+\title{Plots the efficient frontier}
 \usage{
   PlotCompositionEfficientFrontier(Portfolios)
 }
@@ -18,7 +17,9 @@
 }
 \references{
   A. Meucci - "Exercises in Advanced Risk and Portfolio
-  Management" \url{http://symmys.com/node/170}. See
-  Meucci's script for "PlotCompositionEfficientFrontier.m"
+  Management" \url{http://symmys.com/node/170}.
+
+  See Meucci's script for
+  "PlotCompositionEfficientFrontier.m"
 }
 

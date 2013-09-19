@@ -6,8 +6,10 @@
 #' Described in A. Meucci,"Risk and Asset Allocation", Springer, 2005,  Chapter 6.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
-#' See Meucci's script for "S_MeanVarianceBenchmark.m"
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 257 - Benchmark driven allocation I" and "E 258 - Benchmark driven allocation II".
+#'
+#' See Meucci's script for "S_MeanVarianceBenchmark.m" and "E 255 - Mean-variance pitfalls: two-step approach II" from the book.
 #
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 

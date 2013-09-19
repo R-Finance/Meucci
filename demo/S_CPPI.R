@@ -2,8 +2,10 @@
 #'  A. Meucci,"Risk and Asset Allocation", Springer, 2005,  Chapter 6.  
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
-#' See Meucci's script for "S_CPPI.m"
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 264 - Constant proportion portfolio insurance".
+#'
+#' See Meucci's script for "S_CPPI.m"E 264 – Constant proportion portfolio insurance
 #
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 

@@ -1,18 +1,21 @@
-#' Compute the mean-variance efficient frontier (on returns) by quadratic programming, as described in 
+#' @title Computes the mean-variance efficient frontier (on returns) by quadratic programming.
+#'
+#' @description Compute the mean-variance efficient frontier (on returns) by quadratic programming, as described in 
 #' A. Meucci "Risk and Asset Allocation", Springer, 2005
 #'
-#'  @param  NumPortf       : [scalar] number of portfolio in the efficient frontier
-#'  @param  Covariance     : [matrix] (N x N) covariance matrix
-#'  @param  ExpectedValues : [vector] (N x 1) expected returns
-#'  @param  Benchmark      : [vector] (N x 1) of benchmark weights
-#'  @param  Constraints    : [struct] set of constraints. Default: weights sum to one, and no-short positions
+#'  @param  NumPortf        [scalar] number of portfolio in the efficient frontier
+#'  @param  Covariance      [matrix] (N x N) covariance matrix
+#'  @param  ExpectedValues  [vector] (N x 1) expected returns
+#'  @param  Benchmark       [vector] (N x 1) of benchmark weights
+#'  @param  Constraints     [struct] set of constraints. Default: weights sum to one, and no-short positions
 #'  
-#'  @return ExpectedValue  : [vector] (NumPortf x 1) expected values of the portfolios
-#'  @return Volatility     : [vector] (NumPortf x 1) standard deviations of the portfolios
-#'  @return Composition    : [matrix] (NumPortf x N) optimal portfolios 
+#'  @return ExpectedValue   [vector] (NumPortf x 1) expected values of the portfolios
+#'  @return Volatility      [vector] (NumPortf x 1) standard deviations of the portfolios
+#'  @return Composition     [matrix] (NumPortf x N) optimal portfolios 
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}. 
+#'
 #' See Meucci's script for "EfficientFrontierReturnsBenchmark.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

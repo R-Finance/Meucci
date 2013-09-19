@@ -2,7 +2,9 @@
 #' Described in A. Meucci,"Risk and Asset Allocation", Springer, 2005,  Chapter 6.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 259 - Mean-variance for derivatives".
+#'
 #' See Meucci's script for "S_MeanVarianceCalls.m"
 #
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -66,8 +68,8 @@ L = Call_Hor / repmat( Call_0, J, 1  ) - 1;
 ExpectedValues = matrix( apply( L, 2, mean) );
 Covariance = cov( L );
 NumPortf = 40;
-#[e, vol, w] = 
-EFR = EfficientFrontierReturns( NumPortf, Covariance, ExpectedValues, Constr );
+
+EFR = PlotVolVsCompositionEfficientFrontiericientFrontierReturns( NumPortf, Covariance, ExpectedValues, Constr );
 
 ##################################################################################################################
 ### Plots

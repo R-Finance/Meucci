@@ -5,8 +5,10 @@
 #' Described in A. Meucci,"Risk and Asset Allocation", Springer, 2005,  Chapter 6.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
-#' See Meucci's script for "S_MeanVarianceHorizon.m"
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 256 – Mean-variance pitfalls: horizon effect".
+#'
+#' See Meucci's script for "S_MeanVarianceHorizon.m" and "E 255 - Mean-variance pitfalls: two-step approach II" from the book.
 #
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 

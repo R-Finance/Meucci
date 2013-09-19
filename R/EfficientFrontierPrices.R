@@ -1,19 +1,22 @@
-#' Compute the mean-variance efficient frontier (on prices) by quadratic programming, as described in 
+#' @title Computes the mean-variance efficient frontier (on prices) by quadratic programming
+#'
+#' @description Compute the mean-variance efficient frontier (on prices) by quadratic programming, as described in 
 #' A. Meucci "Risk and Asset Allocation", Springer, 2005
 #'
-#'  @param   NumPortf       : [scalar] number of portfolio in the efficient frontier
-#'  @param   Covariance     : [matrix] (N x N) covariance matrix
-#'  @param   ExpectedValues : [vector] (N x 1) expected returns
-#'  @param   Current_Prices : [vector] (N x 1) current prices
-#'  @param   Budget         : [scalar] budget constraint
+#'  @param   NumPortf        [scalar] number of portfolio in the efficient frontier
+#'  @param   Covariance      [matrix] (N x N) covariance matrix
+#'  @param   ExpectedValues  [vector] (N x 1) expected returns
+#'  @param   Current_Prices  [vector] (N x 1) current prices
+#'  @param   Budget          [scalar] budget constraint
 #'  
-#'  @return  ExpectedValue  : [vector] (NumPortf x 1) expected values of the portfolios
-#'  @return  Std_Deviation  : [vector] (NumPortf x 1) standard deviations of the portfolios
-#'  @return  Composition    : [matrix] (NumPortf x N) optimal portfolios 
+#'  @return  ExpectedValue   [vector] (NumPortf x 1) expected values of the portfolios
+#'  @return  Std_Deviation   [vector] (NumPortf x 1) standard deviations of the portfolios
+#'  @return  Composition     [matrix] (NumPortf x N) optimal portfolios 
 #'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
-#' See Meucci's script for "EfficientFrontierReturns.m"
+#'
+#' See Meucci's script for "EfficientFrontierReturns.m".
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 #' @export

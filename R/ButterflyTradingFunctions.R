@@ -12,7 +12,7 @@ MapVol = function( sig , y , K , T )
   return( s )
 }
 
-#'  Compute the pricing in the horizon, as it appears in A. Meucci, "Fully Flexible Views: Theory and Practice",
+#'  Compute the pricing in the horizon as it appears in A. Meucci, "Fully Flexible Views: Theory and Practice",
 #'  The Risk Magazine, October 2008, p 100-106.
 #'  
 #'  @param   Butterflies    List of securities with some analytics computed.

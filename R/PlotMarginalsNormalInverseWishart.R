@@ -1,13 +1,13 @@
 #' Plot the marginals of the normal-inverse-Whishart model.
 #' Described in A. Meucci "Risk and Asset Allocation", Springer, 2005
 #'
-#'  @param	Mu_Simul       : []
-#'	@param	InvSigma_Simul : []
-#'  @param	Mu_0           : []
-#'  @param  T_0            : []
-#'  @param  Sigma_0        : []
-#'  @param  Nu_0           : []
-#'  @param  Legend         : []
+#'  @param	Mu_Simul        []
+#'	@param	InvSigma_Simul  []
+#'  @param	Mu_0            []
+#'  @param  T_0             []
+#'  @param  Sigma_0         []
+#'  @param  Nu_0            []
+#'  @param  Legend          []
 #'  
 #'  @note Numerically and analytically the marginal pdf of 
 #'		- the first entry of the random vector Mu
@@ -17,6 +17,7 @@
 #'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#'
 #' See Meucci's script for "PlotMarginalsNormalInverseWishart.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}

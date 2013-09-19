@@ -1,7 +1,7 @@
 #' @title Convert change in yield-to-maturity to price for fixed-income securities
 #'
 #' @description Convert change in yield-to-maturity to price for fixed-income securities, as described in 
-#' A. Meucci "Risk and Asset Allocation", Springer, 2005
+#' A. Meucci "Risk and Asset Allocation", Springer, 2005.
 #'
 #'  @param	Exp_DY         [vector] (N x 1) expected value of change in yield to maturity
 #'	@param	Cov_DY         [matrix] (N x N) covariance of change in yield to maturity
@@ -13,14 +13,12 @@
 #'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' See Meucci's script for "ConvertChangeInYield2Price.m".
 #'
-#' See (6.77)-(6.79) in "Risk and Asset Allocation"-Springer (2005), by A. Meucci
-#'
-#' See Meucci's script for "ConvertChangeInYield2Price.m"
+#' A. Meucci - "Risk and Asset Allocation"-Springer (2005). See (6.77)-(6.79).
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 #' @export
-
 
 ConvertChangeInYield2Price = function( Exp_DY, Cov_DY, Times2Mat, CurrentPrices )
 {

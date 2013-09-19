@@ -1,13 +1,15 @@
 #' This script projects the distribution of the market invariants for the bond and stock markets 
 #' (i.e. the changes in yield to maturity and compounded returns) from the estimation interval to the investment 
-#' horizon
+#' horizon.
 #' Then it computes the distribution of prices at the investment horizon and performs the two-step mean-variance 
 #' optimization. 
 #' Described in A. Meucci,"Risk and Asset Allocation", Springer, 2005,  Chapter 6.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
-#' See Meucci's script for "S_MeanVarianceHorizon.m"
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 254 - Mean-variance pitfalls: two-step approach I" and "E 255 - Mean-variance pitfalls: two-step approach II".
+#'
+#' See Meucci's script for "S_MeanVarianceOptimization.m"
 #
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 
@@ -100,7 +102,7 @@ Exp_Hrzn_DY_Hat  = mus * tau / tau_tilde;
 SDev_Hrzn_DY_Hat = sigmas * sqrt(tau / tau_tilde);
 Corr_Hrzn_DY_Hat = matrix( 1, N, N ); # full co-dependence
 Cov_Hrzn_DY_Hat  = diag(SDev_Hrzn_DY_Hat, length( SDev_Hrzn_DY_Hat)) %*% Corr_Hrzn_DY_Hat %*% diag(SDev_Hrzn_DY_Hat, length( SDev_Hrzn_DY_Hat));
-#[BondExp_Prices, BondCov_Prices]
+
 CCY2P = ConvertChangeInYield2Price(Exp_Hrzn_DY_Hat, Cov_Hrzn_DY_Hat, u_minus_tau, BondCurrent_Prices_Shifted);
 print( CCY2P$Exp_Prices );
 print( CCY2P$Cov_Prices );
@@ -121,8 +123,6 @@ Market_Scenarios = cbind( StockMarket_Scenarios, BondMarket_Scenarios[ , 2 ] );
 
 NumPortf = 40;
 # frontier with QP (no short-sales)
-#[ExpectedValue, EFP$Std_Deviation, EFP$Composition] 
-
 EFP = EfficientFrontierPrices( NumPortf, S, E,Current_Prices, Budget );
 
 # step 2: ...evaluate satisfaction for all EFP$Composition on the frontier ...

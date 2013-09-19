@@ -7,19 +7,19 @@ Described in A. Meucci "Risk and Asset Allocation", Springer, 2005}
     InvSigma_Simul, Mu_0, T_0, Sigma_0, Nu_0, Legend)
 }
 \arguments{
-  \item{Mu_Simul}{: []}
+  \item{Mu_Simul}{[]}
 
-  \item{InvSigma_Simul}{: []}
+  \item{InvSigma_Simul}{[]}
 
-  \item{Mu_0}{: []}
+  \item{Mu_0}{[]}
 
-  \item{T_0}{: []}
+  \item{T_0}{[]}
 
-  \item{Sigma_0}{: []}
+  \item{Sigma_0}{[]}
 
-  \item{Nu_0}{: []}
+  \item{Nu_0}{[]}
 
-  \item{Legend}{: []}
+  \item{Legend}{[]}
 }
 \description{
   Plot the marginals of the normal-inverse-Whishart model.
@@ -38,7 +38,9 @@ Described in A. Meucci "Risk and Asset Allocation", Springer, 2005}
 }
 \references{
   A. Meucci - "Exercises in Advanced Risk and Portfolio
-  Management" \url{http://symmys.com/node/170}. See
-  Meucci's script for "PlotMarginalsNormalInverseWishart.m"
+  Management" \url{http://symmys.com/node/170}.
+
+  See Meucci's script for
+  "PlotMarginalsNormalInverseWishart.m"
 }
 

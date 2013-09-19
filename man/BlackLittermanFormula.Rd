@@ -1,25 +1,24 @@
 \name{BlackLittermanFormula}
 \alias{BlackLittermanFormula}
-\title{This function computes the Black-Litterman formula for the moments of the posterior normal, as described in
-A. Meucci, "Risk and Asset Allocation", Springer, 2005.}
+\title{Computes the Black-Litterman formula for the moments of the posterior normal.}
 \usage{
   BlackLittermanFormula(Mu, Sigma, P, v, Omega)
 }
 \arguments{
-  \item{Mu}{: [vector] (N x 1) prior expected values.}
+  \item{Mu}{[vector] (N x 1) prior expected values.}
 
-  \item{Sigma}{: [matrix] (N x N) prior covariance matrix.}
+  \item{Sigma}{[matrix] (N x N) prior covariance matrix.}
 
-  \item{P}{: [matrix] (K x N) pick matrix.}
+  \item{P}{[matrix] (K x N) pick matrix.}
 
-  \item{v}{: [vector] (K x 1) vector of views.}
+  \item{v}{[vector] (K x 1) vector of views.}
 
-  \item{Omega}{: [matrix] (K x K) matrix of confidence.}
+  \item{Omega}{[matrix] (K x K) matrix of confidence.}
 }
 \value{
-  BLMu : [vector] (N x 1) posterior expected values.
+  BLMu [vector] (N x 1) posterior expected values.
 
-  BLSigma : [matrix] (N x N) posterior covariance matrix.
+  BLSigma [matrix] (N x N) posterior covariance matrix.
 }
 \description{
   This function computes the Black-Litterman formula for
@@ -30,7 +29,9 @@ A. Meucci, "Risk and Asset Allocation", Springer, 2005.}
   Xavier Valls \email{flamejat@gmail.com}
 }
 \references{
-  \url{http://} See Meucci's script for
-  "BlackLittermanFormula.m"
+  A. Meucci - "Exercises in Advanced Risk and Portfolio
+  Management" \url{http://symmys.com/node/170}.
+
+  See Meucci's script for "BlackLittermanFormula.m"
 }
 

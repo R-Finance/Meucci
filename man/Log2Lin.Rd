@@ -1,19 +1,18 @@
 \name{Log2Lin}
 \alias{Log2Lin}
-\title{Map moments of log-returns to linear returns, as described in  A. Meucci,
-"Risk and Asset Allocation", Springer, 2005.}
+\title{Maps moments of log-returns to linear returns .}
 \usage{
   Log2Lin(Mu, Sigma)
 }
 \arguments{
-  \item{Mu}{: [vector] (N x 1)}
+  \item{Mu}{[vector] (N x 1)}
 
-  \item{Sigma}{: [matrix] (N x N)}
+  \item{Sigma}{[matrix] (N x N)}
 }
 \value{
-  M : [vector] (N x 1)
+  M [vector] (N x 1)
 
-  S : [matrix] (N x N)
+  S [matrix] (N x N)
 }
 \description{
   Map moments of log-returns to linear returns, as
@@ -25,7 +24,8 @@
 }
 \references{
   A. Meucci - "Exercises in Advanced Risk and Portfolio
-  Management" \url{http://symmys.com/node/170}. See
-  Meucci's script for "Log2Lin.m"
+  Management" \url{http://symmys.com/node/170}.
+
+  See Meucci's script for "Log2Lin.m"
 }
 
