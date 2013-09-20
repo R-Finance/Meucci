@@ -5,7 +5,7 @@
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
 #' "E 264 - Constant proportion portfolio insurance".
 #'
-#' See Meucci's script for "S_CPPI.m"E 264 – Constant proportion portfolio insurance
+#' See Meucci's script for "S_CPPI.m"
 #
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 

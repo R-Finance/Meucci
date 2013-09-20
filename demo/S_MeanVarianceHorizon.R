@@ -6,7 +6,7 @@
 #'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
-#' "E 256 – Mean-variance pitfalls: horizon effect".
+#' "E 256 - Mean-variance pitfalls: horizon effect".
 #'
 #' See Meucci's script for "S_MeanVarianceHorizon.m" and "E 255 - Mean-variance pitfalls: two-step approach II" from the book.
 #

@@ -5,7 +5,7 @@
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
 #' "E 263 - Utility maximization II".
 #'
-#' See Meucci's script for "S_UtilityMax.m" and "E 262 – Utility maximization I" from the book.
+#' See Meucci's script for "S_UtilityMax.m" and "E 262 - Utility maximization I" from the book.
 #
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 

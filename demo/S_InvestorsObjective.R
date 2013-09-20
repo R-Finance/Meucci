@@ -4,7 +4,7 @@
 #'
 #' @references
 #' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
-#' "E 236 - Simulation of the investor’s objectives".
+#' "E 236 - Simulation of the investor's objectives".
 #'
 #' See Meucci's script for "S_InvestorsObjective.m"
 #
