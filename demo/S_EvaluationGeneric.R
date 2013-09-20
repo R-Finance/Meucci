@@ -6,11 +6,13 @@
 #'  @return Allocation      : [vector] (N x 1)
 #'
 #' @note
-#' 	compute optimal allocation, only possible if hidden parameters were known: thus it is not a "decision", we call it a "choice"
+#' 	Compute optimal allocation, only possible if hidden parameters were known: thus it is not a "decision", we call it a "choice"
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
-#' See Meucci's script for " EvaluationChoiceOptimal.m"
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 285 - Estimation risk and opportunity cost".
+#'
+#' See Meucci's script for " EvaluationChoiceOptimal.m" 
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 
@@ -40,7 +42,9 @@ EvaluationChoiceOptimal = function( Market, InvestorProfile )
 #'  @return CertaintyEquivalent : [scalar]
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 285 - Estimation risk and opportunity cost".
+#'
 #' See Meucci's script for " EvaluationSatisfaction.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -66,7 +70,9 @@ EvaluationSatisfaction = function( Allocation, Market, InvestorProfile )
 #' 	scenario-dependent decision that tries to pick the optimal allocation
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 285 - Estimation risk and opportunity cost".
+#'
 #' See Meucci's script for "EvaluationDecisionBestPerformer.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -93,7 +99,9 @@ EvaluationDecisionBestPerformer = function( Market, InvestorProfile )
 #'  @return C_Plus          : [scalar] cost
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 285 - Estimation risk and opportunity cost".
+#'
 #' See Meucci's script for "EvaluationDecisionBestPerformer.m"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -117,7 +125,9 @@ EvaluationCost = function( Allocation, Market, InvestorProfile )
 #' Described in A. Meucci "Risk and Asset Allocation", Springer, 2005, Chapter 8.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 285 - Estimation risk and opportunity cost".
+#'
 #' See Meucci's script for "S_EvaluationGeneric.m"
 #
 #' @author Xavier Valls \email{flamejat@@gmail.com}
@@ -140,12 +150,12 @@ InvestorProfile$BaR            = 0.2;
 ##################################################################################################################
 ### Input market parameters
 NumAssets = 10;  
-a = 0.5; # effect of correlation on expected values and volatility (hidden)
+a      = 0.5; # effect of correlation on expected values and volatility (hidden)
 Bottom = 0.06; 
-Top = 0.36; 
-Step = (Top - Bottom) / (NumAssets - 1); 
-v = seq( Bottom, Top, Step ) ; # volatility vector
-Market = NULL;
+Top    = 0.36; 
+Step   = (Top - Bottom) / (NumAssets - 1); 
+v      = seq( Bottom, Top, Step ) ; # volatility vector
+Market = list();
 Market$T = 20; # not hidden
 Market$CurrentPrices = 10 * array( 1, NumAssets);  # not hidden
 

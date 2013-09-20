@@ -39,6 +39,7 @@ S_ESContributionFactors              computes the expected shortfall and the con
 S_ESContributionsStudentT         	 computes the expected shortfall and the contributions to ES from each security  
 S_EigenvalueDispersion               displays the sample eigenvalues dispersion phenomenon
 S_EllipticalNDim                     decomposes the N-variate normal distribution into its radial and uniform components to generate an elliptical distribution
+S_EntropyView						 illustrates the Entropy Pooling approach
 S_EquitiesInvariants                 performs the quest for invariance in the stock market
 S_EquityProjectionPricing            projects the distribution of the market invariants for the stock market from the estimation interval (normal assumption) to the investment horizon. Then it computes the distribution of prices at the investment horizon analytically.
 S_EstimateExpectedValueEvaluation 	 script familiarizes the user with the evaluation of an estimator replicability, loss, error, bias and inefficiency 

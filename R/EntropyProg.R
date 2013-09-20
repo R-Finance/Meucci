@@ -41,13 +41,15 @@
 #' Reversing 'p' and 'p_' leads to the empirical likelihood" estimator of Qin and Lawless (1994). 
 #' See Robertson et al, "Forecasting Using Relative Entropy" (2002) for more theory
 #'  @export
-EntropyProg = function( p , A , b , Aeq , beq )
+EntropyProg = function( p , A = NULL , b = NULL , Aeq , beq )
 {
-    library( nloptr )    
-    
+    library( nloptr ) 
+
+    if( !length(b) ) A = matrix( ,nrow = 0, ncol = 0)
+    if( !length(b) ) b = matrix( ,nrow = 0, ncol = 0)
     # count the number of constraints
     K_ = nrow( A )  # K_ is the number of inequality constraints in the matrix-vector pair A-b
-    K = nrow( Aeq ) # K is the number of equality views in the matrix-vector pair Aeq-beq
+    K  = nrow( Aeq ) # K is the number of equality views in the matrix-vector pair Aeq-beq
     
     # parameter checks        
     if ( K_ + K == 0 ) { stop( "at least one equality or inequality constraint must be specified")}    
@@ -56,8 +58,8 @@ EntropyProg = function( p , A , b , Aeq , beq )
     if ( nrow(A)!=nrow(b) ) { stop( "number of equality constraints in matrix A must match number of elements in vector b") }              
     
     # calculate derivatives of constraint matrices
-    A_ = t( A )
-    b_= t( b )    
+    A_   = t( A )
+    b_   = t( b )    
     Aeq_ = t( Aeq )
     beq_ = t( beq )        
     
@@ -104,9 +106,7 @@ EntropyProg = function( p , A , b , Aeq , beq )
         v = optimResult$solution
         p_ = exp( log(p) - 1 - Aeq_ %*% v ) 	    
         optimizationPerformance = list( converged = (optimResult$status > 0) , ml = optimResult$objective , iterations = optimResult$iterations , sumOfProbabilities = sum( p_ ) )        
-    }
-    
-    else # case inequality constraints are specified    
+    }else # case inequality constraints are specified    
     {        
         # setup variables for constrained optimization
         InqMat = -diag( 1 , K_ + K ) # -1 * Identity Matrix with dimension equal to number of constraints
@@ -194,7 +194,7 @@ EntropyProg = function( p , A , b , Aeq , beq )
 #' @references 
 #' \url{http://www.symmys.com}
 #' See Meucci script pHist.m used for plotting
-#' @author Ram Ahluwalia \email{ram@@wingedfootcapital.com}
+#' @author Ram Ahluwalia \email{ram@@wingedfootcapital.com} and Xavier Valls \email{flamejat@@gmail.com}
 
 pHist = function( X , p , nBins, freq = FALSE )    
 {      
@@ -204,7 +204,7 @@ pHist = function( X , p , nBins, freq = FALSE )
     nBins = round( 10 * log(J) )
   }
   
-  dist = hist( x = X , breaks = nBins , freq = FALSE , main = "Portfolio return distribution" )
+  dist = hist( x = X , breaks = nBins , plot = FALSE );
   n = dist$counts
   x = dist$breaks    
   D = x[2] - x[1]
@@ -221,7 +221,7 @@ pHist = function( X , p , nBins, freq = FALSE )
     f = np/D
   }
   
-  barplot( f , x , 1 )
+  plot( x , f , type = "h", main = "Portfolio return distribution")
   
   return( list( f = f , x = x ) )
 }

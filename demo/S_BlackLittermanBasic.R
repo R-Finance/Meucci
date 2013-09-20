@@ -5,8 +5,10 @@
 #' Springer, 2005,  Chapter 9.
 #'
 #' @references
-#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170}.
-#' See Meucci's script for "S_BlackLittermanBasic.m"
+#' A. Meucci - "Exercises in Advanced Risk and Portfolio Management" \url{http://symmys.com/node/170},
+#' "E 303 - Black-Litterman and beyond II".
+#'
+#' See Meucci's script for "S_BlackLittermanBasic.m" and "E 302 - Black-Litterman and beyond I"
 #'
 #' @author Xavier Valls \email{flamejat@@gmail.com}
 
@@ -23,7 +25,7 @@ PlotCompositionEfficientFrontier( EFR$Composition );
 
 ##################################################################################################################
 ### Modify expected returns the Black-Litterman way and compute new efficient frontier 
-P = cbind( 1, 0, 0, 0, 0, -1 ); # pick matrix
+P     = cbind( 1, 0, 0, 0, 0, -1 ); # pick matrix
 Omega = P %*% covNRets$Sigma %*% t( P );
 Views = sqrt( diag( Omega ) ); # views value
 

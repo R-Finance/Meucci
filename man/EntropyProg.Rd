@@ -2,7 +2,7 @@
 \alias{EntropyProg}
 \title{Entropy pooling program for blending views on scenarios with a prior scenario-probability distribution}
 \usage{
-  EntropyProg(p, A, b, Aeq, beq)
+  EntropyProg(p, A = NULL, b = NULL, Aeq, beq)
 }
 \arguments{
   \item{p}{a vector of initial probabilities based on prior

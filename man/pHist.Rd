@@ -24,7 +24,8 @@
   Generates histogram
 }
 \author{
-  Ram Ahluwalia \email{ram@wingedfootcapital.com}
+  Ram Ahluwalia \email{ram@wingedfootcapital.com} and
+  Xavier Valls \email{flamejat@gmail.com}
 }
 \references{
   \url{http://www.symmys.com} See Meucci script pHist.m

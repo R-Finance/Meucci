@@ -1,7 +1,11 @@
 Xavi's notes:
 
 * Matlab package doesn't seem to be necessary, find substitutes for its functions where possible
-* There are some problems with charts and what can be done with base graphics. Maybe using ggplot2 instead of base graphics can provide more flexibility.
+* There are some problems with charts and what can be done with base graphics:
+	- Maybe using ggplot2 instead of base graphics can provide more flexibility.
+	- How to change the layout after the plot like in MATLAB to change name, limits... (look at pHistPriorPosterior code for an example )
+	- How to draw a histogram passing the x,y coordinates using the barplot function
+	...
 * All the scripts from the papers need to be revised, some don't even work.
 * Maybe there are some packages that aren't needed anymore. Find out which of them. 
 * Documentation for papers and functions from Ram - Manan.
@@ -10,7 +14,6 @@ Xavi's notes:
 * Change coding style to one more R alike
 * Still 2 scripts left from the book: S_MeanVarianceCallsRobust from chapter 9 and S_OptionReplication from chapter 6
 * Improve documentation for every script from the book: 
-	- find the exercises and sections they come from
 	- write down the equations
 * Not Sure if EntropyProg returns what it should with empty matrices as arguments for the constraints
 * Write text version of the formulas in the documentation

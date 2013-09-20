@@ -34,7 +34,8 @@ Depends:
     mvtnorm,
     dlm,
     quadprog,
-    kernlab
+    kernlab,
+    nloptr,
 Suggests:
     limSolve,
     Matrix,
@@ -42,7 +43,6 @@ Suggests:
     reshape2,
     Hmisc,
     moments,
-    nloptr,
     ggplot2,
     expm,
     latticeExtra,
@@ -105,3 +105,4 @@ Collate:
     'data.R'
     'ButterflyTradingFunctions.R'
     'RankingInformationFunctions.R'
+    'pHistPriorPosterior.R'
